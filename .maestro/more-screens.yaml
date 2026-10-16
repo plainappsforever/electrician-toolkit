@@ -22,7 +22,7 @@ tags:
     id: about-privacy-link
 - assertVisible:
     id: about-contact
-    text: ".*info@taulon.org.*"
+    text: ".*plainapps@tuta.com.*"
 - assertVisible:
     id: about-versions
     text: ".*1\\.1\\.0.*engine 1\\.1\\.0.*"
