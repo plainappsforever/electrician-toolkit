@@ -1,0 +1,279 @@
+{
+  "fixture": "abb_m3bp_multivoltage_en",
+  "kind": "motor-iec",
+  "lang": "en",
+  "ocrDamage": [],
+  "fields": {
+    "manufacturer": {
+      "value": "ABB",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "M3BP 160MLA 4",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "4523987123",
+      "unit": "",
+      "line": 2
+    },
+    "year": {
+      "value": 2024,
+      "unit": "",
+      "line": 2
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 3
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 3
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 3
+    },
+    "voltage": {
+      "value": [
+        690,
+        400,
+        660,
+        380,
+        415,
+        440
+      ],
+      "unit": "V",
+      "line": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "connection": {
+      "value": [
+        "Y",
+        "Δ",
+        "Y",
+        "Δ",
+        "Δ",
+        "Δ"
+      ],
+      "unit": "",
+      "line": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "frequencyHz": {
+      "value": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        60
+      ],
+      "unit": "Hz",
+      "line": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "ratedPowerKw": {
+      "value": [
+        15,
+        15,
+        15,
+        15,
+        15,
+        17.3
+      ],
+      "unit": "kW",
+      "line": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "speedRpm": {
+      "value": [
+        1465,
+        1465,
+        1465,
+        1465,
+        1470,
+        1770
+      ],
+      "unit": "rpm",
+      "line": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "current": {
+      "value": [
+        16.0,
+        27.7,
+        16.8,
+        29.1,
+        27.0,
+        28.9
+      ],
+      "unit": "A",
+      "line": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "cosPhi": {
+      "value": [
+        0.85,
+        0.85,
+        0.85,
+        0.85,
+        0.84,
+        0.85
+      ],
+      "unit": "",
+      "line": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "efficiencyClass": {
+      "value": "IE3",
+      "unit": "",
+      "line": 12
+    },
+    "efficiencyPct": {
+      "value": [
+        92.1,
+        92.4,
+        91.6
+      ],
+      "unit": "%",
+      "line": [
+        12,
+        12,
+        12
+      ]
+    },
+    "efficiencyLoadPct": {
+      "value": [
+        100,
+        75,
+        50
+      ],
+      "unit": "%",
+      "line": [
+        12,
+        12,
+        12
+      ]
+    },
+    "weightKg": {
+      "value": 112,
+      "unit": "kg",
+      "line": 14
+    }
+  },
+  "absent": [
+    "ratedPowerHp"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 15,
+      "U": 690,
+      "I": 16.0,
+      "cosPhi": 0.85,
+      "eta": 0.921,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 15,
+      "U": 400,
+      "I": 27.7,
+      "cosPhi": 0.85,
+      "eta": 0.921,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 15,
+      "U": 660,
+      "I": 16.8,
+      "cosPhi": 0.85,
+      "eta": 0.921,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 15,
+      "U": 380,
+      "I": 29.1,
+      "cosPhi": 0.85,
+      "eta": 0.921,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 15,
+      "U": 415,
+      "I": 27.0,
+      "cosPhi": 0.84,
+      "eta": 0.921,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 17.3,
+      "U": 440,
+      "I": 28.9,
+      "cosPhi": 0.85,
+      "eta": 0.924,
+      "assumed": [
+        "eta"
+      ]
+    }
+  ],
+  "notes": "Efficiency line '92.1(100%)' must not yield a 100 % efficiency; '-' separators are not minus signs."
+}

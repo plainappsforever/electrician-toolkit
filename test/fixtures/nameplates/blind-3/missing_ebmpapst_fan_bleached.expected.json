@@ -1,0 +1,62 @@
+{
+  "fixture": "missing_ebmpapst_fan_bleached",
+  "kind": "fan",
+  "lang": "en",
+  "ocrDamage": [],
+  "fields": {
+    "manufacturer": {
+      "value": "ebm-papst",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "A4D300-AP12-01",
+      "unit": "",
+      "line": 1
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 2
+    },
+    "voltage": {
+      "value": 400,
+      "unit": "V",
+      "line": 2
+    },
+    "connection": {
+      "value": "Y",
+      "unit": "",
+      "line": 2
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 2
+    },
+    "ipRating": {
+      "value": "IP44",
+      "unit": "",
+      "line": 3
+    },
+    "insulationClass": {
+      "value": "B",
+      "unit": "",
+      "line": 3
+    }
+  },
+  "absent": [
+    "ratedPowerKw",
+    "ratedPowerHp",
+    "current",
+    "cosPhi",
+    "speedRpm",
+    "efficiencyClass",
+    "efficiencyPct",
+    "duty",
+    "serial",
+    "weightKg"
+  ],
+  "checks": [],
+  "notes": "Power, current, speed, serial and weight are bleached away. 'A4D300' encodes 4 poles / 300 mm, not values."
+}

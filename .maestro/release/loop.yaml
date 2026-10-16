@@ -1,0 +1,68 @@
+appId: ${APP_ID}
+name: "RELEASE: Loop impedance - U5, SPEC E4 met with L_max 91.7 m (shown rounded down, D52), measured 1.80 Ω met (typed through the screens on the Release build)"
+tags:
+  - preview-only
+  - release
+---
+# Release build: no seeds or dev links exist; the app starts from its own defaults (no flow here changes a setting).
+- runFlow:
+    file: ../subflows/release-start.yaml
+- tapOn:
+    id: calc-open-loop
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-ze
+      TEXT: "0.35"
+- scrollUntilVisible:
+    element:
+      id: line-chip-1.5
+- tapOn:
+    id: line-chip-1.5
+- scrollUntilVisible:
+    element:
+      id: pe-chip-1.5
+- tapOn:
+    id: pe-chip-1.5
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "25"
+- assertVisible:
+    id: strip-main
+    text: "1.038 Ω"
+- assertVisible:
+    id: strip-verdict
+    text: ".*Zs 1.038 Ω ≤ Zs_max 2.875 Ω.*condition met.*"
+- scrollUntilVisible:
+    element:
+      id: result-lMax
+- assertVisible:
+    id: result-lMax
+    text: "91.7 m"
+- assertVisible:
+    id: result-zsMax
+    text: "2.875 Ω"
+- assertVisible:
+    id: result-ik
+    text: "221.65 A"
+# measured mode
+- scrollUntilVisible:
+    element:
+      id: mode-measured
+    direction: UP
+    centerElement: true
+- tapOn:
+    id: mode-measured
+- scrollUntilVisible:
+    element:
+      id: input-zsMeasured
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-zsMeasured
+      TEXT: "1.80"
+- assertVisible:
+    id: strip-verdict
+    text: ".*Measured Zs 1.8 Ω ≤ 1.916 Ω.*condition met.*"

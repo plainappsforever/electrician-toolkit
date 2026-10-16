@@ -1,0 +1,93 @@
+appId: ${APP_ID}
+name: Coordination with my table - U4 seed, SPEC E3 gives suggestion B13 and C2 not met
+tags:
+  - core
+---
+- runFlow:
+    file: subflows/seed.yaml
+    env:
+      SEED: table
+- tapOn:
+    id: calc-open-coord
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-ib
+      TEXT: "13"
+- tapOn:
+    id: curve-B
+- tapOn:
+    id: rating-16
+- scrollUntilVisible:
+    element:
+      id: pick-table-.*
+- tapOn:
+    id: pick-table-.*
+- tapOn:
+    id: pick-row-1.5
+- assertVisible:
+    id: selected-row
+    text: ".*1.5 mm².*Iz 20 A"
+- scrollUntilVisible:
+    element:
+      id: input-ambientC
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-ambientC
+      TEXT: "35"
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-fGroup
+      TEXT: "0.8"
+- assertVisible:
+    id: strip-main
+    text: "B13"
+- assertVisible:
+    id: strip-verdict
+    text: ".*C2.*not met.*"
+- scrollUntilVisible:
+    element:
+      id: check-coord.c3
+- assertVisible:
+    id: check-coord.c1
+    text: ".*C1.*met.*"
+- assertVisible:
+    id: check-coord.c2
+    text: ".*C2.*16 A.*14.9.*not met.*"
+- assertVisible:
+    id: result-iz
+    text: "14.96 A"
+- scrollUntilVisible:
+    element:
+      id: working-toggle
+- tapOn:
+    id: working-toggle
+- scrollUntilVisible:
+    element:
+      id: responsibility-note
+- assertVisible:
+    id: source-iec60364-4-43-433.1
+# v1.1 F6 (REVIEW_V1 #6): with B13 the user's own device meets C1–C3: the headline is that device, and the suggestion
+# is a secondary line scoped to overload protection
+- scrollUntilVisible:
+    element:
+      id: rating-13
+    direction: UP
+- tapOn:
+    id: rating-13
+- assertVisible:
+    id: strip-main
+    text: "B13"
+- assertVisible:
+    id: strip-verdict
+    text: ".*C1.*met.*"
+- assertVisible: "Your device"
+- scrollUntilVisible:
+    element:
+      id: result-suggestion
+- assertVisible:
+    id: result-suggestion
+    text: "B13"
+- assertVisible: "Smallest preferred rating that also meets C1–C3 \\(overload only\\)"

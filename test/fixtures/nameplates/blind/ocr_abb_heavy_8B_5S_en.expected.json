@@ -1,0 +1,110 @@
+{
+  "fixture": "ocr_abb_heavy_8B_5S_en",
+  "kind": "motor-iec",
+  "lang": "en",
+  "ocrDamage": [
+    "0/O",
+    "1/l/I",
+    "5/S",
+    "8/B",
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "ABB",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "M2BAX 132SMA 2",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "3G1J082345",
+      "unit": "",
+      "line": 2
+    },
+    "voltage": {
+      "value": 400,
+      "unit": "V",
+      "line": 3
+    },
+    "connection": {
+      "value": "Δ",
+      "unit": "",
+      "line": 3
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 3
+    },
+    "ratedPowerKw": {
+      "value": 5.5,
+      "unit": "kW",
+      "line": 3
+    },
+    "speedRpm": {
+      "value": 2915,
+      "unit": "rpm",
+      "line": 3
+    },
+    "current": {
+      "value": 10.5,
+      "unit": "A",
+      "line": 4
+    },
+    "cosPhi": {
+      "value": 0.88,
+      "unit": "",
+      "line": 4
+    },
+    "efficiencyClass": {
+      "value": "IE2",
+      "unit": "",
+      "line": 5
+    },
+    "efficiencyPct": {
+      "value": 87.0,
+      "unit": "%",
+      "line": 5
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 5
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 5
+    },
+    "weightKg": {
+      "value": 38,
+      "unit": "kg",
+      "line": 6
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "duty"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 5.5,
+      "U": 400,
+      "I": 10.5,
+      "cosPhi": 0.88,
+      "eta": 0.87,
+      "assumed": []
+    }
+  ],
+  "notes": "Almost every digit 5/8/0/1 is a letter."
+}

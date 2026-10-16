@@ -1,0 +1,7 @@
+VEM motors GmbH   Wernigerode
+3~Mot.   WE2R 132 M4   Nr. 7724105/0031   2015
+IE2-88,5%   IP55   Isol.Kl. F   S1
+50 Hz   7,5 kW   1455 1/min   cos φ 0,82
+380-420 V Δ / 660-725 V Y
+15,2/8,7 A
+Gewicht 61 kg

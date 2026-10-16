@@ -1,0 +1,73 @@
+# blind set 2, FIRST AND ONLY RUN — 2026-10-15 23:13:33, HEAD a3c1845, nameplate.ts blob 1bb80d0510b3a66954b68bf672c79c5a1aa99522, score blob 92f0fae8bad65e3afe1913771b89755183680064, fixtures blob 922a1d833f003c72b7c0a865f49a4761fbd10e40
+blind-2: 36 plates, 48 ms — text compared EXACTLY (headline)
+field             plates  exact    top1     recall   extra  false+  conn(Δ/Y)  line
+power                34   88.2%   91.2%   92.3%      3       0  -          36/36
+voltage              34   73.5%   97.1%   88.1%      3       0  17/40      60/60
+current              32   78.1%   93.8%   89.1%      2       0  -          49/49
+frequency            33   93.9%   93.9%   94.4%      0       0  -          38/38
+cosPhi               24   95.8%   95.8%   96.4%      0       0  -          28/28
+speed                31   90.3%   90.3%   88.9%      1       0  -          33/33
+efficiency           15   93.3%   93.3%   93.8%      0       0  -          15/15
+ieClass              16   93.8%   93.8%   93.8%      0       0  -          15/15
+ipRating             29  100.0%  100.0%  100.0%      0       0  -          29/29
+insulationClass      33   93.9%   93.9%   93.9%      0       0  -          31/31
+duty                 26  100.0%  100.0%  100.0%      0       1  -          26/26
+phases               34   97.1%   97.1%   97.1%      0       0  -          33/33
+serial               31   77.4%   77.4%   77.4%      7       0  -          24/24
+type                 35   60.0%   62.9%   62.9%      9       0  -          22/22
+ALL                 407   87.2%   90.9%                         1
+ALL folded          407   89.2%   92.9%                         1   (O→0, I/L→1, S→5, B→8 folded: lenient)
+  brook_crompton_exd_t4 insulationClass: want [F] offered []
+  celma_delta_star_own_line_de voltage: want [400, 690] offered [690] best 690
+  celma_delta_star_own_line_de current: want [21.4, 12.4] offered [12.4] best 12.4
+  elektrim_1ph_capacitor voltage: want [230] offered [230, 450] best 230
+  elektrim_sg132_range_ocr power: want [7500W] offered []
+  elektrim_sg132_range_ocr frequency: want [50] offered []
+  elektrim_sg132_range_ocr serial: want [0718432] offered [O7L8432] best O7L8432
+  elektrim_sg132_range_ocr type: want [SG132M4] offered [SGL32M4] best SGL32M4
+  grundfos_mge_integrated_drive speed: want [360, 4000] offered []
+  grundfos_mge_integrated_drive type: want [MGE90LC224FT100H3] offered [MGE90LC224FT100H3, 98303542PC2241] best MGE90LC224FT100H3
+  hammond_dry_transformer_ocr voltage: want [480, 208, 120] offered [480] best 480
+  hammond_dry_transformer_ocr current: want [54.1, 125] offered [54.1] best 54.1
+  hammond_dry_transformer_ocr serial: want [2019340771] offered [2O1934O77L] best 2O1934O77L
+  hammond_dry_transformer_ocr type: want [NMK045KB] offered []
+  koncar_split_lines_ocr voltage: want [400, 690] offered [690] best 690
+  koncar_split_lines_ocr current: want [8.2, 4.7] offered [4.7] best 4.7
+  koncar_split_lines_ocr serial: want [870312] offered [87O3L2] best 87O3L2
+  koncar_split_lines_ocr type: want [5AZ112M4] offered [5AZLL2M4] best 5AZLL2M4
+  lenze_servo_mcs current: want [3.5] offered []
+  lenze_servo_mcs duty: want [] offered [S1]
+  lenze_servo_mcs type: want [MCS09H41RS0B0Z00] offered []
+  leroy_somer_lses_voltage_table type: want [LSES132ST] offered [ASYNCHRONE] best ASYNCHRONE
+  leroy_somer_lsk_dc_motor voltage: want [460] offered [460, 360] best 460
+  leroy_somer_lsk_dc_motor current: want [59] offered [59, 3.9] best 59
+  leroy_somer_lsk_dc_motor type: want [LSK1604M04] offered []
+  mez_mohelnice_ocr_de serial: want [22084175] offered [22O8] best 22O8
+  mez_mohelnice_ocr_de type: want [4AP100L4] offered [4APLOOL4] best 4APLOOL4
+  missing_brook_crompton_painted_over insulationClass: want [F] offered []
+  missing_hanning_torn_label_pump power: want [80W] offered [80W, 12000W, 23000W] best 80W
+  missing_ziehl_abegg_faded_fan voltage: want [230] offered [230, 400] best 230
+  missing_ziehl_abegg_faded_fan type: want [RH40M4EK4F1R] offered [RH40M4EK4F1RPART112897] best RH40M4EK4F1RPART112897
+  rossi_gearmotor_ocr voltage: want [230, 400] offered [400] best 400
+  rossi_gearmotor_ocr current: want [7.45, 4.3] offered [7.45, 4.3, 230] best 7.45
+  rossi_gearmotor_ocr serial: want [2217045003] offered [22L7O45OO332] best 22L7O45OO332
+  rossi_gearmotor_ocr type: want [MR3I100UO2A90LB4] offered []
+  rotor_400hz_aviation speed: want [11400] offered [400] best 400
+  sgb_oil_transformer_dyn5_de voltage: want [20000, 400] offered [400] best 400
+  teco_nema_dropped_spaces power: want [7457W] offered []
+  teco_nema_dropped_spaces voltage: want [230, 460] offered []
+  teco_nema_dropped_spaces current: want [24.6, 12.3] offered []
+  teco_nema_dropped_spaces frequency: want [60] offered []
+  teco_nema_dropped_spaces cosPhi: want [0.85] offered []
+  teco_nema_dropped_spaces speed: want [1765] offered []
+  teco_nema_dropped_spaces efficiency: want [91.7] offered []
+  teco_nema_dropped_spaces type: want [EP0104C] offered []
+  toshiba_nema_premium_ocr power: want [5592.75W] offered [5219.9W] best 5219.9W
+  toshiba_nema_premium_ocr ieClass: want [NEMAPREMIUM] offered []
+  toshiba_nema_premium_ocr serial: want [170482213] offered [L7O4822L3] best L7O4822L3
+  toshiba_nema_premium_ocr type: want [B0074FLF2UMH] offered [B0O74FLF2UMH] best B0O74FLF2UMH
+  us_motors_575v_designB serial: want [Y114572R290] offered [Y11] best Y11
+  weg_w21_brake_motor phases: want [3] offered []
+  weg_w21_brake_motor type: want [W21100L04] offered [W21100L04BRAKE3] best W21100L04BRAKE3
+  ziehl_abegg_fan_p1_watts_de type: want [FN0504DK4FV7P1] offered [FN0504DK4FV7P1ARTNR116336] best FN0504DK4FV7P1ARTNR116336
+

@@ -1,0 +1,17 @@
+appId: ${APP_ID}
+---
+# Dev switches (src/dev/flags.ts): ${QUERY} e.g. "share=off&pick=none". The system share sheet and file pickers cannot be driven by a
+# flow; the real ones are opened by hand once per platform (V1_LOG P6). Returns to the Calculators tab.
+- runFlow:
+    file: link.yaml
+    env:
+      URL: ${APP_SCHEME}://debug/flags?${QUERY}
+- extendedWaitUntil:
+    visible: "flags set"
+    timeout: 20000
+- tapOn:
+    id: debug-continue
+- extendedWaitUntil:
+    visible:
+      id: calculators-screen
+    timeout: 20000

@@ -1,0 +1,58 @@
+{
+  "fixture": "grundfos_cr_pump_only_p2_code",
+  "kind": "pump",
+  "lang": "en",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "GRUNDFOS",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "CR 10-04 B-FJ-A-E-HQQE",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "B 96501886 P2 2338 0001",
+      "unit": "",
+      "line": 2
+    },
+    "flowM3h": {
+      "value": 10,
+      "unit": "m3/h",
+      "line": 3
+    },
+    "headM": {
+      "value": 41.3,
+      "unit": "m",
+      "line": 3
+    },
+    "speedRpm": {
+      "value": 2900,
+      "unit": "rpm",
+      "line": 4
+    }
+  },
+  "absent": [
+    "ratedPowerKw",
+    "ratedPowerHp",
+    "voltage",
+    "current",
+    "frequencyHz",
+    "cosPhi",
+    "efficiencyClass",
+    "efficiencyPct",
+    "ipRating",
+    "insulationClass",
+    "duty",
+    "phases",
+    "connection",
+    "weightKg"
+  ],
+  "checks": [],
+  "notes": "Pump plate only: no electrical data at all. 'P2 2338' in the Model line is the production plant and year/week code, NOT a P2 power of 2338. 25/120 = max pressure (bar) / temperature (°C); PN 25 is a pressure class."
+}

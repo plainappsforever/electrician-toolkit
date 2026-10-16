@@ -1,0 +1,7 @@
+KSB   Frankenthal   Germany
+Type: Amarex KRT K 100-250/74UG-S
+No. 9972455102/000200/01   Year 2022
+Q 90 rn³/h   H 14.5 m
+3~ 400 V   50 Hz   I 15.0 A   n 1450 1/min
+P1 8.6 kW   P2 7.4 kW   cos φ 0.83
+IP68   Th.Cl. H   S1   165 kg   max. submergence 20 m

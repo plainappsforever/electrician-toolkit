@@ -1,0 +1,161 @@
+{
+ "fixture": "teco_nema_dropped_spaces",
+ "kind": "motor-nema",
+ "lang": "en",
+ "ocrDamage": [
+  "dropped-spaces",
+  "glued-unit"
+ ],
+ "fields": {
+  "manufacturer": {
+   "value": "Teco-Westinghouse",
+   "unit": "",
+   "line": 0
+  },
+  "efficiencyClass": {
+   "value": "NEMA Premium",
+   "unit": "",
+   "line": 0
+  },
+  "type": {
+   "value": "EP0104C",
+   "unit": "",
+   "line": 1
+  },
+  "serial": {
+   "value": "TW2211874",
+   "unit": "",
+   "line": 1
+  },
+  "ratedPowerHp": {
+   "value": 10,
+   "unit": "hp",
+   "line": 2
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 2
+  },
+  "frequencyHz": {
+   "value": 60,
+   "unit": "Hz",
+   "line": 2
+  },
+  "speedRpm": {
+   "value": 1765,
+   "unit": "rpm",
+   "line": 2
+  },
+  "voltage": {
+   "value": [
+    230,
+    460
+   ],
+   "unit": "V",
+   "line": [
+    3,
+    3
+   ]
+  },
+  "current": {
+   "value": [
+    24.6,
+    12.3
+   ],
+   "unit": "A",
+   "line": [
+    3,
+    3
+   ]
+  },
+  "serviceFactor": {
+   "value": 1.15,
+   "unit": "",
+   "line": 4
+  },
+  "serviceFactorCurrent": {
+   "value": [
+    28.3,
+    14.1
+   ],
+   "unit": "A",
+   "line": [
+    4,
+    4
+   ]
+  },
+  "codeLetter": {
+   "value": "H",
+   "unit": "",
+   "line": 4
+  },
+  "nemaDesign": {
+   "value": "B",
+   "unit": "",
+   "line": 4
+  },
+  "frame": {
+   "value": "215T",
+   "unit": "",
+   "line": 5
+  },
+  "enclosure": {
+   "value": "ODP",
+   "unit": "",
+   "line": 5
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 5
+  },
+  "efficiencyPct": {
+   "value": 91.7,
+   "unit": "%",
+   "line": 6
+  },
+  "cosPhi": {
+   "value": 0.85,
+   "unit": "",
+   "line": 6
+  },
+  "ambientC": {
+   "value": 40,
+   "unit": "°C",
+   "line": 6
+  },
+  "duty": {
+   "value": "CONT",
+   "unit": "",
+   "line": 6
+  }
+ },
+ "absent": [
+  "ratedPowerKw",
+  "ipRating",
+  "connection",
+  "weightKg"
+ ],
+ "checks": [
+  {
+   "kind": "3ph",
+   "P_hp": 10,
+   "U": 230,
+   "I": 24.6,
+   "cosPhi": 0.85,
+   "eta": 0.917,
+   "assumed": []
+  },
+  {
+   "kind": "3ph",
+   "P_hp": 10,
+   "U": 460,
+   "I": 12.3,
+   "cosPhi": 0.85,
+   "eta": 0.917,
+   "assumed": []
+  }
+ ],
+ "notes": "OCR dropped almost every space: 'MODELEP0104C' = MODEL EP0104C, 'HP10', 'SFA28.3/14.1' = SF amps (not FLA), 'NEMANOMEFF91.7', 'PF85' = 0.85, 'AMB40C'. 'MAX-E1' is a product line, not IE1."
+}

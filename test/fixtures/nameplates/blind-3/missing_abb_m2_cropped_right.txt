@@ -1,0 +1,8 @@
+ABB Motors   3~ moto
+M2AA 90L 4
+Prod. code 3GAA0923
+Ins.cl. F   IP
+V        Hz    kW    r/
+400 D    50    1,5   14
+690 Y    50    1,5   14
+IE2  82,8%(1

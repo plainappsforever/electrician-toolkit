@@ -1,0 +1,6 @@
+BLOCK   Verden
+1-PHASE CONTROL TRANSFORMER   Type STE 1000/23
+PRI 400 V   SEC 230 V   1000 VA   50/60 Hz
+I1 2.5 A   I2 4.35 A   uk 4.5 %
+ta 40 °C   Insulation class B   IP00
+No. 22-104577   9.6 kg

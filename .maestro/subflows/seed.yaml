@@ -1,0 +1,18 @@
+appId: ${APP_ID}
+---
+# Absolute precondition: app running, database and settings replaced by the named seed (${SEED}), language = device language,
+# Calculators tab showing.
+- runFlow: launch.yaml
+- runFlow:
+    file: link.yaml
+    env:
+      URL: ${APP_SCHEME}://debug/seed?set=${SEED}
+- extendedWaitUntil:
+    visible: "seeded"
+    timeout: 120000
+- tapOn:
+    id: debug-continue
+- extendedWaitUntil:
+    visible:
+      id: calculators-screen
+    timeout: 20000

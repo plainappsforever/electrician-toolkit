@@ -1,0 +1,14 @@
+appId: ${APP_ID}
+name: Restore speed - the 56 MB many backup is validated and restored on this platform (A13, D57)
+tags:
+  - slow
+---
+- runFlow: subflows/launch.yaml
+- runFlow:
+    file: subflows/link.yaml
+    env:
+      URL: ${APP_SCHEME}://debug/restore-timing
+- extendedWaitUntil:
+    visible: "RESTORE .*"
+    timeout: 900000
+- assertVisible: "RESTORE OK.*"

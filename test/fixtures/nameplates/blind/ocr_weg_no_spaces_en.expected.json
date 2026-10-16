@@ -1,0 +1,148 @@
+{
+  "fixture": "ocr_weg_no_spaces_en",
+  "kind": "motor-iec",
+  "lang": "en",
+  "ocrDamage": [
+    "0/O",
+    "1/l/I",
+    "5/S",
+    "W/VV",
+    "Δ->D",
+    "decimal-comma",
+    "dropped-spaces",
+    "glued-unit"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "WEG",
+      "unit": "",
+      "line": 0
+    },
+    "efficiencyClass": {
+      "value": "IE2",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 1
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 1
+    },
+    "ratedPowerKw": {
+      "value": 3,
+      "unit": "kW",
+      "line": 2
+    },
+    "ratedPowerHp": {
+      "value": 4,
+      "unit": "hp",
+      "line": 2
+    },
+    "speedRpm": {
+      "value": 1440,
+      "unit": "rpm",
+      "line": 2
+    },
+    "serviceFactor": {
+      "value": 1.0,
+      "unit": "",
+      "line": 2
+    },
+    "voltage": {
+      "value": [
+        400,
+        690
+      ],
+      "unit": "V",
+      "line": [
+        3,
+        3
+      ]
+    },
+    "current": {
+      "value": [
+        6.37,
+        3.69
+      ],
+      "unit": "A",
+      "line": [
+        3,
+        3
+      ]
+    },
+    "cosPhi": {
+      "value": 0.8,
+      "unit": "",
+      "line": 3
+    },
+    "efficiencyPct": {
+      "value": 85.5,
+      "unit": "%",
+      "line": 4
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 4
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 5
+    },
+    "ambientC": {
+      "value": 40,
+      "unit": "°C",
+      "line": 5
+    },
+    "connection": {
+      "value": "Δ/Y",
+      "unit": "",
+      "line": 5
+    },
+    "serial": {
+      "value": "1046789123",
+      "unit": "",
+      "line": 6
+    },
+    "weightKg": {
+      "value": 27,
+      "unit": "kg",
+      "line": 6
+    }
+  },
+  "absent": [
+    "type"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 3,
+      "U": 400,
+      "I": 6.37,
+      "cosPhi": 0.8,
+      "eta": 0.855,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 3,
+      "U": 690,
+      "I": 3.69,
+      "cosPhi": 0.8,
+      "eta": 0.855,
+      "assumed": []
+    }
+  ],
+  "notes": "'SF' glued after the speed; 'ΔT80K' is a temperature rise."
+}

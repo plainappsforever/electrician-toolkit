@@ -1,0 +1,110 @@
+{
+  "fixture": "compressor_1ph_run_start_caps_mu_de",
+  "kind": "motor-iec",
+  "lang": "de",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "ATB",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 1,
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "SEG 90L-2",
+      "unit": "",
+      "line": 2
+    },
+    "serial": {
+      "value": "7712345",
+      "unit": "",
+      "line": 2
+    },
+    "year": {
+      "value": 2021,
+      "unit": "",
+      "line": 2
+    },
+    "voltage": {
+      "value": 230,
+      "unit": "V",
+      "line": 3
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 3
+    },
+    "current": {
+      "value": 9.8,
+      "unit": "A",
+      "line": 3
+    },
+    "ratedPowerKw": {
+      "value": 1.5,
+      "unit": "kW",
+      "line": 4
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 4
+    },
+    "cosPhi": {
+      "value": 0.96,
+      "unit": "",
+      "line": 4
+    },
+    "speedRpm": {
+      "value": 2850,
+      "unit": "rpm",
+      "line": 4
+    },
+    "capacitorUf": {
+      "value": 30,
+      "unit": "µF",
+      "line": 5
+    },
+    "ipRating": {
+      "value": "IP54",
+      "unit": "",
+      "line": 7
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 7
+    },
+    "weightKg": {
+      "value": 17,
+      "unit": "kg",
+      "line": 7
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "efficiencyClass",
+    "efficiencyPct",
+    "connection"
+  ],
+  "checks": [
+    {
+      "kind": "1ph",
+      "P_kW": 1.5,
+      "U": 230,
+      "I": 9.8,
+      "cosPhi": 0.96,
+      "eta": 0.7,
+      "assumed": [
+        "eta"
+      ]
+    }
+  ],
+  "notes": "Two capacitors: capacitorUf = the run capacitor (Betriebskondensator) 30 μF, written with Greek mu U+03BC; the start capacitor 100 µF (micro sign U+00B5) is a trap, as are 450 V / 330 V capacitor voltages. 250 l/min is air delivery ('min' is not rpm here)."
+}

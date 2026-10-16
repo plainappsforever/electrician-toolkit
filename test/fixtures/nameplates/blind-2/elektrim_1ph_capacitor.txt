@@ -1,0 +1,6 @@
+ELEKTRIM
+1~ Mot.   Sh 80-4C   No. 2208117
+0.75 kW   230 V   50 Hz   5.3 A
+1400 r/min   cos φ 0.93   S1
+Cr 20 µF   450 V~
+IP54   Ins. cl. F   9.6 kg

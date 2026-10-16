@@ -1,0 +1,68 @@
+appId: ${APP_ID}
+name: "RELEASE: Quick voltage drop - U1, SPEC E1 typed through the screen gives 3.76 % exceeds 3 % and the method note (typed through the screens on the Release build)"
+tags:
+  - preview-only
+  - release
+---
+# Release build: no seeds or dev links exist; the app starts from its own defaults (no flow here changes a setting).
+# A9 tap count (besides typing): open the calculator (1) and pick the 1.5 mm² chip (2). Focusing a field to type is part
+# of typing: voltage, current and length = 3 more. Total 5 touches, the spec allows 6 besides typing.
+- runFlow:
+    file: ../subflows/release-start.yaml
+- tapOn:
+    id: calc-open-vdrop
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-voltage
+      TEXT: "230"
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-current
+      TEXT: "16"
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "18"
+- scrollUntilVisible:
+    element:
+      id: size-chip-1.5
+- tapOn:
+    id: size-chip-1.5
+- assertVisible:
+    id: strip-main
+    text: "3.76 %"
+- assertVisible:
+    id: strip-verdict
+    text: ".*exceeds the selected limit 3 %.*"
+- scrollUntilVisible:
+    element:
+      id: warning-method.disagree
+- assertVisible:
+    id: warning-method.disagree
+    text: ".*M3.*2.99 %.*within.*"
+- assertVisible:
+    id: result-u
+    text: "8.64 V"
+- assertVisible:
+    id: result-uEnd
+    text: "221.36 V"
+- assertVisible:
+    id: result-lMax
+    text: "14.3 m"
+- assertVisible:
+    id: result-minSize
+    text: "2.5 mm²"
+# The working: formula lines, assumptions, sources, responsibility note
+- tapOn:
+    id: working-toggle
+- scrollUntilVisible:
+    element:
+      id: responsibility-note
+- assertVisible:
+    id: source-iec60364-5-52-G
+- assertVisible:
+    id: responsibility-note
+    text: "Calculation aid.*"

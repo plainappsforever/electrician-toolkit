@@ -1,0 +1,5 @@
+Wilo
+Typ Yonos PICO 25/1-6
+1~230 V   50/60 Hz   P1 4-40 W
+IPX4D   TF 110   EEI ≤ 0,20
+PN 10   Nr. 4164019

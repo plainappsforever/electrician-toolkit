@@ -1,0 +1,30 @@
+{
+  "id": "E8",
+  "spec": "SPEC §8 E8 — 3~ 400 V, 50 kW, cos φ 0.9, 80 m, Cu, M1, limit 3 %",
+  "cases": [
+    {
+      "name": "16 mm² (exceeds) → minimum section 25 mm²",
+      "kind": "vdrop",
+      "input": { "system": "ac3", "voltage": 400, "power": 50000, "cosPhi": 0.9, "length": { "value": 80, "unit": "m" }, "material": "cu", "size": { "value": 16, "unit": "mm2" }, "method": "M1", "limitPercent": 3 },
+      "expected": {
+        "values.current": { "printed": "80.1875373874" },
+        "values.deltaUPercent": { "printed": "3.612489" },
+        "texts.verdict": "exceeds",
+        "values.minSize": 25,
+        "values.minSizePercent": { "printed": "2.346864" }
+      }
+    },
+    {
+      "name": "25 mm²",
+      "kind": "vdrop",
+      "input": { "system": "ac3", "voltage": 400, "power": 50000, "cosPhi": 0.9, "length": { "value": 80, "unit": "m" }, "material": "cu", "size": { "value": 25, "unit": "mm2" }, "method": "M1", "limitPercent": 3 },
+      "expected": { "values.deltaUPercent": { "printed": "2.346864" }, "texts.verdict": "within" }
+    },
+    {
+      "name": "2 × 25 mm² parallel",
+      "kind": "vdrop",
+      "input": { "system": "ac3", "voltage": 400, "power": 50000, "cosPhi": 0.9, "length": { "value": 80, "unit": "m" }, "material": "cu", "size": { "value": 25, "unit": "mm2" }, "parallel": 2, "method": "M1", "limitPercent": 3 },
+      "expected": { "values.deltaUPercent": { "printed": "1.1734322105" } }
+    }
+  ]
+}

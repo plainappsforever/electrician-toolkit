@@ -1,0 +1,6 @@
+ROTOR B.V.   Eibergen - Holland
+3 PH  IND. MOTOR   TYPE 9RX 90 L4-400
+SER. 21-04473
+200 V Y   400 Hz   2.2 kW   8.7 A
+11 400 r/min   PF 0.85   S1
+INS. CL. F   IP54   AMB 40 °C   14 kg

@@ -1,0 +1,6 @@
+Michael Riedel Transformatorenbau GmbH
+Steuertransformator 1~   Typ RSTN 250
+Pri 400 V   Sek 230 V   250 VA   50/60 Hz
+I1 0,63 A   I2 1,09 A   ta 40 °C   Iso.-Kl. B
+uk 6 %   IP00   3,4 kg
+Nr. 2304-118764   2023   EN 61558-2-2

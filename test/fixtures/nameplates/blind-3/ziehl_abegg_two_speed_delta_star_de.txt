@@ -1,0 +1,9 @@
+ZIEHL-ABEGG
+Typ FN063-VDK.4I.V7P1
+Art.-Nr. 140121
+Nr. 12345678   2023
+3~ 400 V   50 Hz
+Δ   P1 770 W   1,35 A   1330 min-1
+Y   P1 510 W   0,85 A   1050 min-1
+IP54   Isol.-Kl. F   tR 60 °C
+33 kg

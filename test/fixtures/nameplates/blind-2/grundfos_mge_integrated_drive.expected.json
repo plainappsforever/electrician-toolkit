@@ -1,0 +1,141 @@
+{
+ "fixture": "grundfos_mge_integrated_drive",
+ "kind": "motor-fc",
+ "lang": "en",
+ "ocrDamage": [],
+ "fields": {
+  "manufacturer": {
+   "value": "Grundfos",
+   "unit": "",
+   "line": 0
+  },
+  "type": {
+   "value": "MGE 90LC2-24FT100-H3",
+   "unit": "",
+   "line": 1
+  },
+  "ipRating": {
+   "value": "IP55",
+   "unit": "",
+   "line": 1
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 1
+  },
+  "serial": {
+   "value": "0012345678",
+   "unit": "",
+   "line": 2
+  },
+  "ratedPowerKw": {
+   "value": 1.5,
+   "unit": "kW",
+   "line": 3
+  },
+  "inputPowerKw": {
+   "value": 1.68,
+   "unit": "kW",
+   "line": 3
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 3
+  },
+  "voltage": {
+   "value": [
+    380,
+    500
+   ],
+   "unit": "V",
+   "line": [
+    3,
+    3
+   ]
+  },
+  "frequencyHz": {
+   "value": [
+    50,
+    60
+   ],
+   "unit": "Hz",
+   "line": [
+    3,
+    3
+   ]
+  },
+  "current": {
+   "value": [
+    2.75,
+    2.1
+   ],
+   "unit": "A",
+   "line": [
+    4,
+    4
+   ]
+  },
+  "cosPhi": {
+   "value": 0.93,
+   "unit": "",
+   "line": 4
+  },
+  "speedRpm": {
+   "value": [
+    360,
+    4000
+   ],
+   "unit": "rpm",
+   "line": [
+    4,
+    4
+   ]
+  },
+  "efficiencyClass": {
+   "value": "IE5",
+   "unit": "",
+   "line": 5
+  },
+  "efficiencyPct": {
+   "value": 89.3,
+   "unit": "%",
+   "line": 5
+  },
+  "efficiencyLoadPct": {
+   "value": 100,
+   "unit": "%",
+   "line": 5
+  },
+  "weightKg": {
+   "value": 15,
+   "unit": "kg",
+   "line": 5
+  }
+ },
+ "absent": [
+  "ratedPowerHp",
+  "duty",
+  "connection"
+ ],
+ "checks": [
+  {
+   "kind": "3ph-input",
+   "P_kW": 1.68,
+   "U": 380,
+   "I": 2.75,
+   "cosPhi": 0.93,
+   "assumed": []
+  },
+  {
+   "kind": "3ph-input",
+   "P_kW": 1.68,
+   "U": 500,
+   "I": 2.1,
+   "cosPhi": 0.93,
+   "assumed": []
+  }
+ ],
+ "notes": "Motor with integrated frequency converter (Grundfos MGE). P2 1.5 kW is rated output, P1 1.68 kW input. Supply range 3x380-500 V with a current range 2.75-2.10 A (mains current, high current at low voltage); speed range 360-4000 min-1 is two entries. 'I1/1' label means full-load current. 'Model' is a product number, 'P.c.' a production code; neither is type or serial."
+}

@@ -1,0 +1,7 @@
+DEMAG
+3~Mot.  KBA 100 B 4   Nr. 40712233
+400 V Y  50 Hz  IP54  Isol.Kl. F
+S3-40% ED  3,3 kW  7,9 A  cos φ 0,78  1380 1/min
+S1  2,6 kW  6,6 A  cos φ 0,74  1410 1/min
+Bremse 180 V DC   Mbr 30 Nm
+42 kg

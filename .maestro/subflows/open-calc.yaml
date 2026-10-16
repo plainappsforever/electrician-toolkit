@@ -1,0 +1,9 @@
+appId: ${APP_ID}
+---
+# From a pushed screen back to the Calculators tab, then open calculator ${KIND}.
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: tab-calculators
+- tapOn:
+    id: calc-open-${KIND}

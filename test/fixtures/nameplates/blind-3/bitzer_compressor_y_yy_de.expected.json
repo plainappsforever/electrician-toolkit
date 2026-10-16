@@ -1,0 +1,87 @@
+{
+  "fixture": "bitzer_compressor_y_yy_de",
+  "kind": "motor-iec",
+  "lang": "de",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "BITZER",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "4FES-5Y-40S",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "1234567890",
+      "unit": "",
+      "line": 2
+    },
+    "year": {
+      "value": 2022,
+      "unit": "",
+      "line": 2
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 3
+    },
+    "voltage": {
+      "value": [
+        380,
+        420
+      ],
+      "unit": "V",
+      "line": [
+        3,
+        3
+      ]
+    },
+    "connection": {
+      "value": "Y/YY",
+      "unit": "",
+      "line": 3
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 3
+    },
+    "current": {
+      "value": 9.0,
+      "unit": "A",
+      "line": 4
+    },
+    "speedRpm": {
+      "value": 1450,
+      "unit": "rpm",
+      "line": 6
+    },
+    "ipRating": {
+      "value": "IP54",
+      "unit": "",
+      "line": 8
+    },
+    "weightKg": {
+      "value": 72,
+      "unit": "kg",
+      "line": 8
+    }
+  },
+  "absent": [
+    "ratedPowerKw",
+    "ratedPowerHp",
+    "cosPhi",
+    "efficiencyClass",
+    "efficiencyPct",
+    "insulationClass",
+    "duty"
+  ],
+  "checks": [],
+  "notes": "Part-winding start Y/YY (not Δ/Y). current = max. Betriebsstrom 9,0 A; Anlaufstrom 34,6 / 56,8 A are locked-rotor currents (traps). 18,1 m³/h is the compressor displacement, not a pump flow. 19/28 bar are pressures. '5Y' in the type is not a connection. No power printed."
+}

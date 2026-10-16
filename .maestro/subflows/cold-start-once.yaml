@@ -1,0 +1,10 @@
+appId: ${APP_ID}
+---
+# One cold start: the app is stopped, launched, and we wait for the Calculators screen (testID calculators-screen).
+- stopApp
+- launchApp:
+    stopApp: true
+- extendedWaitUntil:
+    visible:
+      id: calculators-screen
+    timeout: 60000

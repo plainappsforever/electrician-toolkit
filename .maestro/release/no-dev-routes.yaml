@@ -1,0 +1,31 @@
+appId: ${APP_ID}
+name: "RELEASE dev routes - a debug link does nothing in a Release build (D70): no seed is loaded, the app stays on the Calculators tab"
+tags:
+  - preview-only
+  - release
+---
+- runFlow: ../subflows/release-start.yaml
+- openLink: ${APP_SCHEME}://debug/seed?set=many
+# iOS asks "Open in Electrician Toolkit Preview?" for every link; Android opens the app directly
+- runFlow:
+    when:
+      platform: iOS
+    commands:
+      - extendedWaitUntil:
+          visible: "Open"
+          timeout: 8000
+          optional: true
+      - runFlow:
+          when:
+            visible: "Open"
+          commands:
+            - tapOn: "Open"
+- extendedWaitUntil:
+    visible:
+      id: calculators-screen
+    timeout: 20000
+- assertNotVisible: "seeded"
+- assertNotVisible: ".*seed many.*"
+- tapOn:
+    id: tab-projects
+- assertNotVisible: "Project 200.*"

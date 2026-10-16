@@ -1,0 +1,192 @@
+{
+  "fixture": "siemens_1le1_tabular_de",
+  "kind": "motor-iec",
+  "lang": "de",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "SIEMENS",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "1LE1003-1BB22-2AA4",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "E0907/1234567 01 001",
+      "unit": "",
+      "line": 2
+    },
+    "weightKg": {
+      "value": 38,
+      "unit": "kg",
+      "line": 3
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 3
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 3
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 3
+    },
+    "efficiencyClass": {
+      "value": "IE3",
+      "unit": "",
+      "line": 4
+    },
+    "voltage": {
+      "value": [
+        400,
+        690,
+        460
+      ],
+      "unit": "V",
+      "line": [
+        6,
+        7,
+        8
+      ]
+    },
+    "connection": {
+      "value": [
+        "Δ",
+        "Y",
+        "Δ"
+      ],
+      "unit": "",
+      "line": [
+        6,
+        7,
+        8
+      ]
+    },
+    "frequencyHz": {
+      "value": [
+        50,
+        50,
+        60
+      ],
+      "unit": "Hz",
+      "line": [
+        6,
+        7,
+        8
+      ]
+    },
+    "current": {
+      "value": [
+        10.7,
+        6.2,
+        10.4
+      ],
+      "unit": "A",
+      "line": [
+        6,
+        7,
+        8
+      ]
+    },
+    "ratedPowerKw": {
+      "value": [
+        5.5,
+        5.5,
+        6.3
+      ],
+      "unit": "kW",
+      "line": [
+        6,
+        7,
+        8
+      ]
+    },
+    "cosPhi": {
+      "value": [
+        0.83,
+        0.83,
+        0.84
+      ],
+      "unit": "",
+      "line": [
+        6,
+        7,
+        8
+      ]
+    },
+    "speedRpm": {
+      "value": [
+        1460,
+        1460,
+        1765
+      ],
+      "unit": "rpm",
+      "line": [
+        6,
+        7,
+        8
+      ]
+    },
+    "efficiencyPct": {
+      "value": [
+        89.6,
+        89.6,
+        90.2
+      ],
+      "unit": "%",
+      "line": [
+        6,
+        7,
+        8
+      ]
+    }
+  },
+  "absent": [
+    "ratedPowerHp"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 5.5,
+      "U": 400,
+      "I": 10.7,
+      "cosPhi": 0.83,
+      "eta": 0.896,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 5.5,
+      "U": 690,
+      "I": 6.2,
+      "cosPhi": 0.83,
+      "eta": 0.896,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 6.3,
+      "U": 460,
+      "I": 10.4,
+      "cosPhi": 0.84,
+      "eta": 0.902,
+      "assumed": []
+    }
+  ],
+  "notes": "Header row carries units; 'DE'/'NDE' are bearing ends, not Δ."
+}

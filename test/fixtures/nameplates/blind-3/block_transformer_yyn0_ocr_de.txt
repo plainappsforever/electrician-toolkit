@@ -1,0 +1,9 @@
+BLOCK   Transformatoren-Elektronik GmbH
+Drehstrom-Trenntransformator
+Typ DTN lOOOO   Nr. 4O71234   2O19
+Pri 3x4OO V   I1 l4,4 A
+Sek 3x4OO/23O V   I2 l4,4 A
+lO kVA   5O Hz   YynO
+uk 3,9 %   ta 4O °C / B   IP0O
+Isol.-Kl. B   Gewicht 6B kg
+EN 61558-2-4

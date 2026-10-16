@@ -1,0 +1,8 @@
+Danfoss Bauer GmbH   D-73734 Esslingen
+Typ BG20-11/D09LA4-TF-S/E003B9
+Nr. 1837452-1   2023
+3~Mot.   50 Hz   IP65   Isol.-Kl. F   S1
+0,75 kW   1385 1/min   cos φ 0,74   IE3
+Δ/Y 230/400 V   3,35/1,93 A
+i = 27,92   n2 = 50 1/min   M2 = 130 Nm
+Bremse 205 V=   MBr 10 Nm   Gewicht 24 kg

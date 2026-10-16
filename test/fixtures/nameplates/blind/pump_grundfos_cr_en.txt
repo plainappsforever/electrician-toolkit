@@ -1,0 +1,8 @@
+GRUNDFOS
+Type: CR 10-4 A-FJ-A-E-HQQE
+Model: A 96501234 P2 1924 0001
+Q 10 m³/h   H 38.4 m   n 2900 min-1
+3x400 V   4.60 A   50 Hz   P2 2.2 kW
+p/t max: 16 bar / 120 °C   PN 16
+IP55   Cl. F   IE3   η 86.7%   MEI ≥ 0.70
+Made in Denmark   38 kg

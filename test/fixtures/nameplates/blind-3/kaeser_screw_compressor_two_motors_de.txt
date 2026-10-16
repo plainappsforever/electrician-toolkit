@@ -1,0 +1,8 @@
+KAESER KOMPRESSOREN
+Schraubenkompressor   Typ SK 22
+Masch.-Nr. 1234   Baujahr 2021
+max. Betriebsüberdruck 8 bar   Liefermenge 2,05 m³/min
+Antriebsmotor 3~   IE3   11 kW   400/690 V Δ/Y   20,8/12,0 A   50 Hz   2945 min-1   cos φ 0,87   IP55
+Lüftermotor   0,25 kW   230/400 V Δ/Y   1,30/0,75 A   50 Hz   1350 min-1   IP54
+Vorsicherung max. 35 A gL
+Gewicht 380 kg

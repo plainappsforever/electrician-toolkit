@@ -1,0 +1,28 @@
+# Flows share one simulator and one database, so run them sequentially in this order (by flow name).
+# Every flow starts with subflows/seed.yaml or a debug link (dev builds only) so it never depends on another flow.
+flows:
+  - "*"
+executionOrder:
+  continueOnFailure: true
+  flowsOrder:
+    - "Smoke - four tabs, settings, language and theme persist"
+    - "Quick voltage drop - U1, SPEC E1 typed through the screen gives 3.76 % exceeds 3 % and the method note"
+    - "Save to project - U2, E1 saved to a new project and circuit appears in Projects and is shown frozen"
+    - "Coordination with my table - U4 seed, SPEC E3 gives suggestion B13 and C2 not met"
+    - "Own table typed - U4, a table with source note and two typed rows is used for E3 and gives B13"
+    - "Loop impedance - U5, SPEC E4 met with L_max 91.7 m (shown rounded down, D52), measured 1.80 Ω met"
+    - "Settings German - U7, Spannungsfall, input 1,5 accepted, results with decimal comma"
+    - "Display rule - D52 on the screens - E4 L_max 91.7 m, E1 at 14.39 m shows 3.01 % exceeds 3 %, E4 at 91.8 m shows Zs 2.876 Ω > Zs_max 2.875 Ω, German 91,7 m"
+    - "Examples E1-E8 typed through the screens reproduce the oracle values (E1 and E4 are in their own flows, E3 in coord-table)"
+    - "More screens - About shows the responsibility note, Sources lists licence status, Backup shows what is stored, Settings changes the default unit and limit"
+    - "Table CSV import - A12, a bad line is refused with its line number and nothing is imported; a good file with decimal comma and semicolon is imported"
+    - "History and favourites - a calculation left on the screen appears under Recent and reopens with its inputs; the star moves a calculator to the top"
+    - "Projects - seed e1 shows three frozen calculations; duplicate, archive and delete with the counts in the confirmation"
+    - "Backup and restore - U6, A6, back up, wipe, restore through the same screens; safety copy and Undo last restore; foreign, newer and broken files are refused"
+    - "Table CSV from a file - A12, the picker path with a bad line, an ambiguous number and a German file (BOM, semicolon, decimal comma, trailing separator)"
+    - "Report PDF - U3, A7, A13, a calculation and a whole project become PDFs (English and German), the project CSV and the all-projects CSV are written"
+    - "PDF probe - the report documents (EN/DE, A4/Letter, one calculation and 30) are written for scripts/verify-pdfs.mjs"
+    - "Logo - Settings accepts a PNG, refuses a file above 512 KB and a text file named .png, and removes the logo"
+    - "Backup and restore of the big database - A13, D57, 10 000 calculations in a 57.9 MB file, back up, restore over the same data with the safety copy, read the time"
+    - "Device probes - foreign keys, triggers, write queue, history order, search, Intl and the display rule pass on this platform's real SQLite and JS engine"
+    - "Restore speed - the 56 MB many backup is validated and restored on this platform (A13, D57)"

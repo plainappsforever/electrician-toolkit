@@ -1,0 +1,108 @@
+{
+  "fixture": "ksb_etaline_p2_only_ocr",
+  "kind": "pump",
+  "lang": "en",
+  "ocrDamage": [
+    "rn/m",
+    "1/l/I",
+    "0/O",
+    "W/VV",
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "KSB",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "Etaline GN 065-160/754 G11",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "9971234567/000100",
+      "unit": "",
+      "line": 2
+    },
+    "year": {
+      "value": 2022,
+      "unit": "",
+      "line": 2
+    },
+    "flowM3h": {
+      "value": 50,
+      "unit": "m3/h",
+      "line": 3
+    },
+    "headM": {
+      "value": 31,
+      "unit": "m",
+      "line": 3
+    },
+    "speedRpm": {
+      "value": 2900,
+      "unit": "rpm",
+      "line": 3
+    },
+    "ratedPowerKw": {
+      "value": 7.5,
+      "unit": "kW",
+      "line": 4
+    },
+    "voltage": {
+      "value": 400,
+      "unit": "V",
+      "line": 4
+    },
+    "connection": {
+      "value": "Δ",
+      "unit": "",
+      "line": 4
+    },
+    "current": {
+      "value": 14.0,
+      "unit": "A",
+      "line": 4
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 4
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 5
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 5
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "cosPhi",
+    "efficiencyClass",
+    "efficiencyPct",
+    "duty",
+    "phases",
+    "weightKg"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 7.5,
+      "U": 400,
+      "I": 14.0,
+      "cosPhi": 0.86,
+      "eta": 0.906,
+      "assumed": [
+        "cosPhi",
+        "eta"
+      ]
+    }
+  ],
+  "notes": "'H 3l m' = 31 m head, 'n 29OO l/min' = 2900 rpm, 'kVV' = kW, 'l4,O A' = 14.0 A. '754' in the type is the impeller diameter code, not a power."
+}

@@ -1,0 +1,80 @@
+{
+ "fixture": "missing_hanning_torn_label_pump",
+ "kind": "pump",
+ "lang": "de",
+ "ocrDamage": [
+  "decimal-comma"
+ ],
+ "fields": {
+  "manufacturer": {
+   "value": "Hanning",
+   "unit": "",
+   "line": 0
+  },
+  "phases": {
+   "value": 1,
+   "unit": "",
+   "line": 2
+  },
+  "voltage": {
+   "value": 230,
+   "unit": "V",
+   "line": 2
+  },
+  "frequencyHz": {
+   "value": 50,
+   "unit": "Hz",
+   "line": 2
+  },
+  "inputPowerKw": {
+   "value": 80,
+   "unit": "W",
+   "line": 2
+  },
+  "current": {
+   "value": 0.45,
+   "unit": "A",
+   "line": 2
+  },
+  "ipRating": {
+   "value": "IPX4",
+   "unit": "",
+   "line": 3
+  },
+  "insulationClass": {
+   "value": "B",
+   "unit": "",
+   "line": 3
+  }
+ },
+ "absent": [
+  "ratedPowerKw",
+  "ratedPowerHp",
+  "cosPhi",
+  "speedRpm",
+  "efficiencyClass",
+  "efficiencyPct",
+  "duty",
+  "serial",
+  "type",
+  "connection",
+  "weightKg",
+  "flowM3h",
+  "headM"
+ ],
+ "checks": [
+  {
+   "kind": "1ph",
+   "P_kW": 0.08,
+   "U": 230,
+   "I": 0.45,
+   "cosPhi": 0.77,
+   "eta": 1.0,
+   "assumed": [
+    "cosPhi",
+    "eta"
+   ]
+  }
+ ],
+ "notes": "Drain-pump motor with the type line torn off. 'KW 12/23' is the production calendar week (Kalenderwoche), NOT kilowatts. P1 80 W is input power; check uses the 1-phase formula with eta = 1 because P1 is already input. No Q/H, no speed, no serial."
+}

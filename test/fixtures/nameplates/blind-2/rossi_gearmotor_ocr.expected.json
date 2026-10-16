@@ -1,0 +1,145 @@
+{
+ "fixture": "rossi_gearmotor_ocr",
+ "kind": "gearmotor",
+ "lang": "en",
+ "ocrDamage": [
+  "0/O",
+  "1/l/I",
+  "Δ->A",
+  "decimal-comma",
+  "glued-unit"
+ ],
+ "fields": {
+  "manufacturer": {
+   "value": "Rossi",
+   "unit": "",
+   "line": 0
+  },
+  "type": {
+   "value": "MR 3I 100 UO2A - 90LB 4",
+   "unit": "",
+   "line": 1
+  },
+  "gearRatio": {
+   "value": 45.2,
+   "unit": "",
+   "line": 2
+  },
+  "outputSpeedRpm": {
+   "value": 31,
+   "unit": "rpm",
+   "line": 2
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 3
+  },
+  "voltage": {
+   "value": [
+    230,
+    400
+   ],
+   "unit": "V",
+   "line": [
+    3,
+    3
+   ]
+  },
+  "connection": {
+   "value": "Δ/Y",
+   "unit": "",
+   "line": 3
+  },
+  "frequencyHz": {
+   "value": 50,
+   "unit": "Hz",
+   "line": 3
+  },
+  "ratedPowerKw": {
+   "value": 1.85,
+   "unit": "kW",
+   "line": 4
+  },
+  "current": {
+   "value": [
+    7.45,
+    4.3
+   ],
+   "unit": "A",
+   "line": [
+    4,
+    4
+   ]
+  },
+  "speedRpm": {
+   "value": 1400,
+   "unit": "rpm",
+   "line": 4
+  },
+  "cosPhi": {
+   "value": 0.78,
+   "unit": "",
+   "line": 4
+  },
+  "ipRating": {
+   "value": "IP55",
+   "unit": "",
+   "line": 5
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 5
+  },
+  "duty": {
+   "value": "S1",
+   "unit": "",
+   "line": 5
+  },
+  "efficiencyClass": {
+   "value": "IE2",
+   "unit": "",
+   "line": 5
+  },
+  "serial": {
+   "value": "2217045-003",
+   "unit": "",
+   "line": 6
+  },
+  "weightKg": {
+   "value": 32,
+   "unit": "kg",
+   "line": 6
+  }
+ },
+ "absent": [
+  "ratedPowerHp",
+  "efficiencyPct"
+ ],
+ "checks": [
+  {
+   "kind": "3ph",
+   "P_kW": 1.85,
+   "U": 230,
+   "I": 7.45,
+   "cosPhi": 0.78,
+   "eta": 0.8,
+   "assumed": [
+    "eta"
+   ]
+  },
+  {
+   "kind": "3ph",
+   "P_kW": 1.85,
+   "U": 400,
+   "I": 4.3,
+   "cosPhi": 0.78,
+   "eta": 0.8,
+   "assumed": [
+    "eta"
+   ]
+  }
+ ],
+ "notes": "Delta sign read as 'A' between 230 and 400 ('23O A / 4OO Y V') - it is not an ampere unit. M2 520 Nm is output torque; n2 31 is output speed. IE2 without a printed efficiency value. Motor designation HB 90LB 4 is part of the type, not a second type."
+}

@@ -1,0 +1,12 @@
+SEW-EURODRIVE                 Bruchsal/Germany
+R37DRN90L4/BE2HF/TF
+01.7154302301.0001.23
+3~IEC60034   Inverter duty VPWM
+1/min 1450/58        Hz 50
+V 220-242Δ/380-420Y
+A 5,95/3,45
+kW 1,5 S1   cosφ 0,76
+IE3  eff% 85,3   IP 54   Th.Kl. 155(F)
+i 24,96   Nm 245   IM M1
+Bremse V AC 230   Nm 20
+CLP220 Miner.Öl/0,30l   kg 36

@@ -1,0 +1,139 @@
+{
+  "fixture": "perske_spindle_11400_de",
+  "kind": "motor-iec",
+  "lang": "de",
+  "ocrDamage": [
+    "thousands-space",
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "PERSKE",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "VS 31.10-2",
+      "unit": "",
+      "line": 2
+    },
+    "serial": {
+      "value": "23-0456",
+      "unit": "",
+      "line": 2
+    },
+    "year": {
+      "value": 2023,
+      "unit": "",
+      "line": 2
+    },
+    "voltage": {
+      "value": 330,
+      "unit": "V",
+      "line": 3
+    },
+    "connection": {
+      "value": "Δ",
+      "unit": "",
+      "line": 3
+    },
+    "frequencyHz": {
+      "value": 200,
+      "unit": "Hz",
+      "line": 3
+    },
+    "duty": {
+      "value": [
+        "S1",
+        "S6 60%"
+      ],
+      "unit": "",
+      "line": [
+        4,
+        5
+      ]
+    },
+    "ratedPowerKw": {
+      "value": [
+        3.0,
+        3.6
+      ],
+      "unit": "kW",
+      "line": [
+        4,
+        5
+      ]
+    },
+    "current": {
+      "value": [
+        7.6,
+        9.0
+      ],
+      "unit": "A",
+      "line": [
+        4,
+        5
+      ]
+    },
+    "cosPhi": {
+      "value": 0.82,
+      "unit": "",
+      "line": 4
+    },
+    "speedRpm": {
+      "value": 11400,
+      "unit": "rpm",
+      "line": 6
+    },
+    "ipRating": {
+      "value": "IP54",
+      "unit": "",
+      "line": 7
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 7
+    },
+    "weightKg": {
+      "value": 18,
+      "unit": "kg",
+      "line": 7
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "efficiencyClass",
+    "efficiencyPct"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 3.0,
+      "U": 330,
+      "I": 7.6,
+      "cosPhi": 0.82,
+      "eta": 0.85,
+      "assumed": [
+        "eta"
+      ]
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 3.6,
+      "U": 330,
+      "I": 9.0,
+      "cosPhi": 0.82,
+      "eta": 0.85,
+      "assumed": [
+        "eta"
+      ]
+    }
+  ],
+  "notes": "Speed has a thousands space: 11 400 min-1 = 11400 rpm (not 11 or 400). 200 Hz, 330 V. 'Nr. 23-0456' is a serial, not a range."
+}

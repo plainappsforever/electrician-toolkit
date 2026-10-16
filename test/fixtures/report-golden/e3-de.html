@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8"><title>Berechnungsbericht — F3</title><style>
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 9.5pt; line-height: 1.35; color: #111; padding: 0 13mm; }
+table.page { width: 100%; border-collapse: collapse; }
+table.page > thead > tr > td, table.page > tfoot > tr > td, table.page > tbody > tr > td { padding: 0; }
+.top-space { height: 11mm; }
+.foot { border-top: 1px solid #888; margin-top: 4mm; padding: 2mm 0 9mm; font-size: 7.5pt; color: #333; }
+.foot p { margin: 0 0 1mm; }
+.letterhead { display: flex; justify-content: space-between; align-items: flex-start; gap: 8mm; border-bottom: 2px solid #111; padding-bottom: 3mm; margin-bottom: 4mm; }
+.letterhead img { max-height: 18mm; max-width: 55mm; }
+.company { text-align: right; font-size: 8.5pt; white-space: pre-line; }
+.company b { font-size: 11pt; }
+h1 { font-size: 16pt; margin: 0 0 2mm; }
+h2 { font-size: 12.5pt; margin: 6mm 0 2mm; border-bottom: 1px solid #bbb; padding-bottom: 1mm; break-after: avoid; page-break-after: avoid; }
+h3 { font-size: 11pt; margin: 4mm 0 1mm; break-after: avoid; page-break-after: avoid; }
+h4 { font-size: 9pt; text-transform: uppercase; letter-spacing: 0.04em; color: #444; margin: 3mm 0 1mm; break-after: avoid; page-break-after: avoid; }
+.small { font-size: 8pt; color: #444; }
+.url { word-break: break-all; }
+.user, .multiline { white-space: pre-line; }
+table.kv { border-collapse: collapse; width: 100%; }
+table.kv th, table.kv td { text-align: left; vertical-align: top; padding: 0.8mm 2mm 0.8mm 0; border-bottom: 1px solid #e3e3e3; }
+table.kv th { font-weight: 600; width: 46%; }
+table.kv td.num { font-variant-numeric: tabular-nums; }
+tr, li { break-inside: avoid; page-break-inside: avoid; }
+ul, ol { margin: 0; padding-left: 5mm; }
+ol.steps li { margin-bottom: 1mm; font-variant-numeric: tabular-nums; }
+ul.sources { list-style: none; padding-left: 0; }
+ul.sources li { margin-bottom: 1.5mm; }
+.badge { display: inline-block; font-size: 7.5pt; padding: 0 1.5mm; border: 1px solid #777; border-radius: 2mm; }
+.badge.lic { background: #f1f1f1; }
+.warn { color: #7a3b00; }
+section.calc { margin-bottom: 4mm; }
+.calc-note { display: none; margin: 2mm 0 0; padding-top: 1mm; border-top: 1px solid #bbb; font-size: 7.5pt; color: #333; }
+.checks-note { margin: 1.5mm 0 0; padding: 1mm 0 0; border-top: 1px dotted #999; font-size: 7.5pt; color: #333; }
+.keep { break-inside: avoid; page-break-inside: avoid; }
+.circuit { margin-top: 3mm; }
+</style></head>
+<body>
+<table class="page">
+<thead><tr><td><div class="top-space"></div></td></tr></thead>
+<tfoot><tr><td><div class="foot">
+<!-- OWNER WORDING: draft wording of the responsibility note (SPEC §15); the owner decides the final text. -->
+<p class="resp-note">Rechenhilfe. Die Ergebnisse hängen von Ihren Eingaben und den angezeigten Annahmen ab. Sie sind keine Planungsfreigabe, keine Prüfung auf Normeinhaltung und kein Prüfnachweis. Sie sind dafür verantwortlich, sie anhand der für Ihre Anlage geltenden Normen und Regeln, der Herstellerangaben und der Vorgaben des Netzbetreibers zu prüfen.</p>
+<p>Electrician Toolkit 1.0.0 · Rechenkern 1.1.0 · Profil eu-de v1</p>
+</div></td></tr></tfoot>
+<tbody><tr><td>
+<div class="letterhead"><div></div><div class="company"><b>Elektro Muster GmbH</b>
+Hauptstr. 1</div></div>
+<h1>Berechnungsbericht</h1><table class="kv"><tr><th>Datum</th><td>01.10.2026</td></tr></table><section class="calc"><h2>F3 — Schutzorgan &amp; Leitung</h2><div class="small">Berechnet mit Rechenkern 1.1.0, Profil eu-de (Version 1), gespeichert 30.09.2026</div><div class="keep"><h4>Ergebnisse</h4><table class="kv"><tr><th>Strombelastbarkeit Iz</th><td class="num">14,96 A</td></tr><tr><th>Bemessungsstrom In</th><td class="num">16 A</td></tr><tr><th>Konventioneller Auslösestrom I2</th><td class="num">23,2 A</td></tr><tr><th>Vorgeschlagenes Schutzorgan (nur Überlastschutz C1–C3)</th><td class="num">B13</td></tr></table></div><div class="keep"><h4>Prüfungen gegen die von Ihnen gewählten Grenzwerte</h4><ul><li>C1 Ib ≤ In: 13 A ≤ 16 A — erfüllt <span class="small">[IEC 60364-4-43 / DIN VDE 0100-430: Schutz bei Überstrom]</span></li><li>C2 In ≤ Iz: 16 A &gt; 14,96 A — nicht erfüllt <span class="small">[IEC 60364-4-43 / DIN VDE 0100-430: Schutz bei Überstrom]</span></li><li>C3 I2 ≤ 1,45 × Iz: 23,2 A &gt; 1,45 × 14,966 A = 21,7 A — nicht erfüllt <span class="small">[IEC 60364-4-43 / DIN VDE 0100-430: Schutz bei Überstrom]</span></li></ul><p class="checks-note">Rechenhilfe. Die Ergebnisse hängen von Ihren Eingaben und den angezeigten Annahmen ab. Sie sind keine Planungsfreigabe, keine Prüfung auf Normeinhaltung und kein Prüfnachweis. Sie sind dafür verantwortlich, sie anhand der für Ihre Anlage geltenden Normen und Regeln, der Herstellerangaben und der Vorgaben des Netzbetreibers zu prüfen.</p></div><div class="keep"><h4>Eingaben</h4><table class="kv"><tr><th>Betriebsstrom Ib</th><td>13 A</td></tr><tr><th>Schutzorgan</th><td>B16</td></tr><tr><th>Strombelastbarkeit Iz</th><td>Aus der eigenen Tabelle des Errichters „Example — IEC 60364-5-52 Table B.52.2, method C (development seed)“ (1,5 mm²), vom Nutzer eingegebene Werte, nicht von dieser App geliefert: Iz = 20 A; θmax 70 °C, θref 30 °C. Angegebene Quelle: IEC 60364-5-52:2009 Table B.52.2, reference method C, copper, PVC 70 °C, 30 °C ambient, 2 loaded conductors — values as publicly restated (ecalpro.com); 1.5 mm² rounded from 19.5 A to 20 A for example E3. Development and test seed only, not shipped in the app.</td></tr><tr><th>Umgebungstemperatur θa</th><td>35 °C</td></tr><tr><th>Häufungsfaktor</th><td>0,8</td></tr></table></div><div class="keep"><h4>Annahmen</h4><ul><li>Iz = 20 A aus der eigenen Tabelle des Errichters „Example — IEC 60364-5-52 Table B.52.2, method C (development seed)“ (1,5 mm²); vom Nutzer eingegebene Werte, nicht von dieser App geliefert; angegebene Quelle: IEC 60364-5-52:2009 Table B.52.2, reference method C, copper, PVC 70 °C, 30 °C ambient, 2 loaded conductors — values as publicly restated (ecalpro.com); 1.5 mm² rounded from 19.5 A to 20 A for example E3. Development and test seed only, not shipped in the app.</li><li>Temperaturfaktor aus der Wärmebilanz berechnet; ein in der Tabelle des Errichters angegebener Faktor kann durch Rundung abweichen und stattdessen eingegeben werden</li><li>Häufungsfaktor 0,8, von Ihnen eingegeben</li><li>Leitungsschutzschalter: I2 = 1,45 × In</li><li>Der Bemessungsvorschlag berücksichtigt nur den Überlastschutz (C1–C3): Abschaltung (Schleifenimpedanz), Kurzschluss, Selektivität und Einschaltströme werden hier nicht geprüft</li></ul></div><div><h4>Rechenweg</h4><ol class="steps"><li>f_θ = √((θmax − θa) / (θmax − θref)) = √((70 °C − 35 °C) / (70 °C − 30 °C)) = 0,9354</li><li>Iz = Iz_Tabelle × f_θ × f_Häufung × f_weitere = 20 A × 0,9354 × 0,8 × 1 = 14,96 A</li><li>I2 = 1,45 × In = 1,45 × 16 A = 23,2 A</li><li>Vorschlag B13: Ib 13 A ≤ In 13 A ≤ Iz 14,96 A; I2 18,85 A ≤ 21,7 A</li></ol></div><div><h4>Quellen</h4><ul class="sources"><li><b>Wärmebilanz eines Kabels: Umgebungstemperaturfaktor f_θ = √((θmax − θa)/(θmax − θref))</b><br>Stromwärmeverluste proportional zur Erwärmung bis zur Leiter-Grenztemperatur<br><span class="badge pub">öffentliche Quelle</span><div class="small url">https://ecalpro.com/docs/cable-derating-factors-methodology</div></li><li><b>IEC 60364-4-43 / DIN VDE 0100-430: Schutz bei Überstrom</b>, IEC 60364-4-43:2023<br>433.1: Ib ≤ In ≤ Iz und I2 ≤ 1,45·Iz<br><span class="badge lic">lizenzierte Norm: Abschnitt zitiert, Text nicht wiedergegeben</span><div class="small url">https://professional-electrician.com/technical/requirements-protection-overload/</div></li><li><b>IEC 60898-1 / DIN EN 60898-1: Leitungsschutzschalter für Hausinstallationen</b>, IEC 60898-1:2015+AMD1:2019<br>Vorzugswerte In; unverzögerte Auslösung B 3–5·In, C 5–10·In, D 10–20·In; großer Prüfstrom I2 = 1,45·In<br><span class="badge lic">lizenzierte Norm: Abschnitt zitiert, Text nicht wiedergegeben</span><div class="small url">https://de.wikipedia.org/wiki/Leitungsschutzschalter</div></li></ul></div><p class="calc-note">Rechenhilfe. Die Ergebnisse hängen von Ihren Eingaben und den angezeigten Annahmen ab. Sie sind keine Planungsfreigabe, keine Prüfung auf Normeinhaltung und kein Prüfnachweis. Sie sind dafür verantwortlich, sie anhand der für Ihre Anlage geltenden Normen und Regeln, der Herstellerangaben und der Vorgaben des Netzbetreibers zu prüfen.</p></section>
+</td></tr></tbody>
+</table>
+</body></html>

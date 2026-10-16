@@ -1,0 +1,52 @@
+{
+  "id": "E4",
+  "spec": "SPEC §8 E4, E4b — TN, U0 230 V, Ze 0.35 Ω",
+  "cases": [
+    {
+      "name": "E4 Cu 1.5/1.5 mm², 25 m, θ 70 °C, MCB B16, Cmin 1.0",
+      "kind": "loop",
+      "input": { "mode": "calculated", "u0": 230, "ze": 0.35, "material": "cu", "lineSize": { "value": 1.5, "unit": "mm2" }, "peSize": { "value": 1.5, "unit": "mm2" }, "length": { "value": 25, "unit": "m" }, "loopTempC": 70, "device": { "type": "mcb", "curve": "B", "ratedCurrent": 16 }, "cmin": 1 },
+      "expected": {
+        "values.ia": 80,
+        "values.rhoTheta": { "printed": "0.0206293103" },
+        "values.rPrime": { "printed": "0.0275057471" },
+        "values.zs": { "printed": "1.0376436782" },
+        "values.zsMax": 2.875,
+        "checks.loop.zs": true,
+        "values.lMax": { "printed": "91.7989970748" },
+        "values.ik": { "printed": "221.6560509554" }
+      }
+    },
+    {
+      "name": "E4 with Cmin 0.95",
+      "kind": "loop",
+      "input": { "mode": "calculated", "u0": 230, "ze": 0.35, "material": "cu", "lineSize": { "value": 1.5, "unit": "mm2" }, "peSize": { "value": 1.5, "unit": "mm2" }, "length": { "value": 25, "unit": "m" }, "loopTempC": 70, "device": { "type": "mcb", "curve": "B", "ratedCurrent": 16 }, "cmin": 0.95 },
+      "expected": {
+        "values.zsMax": 2.73125,
+        "values.lMax": { "printed": "86.5728165483" },
+        "values.ik": { "printed": "210.5732484076" }
+      }
+    },
+    {
+      "name": "E4 measured mode Zs = 1.80 Ω",
+      "kind": "loop",
+      "input": { "mode": "measured", "u0": 230, "zsMeasured": 1.8, "device": { "type": "mcb", "curve": "B", "ratedCurrent": 16 }, "cmin": 1 },
+      "expected": {
+        "values.measuredLimit": { "printed": "1.9166666667" },
+        "checks.loop.measured": true
+      }
+    },
+    {
+      "name": "E4b Cu 2.5/2.5 mm², 20 m, MCB C16",
+      "kind": "loop",
+      "input": { "mode": "calculated", "u0": 230, "ze": 0.35, "material": "cu", "lineSize": { "value": 2.5, "unit": "mm2" }, "peSize": { "value": 2.5, "unit": "mm2" }, "length": { "value": 20, "unit": "m" }, "loopTempC": 70, "device": { "type": "mcb", "curve": "C", "ratedCurrent": 16 }, "cmin": 1 },
+      "expected": {
+        "values.ia": 160,
+        "values.rPrime": { "printed": "0.0165034483" },
+        "values.zs": { "printed": "0.6800689655" },
+        "values.zsMax": 1.4375,
+        "values.lMax": { "printed": "65.8953196824" }
+      }
+    }
+  ]
+}

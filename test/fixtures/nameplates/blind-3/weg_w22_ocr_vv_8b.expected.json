@@ -1,0 +1,197 @@
+{
+  "fixture": "weg_w22_ocr_vv_8b",
+  "kind": "motor-iec",
+  "lang": "en",
+  "ocrDamage": [
+    "W/VV",
+    "8/B",
+    "0/O",
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "WEG",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "W22",
+      "unit": "",
+      "line": 0
+    },
+    "efficiencyClass": {
+      "value": "IE3",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "1031234567",
+      "unit": "",
+      "line": 2
+    },
+    "year": {
+      "value": 2022,
+      "unit": "",
+      "line": 2
+    },
+    "ratedPowerKw": {
+      "value": 5.5,
+      "unit": "kW",
+      "line": 3
+    },
+    "ratedPowerHp": {
+      "value": 7.5,
+      "unit": "hp",
+      "line": 3
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 3
+    },
+    "serviceFactor": {
+      "value": 1,
+      "unit": "",
+      "line": 3
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 4
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 4
+    },
+    "ambientC": {
+      "value": 40,
+      "unit": "°C",
+      "line": 4
+    },
+    "voltage": {
+      "value": [
+        400,
+        690
+      ],
+      "unit": "V",
+      "line": [
+        6,
+        7
+      ]
+    },
+    "connection": {
+      "value": [
+        "Δ",
+        "Y"
+      ],
+      "unit": "",
+      "line": [
+        6,
+        7
+      ]
+    },
+    "frequencyHz": {
+      "value": [
+        50,
+        50
+      ],
+      "unit": "Hz",
+      "line": [
+        6,
+        7
+      ]
+    },
+    "current": {
+      "value": [
+        10.7,
+        6.2
+      ],
+      "unit": "A",
+      "line": [
+        6,
+        7
+      ]
+    },
+    "speedRpm": {
+      "value": [
+        1460,
+        1460
+      ],
+      "unit": "rpm",
+      "line": [
+        6,
+        7
+      ]
+    },
+    "cosPhi": {
+      "value": [
+        0.82,
+        0.82
+      ],
+      "unit": "",
+      "line": [
+        6,
+        7
+      ]
+    },
+    "efficiencyPct": {
+      "value": [
+        90.1,
+        90.5,
+        89.6
+      ],
+      "unit": "%",
+      "line": [
+        8,
+        8,
+        8
+      ]
+    },
+    "efficiencyLoadPct": {
+      "value": [
+        100,
+        75,
+        50
+      ],
+      "unit": "%",
+      "line": [
+        8,
+        8,
+        8
+      ]
+    },
+    "weightKg": {
+      "value": 48,
+      "unit": "kg",
+      "line": 9
+    }
+  },
+  "absent": [],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 5.5,
+      "U": 400,
+      "I": 10.7,
+      "cosPhi": 0.82,
+      "eta": 0.901,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 5.5,
+      "U": 690,
+      "I": 6.2,
+      "cosPhi": 0.82,
+      "eta": 0.901,
+      "assumed": []
+    }
+  ],
+  "notes": "'ΔT 80K' is a temperature rise, not a connection. 'ALT 1000m' is altitude, not head. '04P' = 4 poles. 'B9,6' = 89.6, '4B kg' = 48 kg, '6,2O' = 6.20. 'Premium Efficiency' is WEG's line name; the class is IE3."
+}

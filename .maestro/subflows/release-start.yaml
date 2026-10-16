@@ -1,0 +1,11 @@
+appId: ${APP_ID}
+---
+# Release builds have no dev links: restart the app, wait for the Calculators tab and make sure it shows (tab bar tap).
+- launchApp:
+    stopApp: true
+- extendedWaitUntil:
+    visible:
+      id: calculators-screen
+    timeout: 60000
+- tapOn:
+    id: tab-calculators

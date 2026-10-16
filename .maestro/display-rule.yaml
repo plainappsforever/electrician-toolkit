@@ -1,0 +1,140 @@
+appId: ${APP_ID}
+name: Display rule - D52 on the screens - E4 L_max 91.7 m, E1 at 14.39 m shows 3.01 % exceeds 3 %, E4 at 91.8 m shows Zs 2.876 Ω > Zs_max 2.875 Ω, German 91,7 m
+tags:
+  - core
+---
+- runFlow:
+    file: subflows/seed.yaml
+    env:
+      SEED: empty
+# E1 at 14.39 m: 3.0008 % is above the limit and must not be shown as "3 %"
+- tapOn:
+    id: calc-open-vdrop
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-current
+      TEXT: "16"
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "14.39"
+- scrollUntilVisible:
+    element:
+      id: size-chip-1.5
+- tapOn:
+    id: size-chip-1.5
+- assertVisible:
+    id: strip-verdict
+    text: ".*Δu 3.01 % exceeds the selected limit 3 %.*"
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "14.3"
+- assertVisible:
+    id: strip-verdict
+    text: ".*Δu 2.99 % is within the selected limit 3 %.*"
+# E4 at 91.8 m: Zs 2.87588 Ω is above Zs_max 2.875 Ω and must not be shown as 2.875
+- runFlow:
+    file: subflows/open-calc.yaml
+    env:
+      KIND: loop
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-ze
+      TEXT: "0.35"
+- scrollUntilVisible:
+    element:
+      id: line-chip-1.5
+- tapOn:
+    id: line-chip-1.5
+- scrollUntilVisible:
+    element:
+      id: pe-chip-1.5
+- tapOn:
+    id: pe-chip-1.5
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "91.8"
+- assertVisible:
+    id: strip-verdict
+    text: ".*Zs 2.876 Ω > Zs_max 2.875 Ω.*not met.*"
+# v1.1 F4: the current side spelled out, Ik rounded down (never "Ik 80 A" beside "Ia 80 A" with "not met")
+- scrollUntilVisible:
+    element:
+      id: check-loop.ik
+- assertVisible:
+    id: check-loop.ik
+    text: ".*Ik 79.99 A < Ia 80 A — not met.*"
+- assertVisible:
+    id: result-ik
+    text: "79.99 A"
+- scrollUntilVisible:
+    element:
+      id: input-length
+    direction: UP
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "25"
+- scrollUntilVisible:
+    element:
+      id: result-lMax
+- assertVisible:
+    id: result-lMax
+    text: "91.7 m"
+# German: the same maximum with a decimal comma
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: tab-more
+- tapOn:
+    id: open-settings
+- tapOn:
+    id: language-de
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: tab-calculators
+- tapOn:
+    id: calc-open-loop
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-ze
+      TEXT: "0,35"
+- scrollUntilVisible:
+    element:
+      id: line-chip-1.5
+- tapOn:
+    id: line-chip-1.5
+- scrollUntilVisible:
+    element:
+      id: pe-chip-1.5
+- tapOn:
+    id: pe-chip-1.5
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "25"
+- scrollUntilVisible:
+    element:
+      id: result-lMax
+- assertVisible:
+    id: result-lMax
+    text: "91,7 m"
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: tab-more
+- tapOn:
+    id: open-settings
+- tapOn:
+    id: language-system

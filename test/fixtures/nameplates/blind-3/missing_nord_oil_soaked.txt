@@ -1,0 +1,6 @@
+NORD
+3~Mot.   IEC 60034   IE3
+230/400 V   Δ/Y   50 Hz
+8,0/4,6 A   2,2 kW
+cos φ 0,79   1440 min-1
+η 86,7 %   IP55   Th.Cl. F

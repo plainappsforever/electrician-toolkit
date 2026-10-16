@@ -1,0 +1,85 @@
+{
+ "fixture": "missing_vem_corroded_voltage_line_de",
+ "kind": "motor-iec",
+ "lang": "de",
+ "ocrDamage": [
+  "decimal-comma"
+ ],
+ "fields": {
+  "manufacturer": {
+   "value": "VEM",
+   "unit": "",
+   "line": 0
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 1
+  },
+  "type": {
+   "value": "K11R 90 L4",
+   "unit": "",
+   "line": 1
+  },
+  "ratedPowerKw": {
+   "value": 1.5,
+   "unit": "kW",
+   "line": 3
+  },
+  "duty": {
+   "value": "S1",
+   "unit": "",
+   "line": 3
+  },
+  "speedRpm": {
+   "value": 1420,
+   "unit": "rpm",
+   "line": 3
+  },
+  "current": {
+   "value": 3.5,
+   "unit": "A",
+   "line": 4
+  },
+  "cosPhi": {
+   "value": 0.79,
+   "unit": "",
+   "line": 4
+  },
+  "ipRating": {
+   "value": "IP55",
+   "unit": "",
+   "line": 5
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 5
+  }
+ },
+ "absent": [
+  "ratedPowerHp",
+  "voltage",
+  "frequencyHz",
+  "efficiencyClass",
+  "efficiencyPct",
+  "serial",
+  "connection",
+  "weightKg"
+ ],
+ "checks": [
+  {
+   "kind": "3ph",
+   "P_kW": 1.5,
+   "U": 400,
+   "I": 3.5,
+   "cosPhi": 0.79,
+   "eta": 0.8,
+   "assumed": [
+    "U",
+    "eta"
+   ]
+  }
+ ],
+ "notes": "Corroded: the voltage / Hz / connection / serial line is gone. Only one current survives, so it cannot be assigned to Δ or Y. Do not fill 400 V or 50 Hz by default (the check assumes 400 V only to test plausibility)."
+}

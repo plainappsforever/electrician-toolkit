@@ -1,0 +1,9 @@
+appId: ${APP_ID}
+---
+# Opens a dev link. iOS asks "Open in Electrician Toolkit Dev?" every time; Android opens the app directly.
+- openLink: ${URL}
+- runFlow:
+    when:
+      visible: "Open"
+    commands:
+      - tapOn: "Open"

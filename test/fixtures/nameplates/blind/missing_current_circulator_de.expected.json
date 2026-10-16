@@ -1,0 +1,77 @@
+{
+  "fixture": "missing_current_circulator_de",
+  "kind": "pump",
+  "lang": "de",
+  "ocrDamage": [],
+  "fields": {
+    "manufacturer": {
+      "value": "Wilo",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "Yonos PICO 25/1-6",
+      "unit": "",
+      "line": 1
+    },
+    "phases": {
+      "value": 1,
+      "unit": "",
+      "line": 2
+    },
+    "voltage": {
+      "value": 230,
+      "unit": "V",
+      "line": 2
+    },
+    "frequencyHz": {
+      "value": [
+        50,
+        60
+      ],
+      "unit": "Hz",
+      "line": [
+        2,
+        2
+      ]
+    },
+    "inputPowerKw": {
+      "value": [
+        4,
+        40
+      ],
+      "unit": "W",
+      "line": [
+        2,
+        2
+      ]
+    },
+    "ipRating": {
+      "value": "IPX4D",
+      "unit": "",
+      "line": 3
+    },
+    "serial": {
+      "value": "4164019",
+      "unit": "",
+      "line": 4
+    }
+  },
+  "absent": [
+    "ratedPowerKw",
+    "ratedPowerHp",
+    "current",
+    "cosPhi",
+    "speedRpm",
+    "efficiencyClass",
+    "efficiencyPct",
+    "insulationClass",
+    "duty",
+    "connection",
+    "weightKg",
+    "flowM3h",
+    "headM"
+  ],
+  "checks": [],
+  "notes": "'25/1-6' in the type is nominal size/head, not flow or head values; 'TF 110' is a temperature class."
+}

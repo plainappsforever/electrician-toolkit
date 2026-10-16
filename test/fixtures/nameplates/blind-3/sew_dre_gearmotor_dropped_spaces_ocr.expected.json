@@ -1,0 +1,146 @@
+{
+  "fixture": "sew_dre_gearmotor_dropped_spaces_ocr",
+  "kind": "gearmotor",
+  "lang": "de",
+  "ocrDamage": [
+    "W/VV",
+    "0/O",
+    "rn/m",
+    "dropped-spaces",
+    "glued-unit",
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "SEW-EURODRIVE",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "KA47DRE100M4/TF",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "01.3012345678.0002.12",
+      "unit": "",
+      "line": 2
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 3
+    },
+    "speedRpm": {
+      "value": 1435,
+      "unit": "rpm",
+      "line": 4
+    },
+    "outputSpeedRpm": {
+      "value": 31,
+      "unit": "rpm",
+      "line": 4
+    },
+    "voltage": {
+      "value": [
+        230,
+        400
+      ],
+      "unit": "V",
+      "line": [
+        5,
+        5
+      ]
+    },
+    "connection": {
+      "value": "Δ/Y",
+      "unit": "",
+      "line": 5
+    },
+    "current": {
+      "value": [
+        10.6,
+        6.1
+      ],
+      "unit": "A",
+      "line": [
+        6,
+        6
+      ]
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 7
+    },
+    "ratedPowerKw": {
+      "value": 3,
+      "unit": "kW",
+      "line": 7
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 7
+    },
+    "cosPhi": {
+      "value": 0.8,
+      "unit": "",
+      "line": 8
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 8
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 9
+    },
+    "gearRatio": {
+      "value": 46.31,
+      "unit": "",
+      "line": 9
+    },
+    "efficiencyPct": {
+      "value": 86.5,
+      "unit": "%",
+      "line": 10
+    },
+    "efficiencyClass": {
+      "value": "IE2",
+      "unit": "",
+      "line": 10
+    },
+    "weightKg": {
+      "value": 62,
+      "unit": "kg",
+      "line": 11
+    }
+  },
+  "absent": [
+    "ratedPowerHp"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 3,
+      "U": 400,
+      "I": 6.1,
+      "cosPhi": 0.8,
+      "eta": 0.865,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 3,
+      "U": 230,
+      "I": 10.6,
+      "cosPhi": 0.8,
+      "eta": 0.865,
+      "assumed": []
+    }
+  ],
+  "notes": "'kW3S1' = 3 kW, duty S1 (not 3.51 or 35). '1/rnin1435/31' = 1435 rpm motor, 31 rpm output. 'eff%86,5IE2' = 86.5 % and IE2. 'Nm924' is output torque."
+}

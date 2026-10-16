@@ -1,0 +1,142 @@
+{
+  "fixture": "ocr_gearmotor_split_unit_de",
+  "kind": "gearmotor",
+  "lang": "de",
+  "ocrDamage": [
+    "1/l/I",
+    "rn/m",
+    "Δ->D",
+    "φ->o",
+    "decimal-comma",
+    "split-lines"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "Bauer Gear Motor",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "BG20-11/D09LA4-TF",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "1234567-001",
+      "unit": "",
+      "line": 2
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 2
+    },
+    "voltage": {
+      "value": [
+        230,
+        400
+      ],
+      "unit": "V",
+      "line": [
+        3,
+        3
+      ]
+    },
+    "connection": {
+      "value": "Δ/Y",
+      "unit": "",
+      "line": 3
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 3
+    },
+    "current": {
+      "value": [
+        4.6,
+        2.65
+      ],
+      "unit": "A",
+      "line": [
+        4,
+        4
+      ]
+    },
+    "ratedPowerKw": {
+      "value": 1.1,
+      "unit": "kW",
+      "line": 5
+    },
+    "cosPhi": {
+      "value": 0.76,
+      "unit": "",
+      "line": 6
+    },
+    "speedRpm": {
+      "value": 1410,
+      "unit": "rpm",
+      "line": 6
+    },
+    "ipRating": {
+      "value": "IP65",
+      "unit": "",
+      "line": 7
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 7
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 7
+    },
+    "gearRatio": {
+      "value": 34.37,
+      "unit": "",
+      "line": 7
+    },
+    "outputSpeedRpm": {
+      "value": 41,
+      "unit": "rpm",
+      "line": 7
+    },
+    "weightKg": {
+      "value": 26,
+      "unit": "kg",
+      "line": 8
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "efficiencyClass",
+    "efficiencyPct"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 1.1,
+      "U": 230,
+      "I": 4.6,
+      "cosPhi": 0.76,
+      "eta": 0.81,
+      "assumed": [
+        "eta"
+      ]
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 1.1,
+      "U": 400,
+      "I": 2.65,
+      "cosPhi": 0.76,
+      "eta": 0.81,
+      "assumed": [
+        "eta"
+      ]
+    }
+  ],
+  "notes": "'n2=41' is output speed; 1,1 belongs to the 'kW' at the start of the following line."
+}

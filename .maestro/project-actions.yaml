@@ -1,0 +1,62 @@
+appId: ${APP_ID}
+name: Projects - seed e1 shows three frozen calculations; duplicate, archive and delete with the counts in the confirmation
+tags:
+  - core
+---
+- runFlow:
+    file: subflows/seed.yaml
+    env:
+      SEED: e1
+- tapOn:
+    id: tab-projects
+- tapOn: ".*Müller, Küche.*"
+- scrollUntilVisible:
+    element: ".*F3 Steckdosen.*"
+- tapOn: ".*F3 Steckdosen.*"
+- assertVisible: ".*Spannungsfall F3.*"
+- assertVisible: ".*Schutz F3.*"
+- assertVisible: ".*Schleife F3.*"
+# the frozen E1 result, then Open as new calculation (recomputed with the inputs)
+- tapOn: ".*Spannungsfall F3.*"
+- assertVisible:
+    id: result-main
+    text: "3.76 %"
+- scrollUntilVisible:
+    element:
+      id: saved-open-new
+- tapOn:
+    id: saved-open-new
+- assertVisible:
+    id: strip-main
+    text: "3.76 %"
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: tab-projects
+- tapOn: ".*Müller, Küche.*"
+- scrollUntilVisible:
+    element:
+      id: project-duplicate
+- tapOn:
+    id: project-duplicate
+- extendedWaitUntil:
+    visible:
+      id: project-screen
+    timeout: 10000
+- scrollUntilVisible:
+    element:
+      id: project-delete
+- tapOn:
+    id: project-delete
+- assertVisible: ".*1 circuits and 3 saved calculations.*"
+- tapOn: "Delete"
+- extendedWaitUntil:
+    visible:
+      id: projects-screen
+    timeout: 10000

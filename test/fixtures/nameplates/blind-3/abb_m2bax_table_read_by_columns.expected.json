@@ -1,0 +1,191 @@
+{
+  "fixture": "abb_m2bax_table_read_by_columns",
+  "kind": "motor-iec",
+  "lang": "en",
+  "ocrDamage": [],
+  "fields": {
+    "manufacturer": {
+      "value": "ABB",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "M2BAX 112MB 4",
+      "unit": "",
+      "line": 1
+    },
+    "year": {
+      "value": 2010,
+      "unit": "",
+      "line": 2
+    },
+    "serial": {
+      "value": "4590123",
+      "unit": "",
+      "line": 4
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 5
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 5
+    },
+    "voltage": {
+      "value": [
+        400,
+        690
+      ],
+      "unit": "V",
+      "line": [
+        7,
+        8
+      ]
+    },
+    "connection": {
+      "value": [
+        "Δ",
+        "Y"
+      ],
+      "unit": "",
+      "line": [
+        7,
+        8
+      ]
+    },
+    "frequencyHz": {
+      "value": [
+        50,
+        50
+      ],
+      "unit": "Hz",
+      "line": [
+        10,
+        11
+      ]
+    },
+    "ratedPowerKw": {
+      "value": [
+        4,
+        4
+      ],
+      "unit": "kW",
+      "line": [
+        13,
+        14
+      ]
+    },
+    "speedRpm": {
+      "value": [
+        1445,
+        1445
+      ],
+      "unit": "rpm",
+      "line": [
+        16,
+        17
+      ]
+    },
+    "current": {
+      "value": [
+        8.1,
+        4.7
+      ],
+      "unit": "A",
+      "line": [
+        19,
+        20
+      ]
+    },
+    "cosPhi": {
+      "value": [
+        0.82,
+        0.82
+      ],
+      "unit": "",
+      "line": [
+        22,
+        23
+      ]
+    },
+    "duty": {
+      "value": [
+        "S1",
+        "S1"
+      ],
+      "unit": "",
+      "line": [
+        25,
+        26
+      ]
+    },
+    "efficiencyClass": {
+      "value": "IE2",
+      "unit": "",
+      "line": 27
+    },
+    "efficiencyPct": {
+      "value": [
+        86.6,
+        87.2,
+        86.2
+      ],
+      "unit": "%",
+      "line": [
+        27,
+        27,
+        27
+      ]
+    },
+    "efficiencyLoadPct": {
+      "value": [
+        100,
+        75,
+        50
+      ],
+      "unit": "%",
+      "line": [
+        27,
+        27,
+        27
+      ]
+    },
+    "weightKg": {
+      "value": 29,
+      "unit": "kg",
+      "line": 28
+    }
+  },
+  "absent": [
+    "ratedPowerHp"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 4,
+      "U": 400,
+      "I": 8.1,
+      "cosPhi": 0.82,
+      "eta": 0.866,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 4,
+      "U": 690,
+      "I": 4.7,
+      "cosPhi": 0.82,
+      "eta": 0.866,
+      "assumed": []
+    }
+  ],
+  "notes": "Table read column-wise: the header 'V' is followed by both voltages, 'Hz' by both frequencies, etc. Row 1 = 400 D / 50 / 4 / 1445 / 8.1 / 0.82 / S1, row 2 = 690 Y ... 4.7 ... ABB prints a real 'D' for Δ. 'Prod. code' is not the serial; the 'No' line is."
+}

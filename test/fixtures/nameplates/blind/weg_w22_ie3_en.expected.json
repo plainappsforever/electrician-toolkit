@@ -1,0 +1,139 @@
+{
+  "fixture": "weg_w22_ie3_en",
+  "kind": "motor-iec",
+  "lang": "en",
+  "ocrDamage": [],
+  "fields": {
+    "manufacturer": {
+      "value": "WEG",
+      "unit": "",
+      "line": 0
+    },
+    "efficiencyClass": {
+      "value": "IE3",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 1
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 1
+    },
+    "ratedPowerKw": {
+      "value": 7.5,
+      "unit": "kW",
+      "line": 2
+    },
+    "ratedPowerHp": {
+      "value": 10,
+      "unit": "hp",
+      "line": 2
+    },
+    "speedRpm": {
+      "value": 1460,
+      "unit": "rpm",
+      "line": 2
+    },
+    "serviceFactor": {
+      "value": 1.0,
+      "unit": "",
+      "line": 2
+    },
+    "voltage": {
+      "value": [
+        400,
+        690
+      ],
+      "unit": "V",
+      "line": [
+        3,
+        3
+      ]
+    },
+    "current": {
+      "value": [
+        14.3,
+        8.28
+      ],
+      "unit": "A",
+      "line": [
+        3,
+        3
+      ]
+    },
+    "cosPhi": {
+      "value": 0.84,
+      "unit": "",
+      "line": 3
+    },
+    "connection": {
+      "value": "Δ/Y",
+      "unit": "",
+      "line": 4
+    },
+    "efficiencyPct": {
+      "value": 90.4,
+      "unit": "%",
+      "line": 4
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 4
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 5
+    },
+    "ambientC": {
+      "value": 40,
+      "unit": "°C",
+      "line": 5
+    },
+    "weightKg": {
+      "value": 58,
+      "unit": "kg",
+      "line": 5
+    },
+    "serial": {
+      "value": "1034567890",
+      "unit": "",
+      "line": 6
+    }
+  },
+  "absent": [
+    "type"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 7.5,
+      "U": 400,
+      "I": 14.3,
+      "cosPhi": 0.84,
+      "eta": 0.904,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 7.5,
+      "U": 690,
+      "I": 8.28,
+      "cosPhi": 0.84,
+      "eta": 0.904,
+      "assumed": []
+    }
+  ],
+  "notes": "'ALT 1000 m' is altitude; '13 g' grease; 'ΔT 80K' temperature rise."
+}

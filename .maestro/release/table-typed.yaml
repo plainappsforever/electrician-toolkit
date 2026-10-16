@@ -1,0 +1,112 @@
+appId: ${APP_ID}
+name: "RELEASE: Own table typed - U4, a table with source note and two typed rows is used for E3 and gives B13 (typed through the screens on the Release build)"
+tags:
+  - preview-only
+  - release
+---
+# Release build: no seeds or dev links exist; the app starts from its own defaults (no flow here changes a setting).
+- runFlow:
+    file: ../subflows/release-start.yaml
+- tapOn:
+    id: tab-tables
+# (a Release install keeps what earlier flows made: the list may not be empty)
+- tapOn:
+    id: table-new
+- tapOn:
+    id: table-name
+- inputText: "My example table"
+- pressKey: Enter
+# a table without a source note is refused (D14)
+- scrollUntilVisible:
+    element:
+      id: table-save
+- tapOn:
+    id: table-save
+- scrollUntilVisible:
+    element:
+      id: table-problem-0
+- assertVisible:
+    id: table-problem-0
+    text: ".*where the values come from.*"
+- scrollUntilVisible:
+    element:
+      id: table-source
+    direction: UP
+    centerElement: true
+- tapOn:
+    id: table-source
+- inputText: "Invented test values, not from a standard"
+- scrollUntilVisible:
+    element:
+      id: row-size-0
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: row-size-0
+      TEXT: "1.5"
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: row-iz-0
+      TEXT: "20"
+- scrollUntilVisible:
+    element:
+      id: row-add
+- tapOn:
+    id: row-add
+- scrollUntilVisible:
+    element:
+      id: row-size-1
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: row-size-1
+      TEXT: "2.5"
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: row-iz-1
+      TEXT: "28"
+- scrollUntilVisible:
+    element:
+      id: table-save
+- tapOn:
+    id: table-save
+- scrollUntilVisible:
+    element:
+      id: table-delete
+- tapOn:
+    id: nav-back
+- assertVisible: ".*My example table.*"
+- tapOn:
+    id: tab-calculators
+- tapOn:
+    id: calc-open-coord
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-ib
+      TEXT: "13"
+- scrollUntilVisible:
+    element:
+      id: pick-table-.*
+- tapOn:
+    id: pick-table-.*
+- tapOn:
+    id: pick-row-1.5
+- scrollUntilVisible:
+    element:
+      id: input-ambientC
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-ambientC
+      TEXT: "35"
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-fGroup
+      TEXT: "0.8"
+- assertVisible:
+    id: strip-main
+    text: "B13"

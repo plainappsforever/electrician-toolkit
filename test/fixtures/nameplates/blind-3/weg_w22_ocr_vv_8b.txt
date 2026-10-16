@@ -1,0 +1,10 @@
+VVEG   W22 IE3 Premium Efficiency
+3~ MOTOR   132S/M   04P
+Nr 1031234567   2022
+kW 5,5   HP 7,5   S1   SF 1,00
+IP55   INS.CL.F   ΔT 80K   AMB 40°C   ALT 1000m
+V       Hz    A       RPM    cos φ
+400Δ    50    10,7    1460   0,82
+690Y    50    6,2O    1460   0,82
+η  100% 90,1   75% 90,5   50% B9,6
+6308-ZZ   6207-ZZ   4B kg

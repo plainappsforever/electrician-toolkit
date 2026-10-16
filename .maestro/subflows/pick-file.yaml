@@ -1,0 +1,17 @@
+appId: ${APP_ID}
+---
+# Picks ${NAME}.json in the REAL system file picker the app just opened (Release flows, D95). The files are placed by
+# scripts/push-picker-files.sh: iOS Files → On My iPhone; Android → Downloads. One file per platform, because Maestro
+# does not substitute ${NAME} inside a nested `commands:` block (seen in v1.1).
+- runFlow:
+    when:
+      platform: iOS
+    file: pick-file-ios.yaml
+    env:
+      NAME: ${NAME}
+- runFlow:
+    when:
+      platform: Android
+    file: pick-file-android.yaml
+    env:
+      NAME: ${NAME}

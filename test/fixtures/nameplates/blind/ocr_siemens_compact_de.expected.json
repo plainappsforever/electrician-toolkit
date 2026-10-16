@@ -1,0 +1,145 @@
+{
+  "fixture": "ocr_siemens_compact_de",
+  "kind": "motor-iec",
+  "lang": "de",
+  "ocrDamage": [
+    "0/O",
+    "1/l/I",
+    "5/S",
+    "rn/m",
+    "W/VV",
+    "Δ->A",
+    "φ->o",
+    "decimal-comma",
+    "glued-unit"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "SIEMENS",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "1LE1002-1BB22-2AA4",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "E0812/0496382 01 002",
+      "unit": "",
+      "line": 2
+    },
+    "weightKg": {
+      "value": 29,
+      "unit": "kg",
+      "line": 3
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 3
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 3
+    },
+    "voltage": {
+      "value": [
+        400,
+        690
+      ],
+      "unit": "V",
+      "line": [
+        4,
+        4
+      ]
+    },
+    "connection": {
+      "value": [
+        "Δ",
+        "Y"
+      ],
+      "unit": "",
+      "line": [
+        4,
+        4
+      ]
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 4
+    },
+    "current": {
+      "value": [
+        7.9,
+        4.55
+      ],
+      "unit": "A",
+      "line": [
+        4,
+        4
+      ]
+    },
+    "ratedPowerKw": {
+      "value": 4,
+      "unit": "kW",
+      "line": 5
+    },
+    "cosPhi": {
+      "value": 0.82,
+      "unit": "",
+      "line": 5
+    },
+    "speedRpm": {
+      "value": 1455,
+      "unit": "rpm",
+      "line": 5
+    },
+    "efficiencyClass": {
+      "value": "IE3",
+      "unit": "",
+      "line": 6
+    },
+    "efficiencyPct": {
+      "value": 88.6,
+      "unit": "%",
+      "line": 6
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 6
+    }
+  },
+  "absent": [
+    "ratedPowerHp"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 4,
+      "U": 400,
+      "I": 7.9,
+      "cosPhi": 0.82,
+      "eta": 0.886,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 4,
+      "U": 690,
+      "I": 4.55,
+      "cosPhi": 0.82,
+      "eta": 0.886,
+      "assumed": []
+    }
+  ],
+  "notes": "'400A' is 400 V delta, not 400 A."
+}

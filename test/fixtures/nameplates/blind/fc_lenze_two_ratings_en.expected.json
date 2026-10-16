@@ -1,0 +1,155 @@
+{
+  "fixture": "fc_lenze_two_ratings_en",
+  "kind": "motor-fc",
+  "lang": "en",
+  "ocrDamage": [],
+  "fields": {
+    "manufacturer": {
+      "value": "Lenze",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "MD FMARS 112-22",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "13401234",
+      "unit": "",
+      "line": 2
+    },
+    "ipRating": {
+      "value": "IP54",
+      "unit": "",
+      "line": 2
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 2
+    },
+    "efficiencyClass": {
+      "value": "IE3",
+      "unit": "",
+      "line": 2
+    },
+    "frequencyHz": {
+      "value": [
+        50,
+        100
+      ],
+      "unit": "Hz",
+      "line": [
+        3,
+        4
+      ]
+    },
+    "voltage": {
+      "value": [
+        400,
+        400
+      ],
+      "unit": "V",
+      "line": [
+        3,
+        4
+      ]
+    },
+    "connection": {
+      "value": [
+        "Y",
+        "Y"
+      ],
+      "unit": "",
+      "line": [
+        3,
+        4
+      ]
+    },
+    "ratedPowerKw": {
+      "value": [
+        4.0,
+        4.0
+      ],
+      "unit": "kW",
+      "line": [
+        3,
+        4
+      ]
+    },
+    "current": {
+      "value": [
+        7.9,
+        8.1
+      ],
+      "unit": "A",
+      "line": [
+        3,
+        4
+      ]
+    },
+    "cosPhi": {
+      "value": [
+        0.82,
+        0.84
+      ],
+      "unit": "",
+      "line": [
+        3,
+        4
+      ]
+    },
+    "speedRpm": {
+      "value": [
+        1450,
+        2950
+      ],
+      "unit": "rpm",
+      "line": [
+        3,
+        4
+      ]
+    },
+    "weightKg": {
+      "value": 30,
+      "unit": "kg",
+      "line": 6
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "efficiencyPct",
+    "duty"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 4.0,
+      "U": 400,
+      "I": 7.9,
+      "cosPhi": 0.82,
+      "eta": 0.886,
+      "assumed": [
+        "eta"
+      ]
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 4.0,
+      "U": 400,
+      "I": 8.1,
+      "cosPhi": 0.84,
+      "eta": 0.87,
+      "assumed": [
+        "eta"
+      ]
+    }
+  ],
+  "notes": "The 'Inverter supply 400 V' line is not a third rating."
+}

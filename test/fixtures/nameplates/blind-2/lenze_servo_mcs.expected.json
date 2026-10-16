@@ -1,0 +1,91 @@
+{
+ "fixture": "lenze_servo_mcs",
+ "kind": "motor-iec",
+ "lang": "en",
+ "ocrDamage": [],
+ "fields": {
+  "manufacturer": {
+   "value": "Lenze",
+   "unit": "",
+   "line": 0
+  },
+  "type": {
+   "value": "MCS09H41-RS0B0-Z0-0",
+   "unit": "",
+   "line": 1
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 2
+  },
+  "serial": {
+   "value": "1830742215",
+   "unit": "",
+   "line": 2
+  },
+  "current": {
+   "value": 3.5,
+   "unit": "A",
+   "line": 4
+  },
+  "speedRpm": {
+   "value": 3000,
+   "unit": "rpm",
+   "line": 4
+  },
+  "ratedPowerKw": {
+   "value": 1.6,
+   "unit": "kW",
+   "line": 5
+  },
+  "voltage": {
+   "value": 330,
+   "unit": "V",
+   "line": 5
+  },
+  "frequencyHz": {
+   "value": 200,
+   "unit": "Hz",
+   "line": 5
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 7
+  },
+  "ipRating": {
+   "value": "IP54",
+   "unit": "",
+   "line": 7
+  },
+  "weightKg": {
+   "value": 11.4,
+   "unit": "kg",
+   "line": 7
+  }
+ },
+ "absent": [
+  "ratedPowerHp",
+  "cosPhi",
+  "efficiencyClass",
+  "efficiencyPct",
+  "duty",
+  "connection"
+ ],
+ "checks": [
+  {
+   "kind": "3ph",
+   "P_kW": 1.6,
+   "U": 330,
+   "I": 3.5,
+   "cosPhi": 0.88,
+   "eta": 0.91,
+   "assumed": [
+    "cosPhi",
+    "eta"
+   ]
+  }
+ ],
+ "notes": "Servo (PM synchronous). Rated current is IN 3.5 A; I0 4.3 A is the continuous standstill current and Imax 15 A the peak - neither is the rated current. Torques in Nm are not power. fN 200 Hz is the electrical frequency at nN (8 poles), not mains. KTY83-110 is the temperature sensor, not a voltage. No cos φ, duty or connection printed."
+}

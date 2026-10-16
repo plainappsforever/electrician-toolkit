@@ -1,0 +1,29 @@
+ABB Motors   3~ motor
+M2BAX 112MB 4
+IEC 60034-1   2010
+Prod. code 3GBA112320-ADC
+No 4590123
+Ins.cl. F   IP 55
+V
+400 D
+690 Y
+Hz
+50
+50
+kW
+4
+4
+r/min
+1445
+1445
+A
+8.1
+4.7
+cos φ
+0.82
+0.82
+Duty
+S1
+S1
+IE2  86.6%(100%)  87.2%(75%)  86.2%(50%)
+6206-2Z/C3   6205-2Z/C3   29 kg

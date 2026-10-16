@@ -1,0 +1,97 @@
+{
+ "fixture": "leroy_somer_lsk_dc_motor",
+ "kind": "motor-iec",
+ "lang": "en",
+ "ocrDamage": [],
+ "fields": {
+  "manufacturer": {
+   "value": "Leroy-Somer",
+   "unit": "",
+   "line": 0
+  },
+  "type": {
+   "value": "LSK 1604 M 04",
+   "unit": "",
+   "line": 1
+  },
+  "serial": {
+   "value": "731204/018",
+   "unit": "",
+   "line": 1
+  },
+  "year": {
+   "value": 2019,
+   "unit": "",
+   "line": 1
+  },
+  "ratedPowerKw": {
+   "value": 25,
+   "unit": "kW",
+   "line": 2
+  },
+  "speedRpm": {
+   "value": 2400,
+   "unit": "rpm",
+   "line": 2
+  },
+  "duty": {
+   "value": "S1",
+   "unit": "",
+   "line": 2
+  },
+  "ipRating": {
+   "value": "IP23S",
+   "unit": "",
+   "line": 2
+  },
+  "insulationClass": {
+   "value": "H",
+   "unit": "",
+   "line": 2
+  },
+  "voltage": {
+   "value": 460,
+   "unit": "V",
+   "line": 3
+  },
+  "current": {
+   "value": 59,
+   "unit": "A",
+   "line": 3
+  },
+  "ambientC": {
+   "value": 40,
+   "unit": "°C",
+   "line": 5
+  },
+  "weightKg": {
+   "value": 210,
+   "unit": "kg",
+   "line": 5
+  }
+ },
+ "absent": [
+  "ratedPowerHp",
+  "frequencyHz",
+  "cosPhi",
+  "efficiencyClass",
+  "efficiencyPct",
+  "phases",
+  "connection"
+ ],
+ "checks": [
+  {
+   "kind": "1ph",
+   "P_kW": 25,
+   "U": 460,
+   "I": 59,
+   "cosPhi": 1.0,
+   "eta": 0.88,
+   "assumed": [
+    "cosPhi",
+    "eta"
+   ]
+  }
+ ],
+ "notes": "DC motor: no phases, no Hz, no cos φ, no connection. Rated voltage/current = ARMATURE 460 V / 59 A; FIELD 360 V / 3.9 A is the separate excitation supply (like a brake coil: NOT voltage/current). Physics check is P = U*I*eta, encoded as kind '1ph' with cosPhi 1.0 (assumed); a 3-phase formula would be wrong by sqrt(3). The 'A' in 'MOTEUR A COURANT' is French, not an ampere or delta mark."
+}

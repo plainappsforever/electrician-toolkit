@@ -1,0 +1,6 @@
+VEM
+Drehstrom-Motor   Typ KMR 100 L4
+Nr. 845123   1987
+380 V Y   5,1 A   2,2 kW
+1410 U/min   50 Hz   IP 44
+TGL 2643   Isol.-Kl. B

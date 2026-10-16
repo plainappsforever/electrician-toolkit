@@ -1,0 +1,9 @@
+SGB-SMIT   Regensburg
+Drehstrom-Öltransformator   DIN EN 60076
+Typ DOTEL 630/20   Nr. 1234567   Baujahr 2019
+Bemessungsleistung   630 kVA   50 Hz
+Schaltgruppe Dyn5   uk 4,0 %   Kühlungsart ONAN
+OS   20 000 V   ± 2 x 2,5 %   18,2 A
+US   400 V   909,3 A
+Isolationspegel LI 125 AC 50 / LI - AC 3
+Gesamtgewicht 1850 kg   Ölgewicht 380 kg

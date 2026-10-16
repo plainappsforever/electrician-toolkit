@@ -1,0 +1,123 @@
+{
+  "fixture": "wilo_stratos_p1_range_eei_de",
+  "kind": "pump",
+  "lang": "de",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "WILO",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "Stratos 30/1-8",
+      "unit": "",
+      "line": 1
+    },
+    "phases": {
+      "value": 1,
+      "unit": "",
+      "line": 2
+    },
+    "voltage": {
+      "value": 230,
+      "unit": "V",
+      "line": 2
+    },
+    "frequencyHz": {
+      "value": [
+        50,
+        60
+      ],
+      "unit": "Hz",
+      "line": [
+        2,
+        2
+      ]
+    },
+    "inputPowerKw": {
+      "value": [
+        8,
+        130
+      ],
+      "unit": "W",
+      "line": [
+        3,
+        3
+      ]
+    },
+    "current": {
+      "value": [
+        0.08,
+        1.08
+      ],
+      "unit": "A",
+      "line": [
+        4,
+        4
+      ]
+    },
+    "ipRating": {
+      "value": "IPX4D",
+      "unit": "",
+      "line": 5
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 5
+    },
+    "serial": {
+      "value": "2098 4567 1234",
+      "unit": "",
+      "line": 8
+    },
+    "year": {
+      "value": 2019,
+      "unit": "",
+      "line": 8
+    }
+  },
+  "absent": [
+    "ratedPowerKw",
+    "ratedPowerHp",
+    "cosPhi",
+    "speedRpm",
+    "efficiencyClass",
+    "efficiencyPct",
+    "duty",
+    "connection",
+    "weightKg",
+    "flowM3h",
+    "headM"
+  ],
+  "checks": [
+    {
+      "kind": "1ph",
+      "P_kW": 0.13,
+      "U": 230,
+      "I": 1.08,
+      "cosPhi": 0.52,
+      "eta": 1.0,
+      "assumed": [
+        "cosPhi",
+        "eta"
+      ]
+    },
+    {
+      "kind": "1ph",
+      "P_kW": 0.008,
+      "U": 230,
+      "I": 0.08,
+      "cosPhi": 0.43,
+      "eta": 1.0,
+      "assumed": [
+        "cosPhi",
+        "eta"
+      ]
+    }
+  ],
+  "notes": "Electronic circulator: power and current are min-max ranges (input power, W). EEI ≤ 0,20 is an energy index, not an efficiency; TF 110 is a temperature class; 1-8 in the type is the head range, not printed as H. No speed on the plate."
+}

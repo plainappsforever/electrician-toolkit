@@ -1,0 +1,9 @@
+Lenze
+MCS09H41-RS0B0-Z0-0
+3~ Servo motor   SN 1830742215
+M0  6.6 Nm    I0  4.3 A   (continuous)
+MN  5.1 Nm    IN  3.5 A   nN 3000 r/min
+PN  1.60 kW   UN  330 V   fN  200 Hz
+Mmax 19.2 Nm  Imax 15.0 A (peak)
+Th.Cl. F   IP54   KTY83-110   11.4 kg
+EN 60034   Made in Germany

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8"><title>Berechnungsbericht — F3</title><style>
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 9.5pt; line-height: 1.35; color: #111; padding: 0 13mm; }
+table.page { width: 100%; border-collapse: collapse; }
+table.page > thead > tr > td, table.page > tfoot > tr > td, table.page > tbody > tr > td { padding: 0; }
+.top-space { height: 11mm; }
+.foot { border-top: 1px solid #888; margin-top: 4mm; padding: 2mm 0 9mm; font-size: 7.5pt; color: #333; }
+.foot p { margin: 0 0 1mm; }
+.letterhead { display: flex; justify-content: space-between; align-items: flex-start; gap: 8mm; border-bottom: 2px solid #111; padding-bottom: 3mm; margin-bottom: 4mm; }
+.letterhead img { max-height: 18mm; max-width: 55mm; }
+.company { text-align: right; font-size: 8.5pt; white-space: pre-line; }
+.company b { font-size: 11pt; }
+h1 { font-size: 16pt; margin: 0 0 2mm; }
+h2 { font-size: 12.5pt; margin: 6mm 0 2mm; border-bottom: 1px solid #bbb; padding-bottom: 1mm; break-after: avoid; page-break-after: avoid; }
+h3 { font-size: 11pt; margin: 4mm 0 1mm; break-after: avoid; page-break-after: avoid; }
+h4 { font-size: 9pt; text-transform: uppercase; letter-spacing: 0.04em; color: #444; margin: 3mm 0 1mm; break-after: avoid; page-break-after: avoid; }
+.small { font-size: 8pt; color: #444; }
+.url { word-break: break-all; }
+.user, .multiline { white-space: pre-line; }
+table.kv { border-collapse: collapse; width: 100%; }
+table.kv th, table.kv td { text-align: left; vertical-align: top; padding: 0.8mm 2mm 0.8mm 0; border-bottom: 1px solid #e3e3e3; }
+table.kv th { font-weight: 600; width: 46%; }
+table.kv td.num { font-variant-numeric: tabular-nums; }
+tr, li { break-inside: avoid; page-break-inside: avoid; }
+ul, ol { margin: 0; padding-left: 5mm; }
+ol.steps li { margin-bottom: 1mm; font-variant-numeric: tabular-nums; }
+ul.sources { list-style: none; padding-left: 0; }
+ul.sources li { margin-bottom: 1.5mm; }
+.badge { display: inline-block; font-size: 7.5pt; padding: 0 1.5mm; border: 1px solid #777; border-radius: 2mm; }
+.badge.lic { background: #f1f1f1; }
+.warn { color: #7a3b00; }
+section.calc { margin-bottom: 4mm; }
+.calc-note { display: none; margin: 2mm 0 0; padding-top: 1mm; border-top: 1px solid #bbb; font-size: 7.5pt; color: #333; }
+.checks-note { margin: 1.5mm 0 0; padding: 1mm 0 0; border-top: 1px dotted #999; font-size: 7.5pt; color: #333; }
+.keep { break-inside: avoid; page-break-inside: avoid; }
+.circuit { margin-top: 3mm; }
+</style></head>
+<body>
+<table class="page">
+<thead><tr><td><div class="top-space"></div></td></tr></thead>
+<tfoot><tr><td><div class="foot">
+<!-- OWNER WORDING: draft wording of the responsibility note (SPEC §15); the owner decides the final text. -->
+<p class="resp-note">Rechenhilfe. Die Ergebnisse hängen von Ihren Eingaben und den angezeigten Annahmen ab. Sie sind keine Planungsfreigabe, keine Prüfung auf Normeinhaltung und kein Prüfnachweis. Sie sind dafür verantwortlich, sie anhand der für Ihre Anlage geltenden Normen und Regeln, der Herstellerangaben und der Vorgaben des Netzbetreibers zu prüfen.</p>
+<p>Electrician Toolkit 1.0.0 · Rechenkern 1.1.0 · Profil eu-de v1</p>
+</div></td></tr></tfoot>
+<tbody><tr><td>
+<div class="letterhead"><div></div><div class="company"><b>Elektro Muster GmbH</b>
+Hauptstr. 1</div></div>
+<h1>Berechnungsbericht</h1><table class="kv"><tr><th>Datum</th><td>01.10.2026</td></tr></table><section class="calc"><h2>F3 — Spannungsfall &amp; Querschnitt</h2><div class="small">Berechnet mit Rechenkern 1.1.0, Profil eu-de (Version 1), gespeichert 30.09.2026</div><div class="keep"><h4>Ergebnisse</h4><table class="kv"><tr><th>Spannungsfall Δu</th><td class="num">3,76 %</td></tr><tr><th>Spannungsfall u (je Leiterweg)</th><td class="num">8,64 V</td></tr><tr><th>Spannung am Leitungsende</th><td class="num">221,36 V</td></tr><tr><th>Verlustleistung in der Leitung</th><td class="num">138,24 W</td></tr><tr><th>Maximale Länge für den gewählten Δu-Grenzwert</th><td class="num">14,3 m</td></tr><tr><th>Kleinster Normquerschnitt nur für den Spannungsfall-Grenzwert — Strombelastbarkeit und Schutz getrennt prüfen</th><td class="num">2,5 mm²</td></tr></table></div><div class="keep"><h4>Prüfungen gegen die von Ihnen gewählten Grenzwerte</h4><ul><li>Δu 3,76 % überschreitet den gewählten Grenzwert 3 % <span class="small">[IEC 60364-5-52 / DIN VDE 0100-520, Anhang G (informativ): Spannungsfall]</span></li></ul><div class="keep"><h4>Hinweise</h4><ul class="warn"><li>M3 feste Leitfähigkeit κ ergibt Δu = 2,99 % und liegt damit innerhalb des gewählten Grenzwerts. Die Verfahren beruhen auf unterschiedlichen Annahmen — siehe Rechenweg.</li></ul></div><p class="checks-note">Rechenhilfe. Die Ergebnisse hängen von Ihren Eingaben und den angezeigten Annahmen ab. Sie sind keine Planungsfreigabe, keine Prüfung auf Normeinhaltung und kein Prüfnachweis. Sie sind dafür verantwortlich, sie anhand der für Ihre Anlage geltenden Normen und Regeln, der Herstellerangaben und der Vorgaben des Netzbetreibers zu prüfen.</p></div><div class="keep"><h4>Eingaben</h4><table class="kv"><tr><th>Netz</th><td>Wechselstrom einphasig (1~)</td></tr><tr><th>Spannung</th><td>230 V</td></tr><tr><th>Strom</th><td>16 A</td></tr><tr><th>Länge</th><td>18 m</td></tr><tr><th>Leitermaterial</th><td>Kupfer</td></tr><tr><th>Querschnitt</th><td>1,5 mm²</td></tr><tr><th>cos φ</th><td>1</td></tr><tr><th>Grenzwert</th><td>3 %</td></tr></table></div><div class="keep"><h4>Annahmen</h4><ul><li>Leistungsfaktor cos φ = 1</li><li>L ist die einfache Leitungslänge</li><li>Konstanten nach Anhang G für Kupfer: ρ1 = 0,0225 Ω·mm²/m, Reaktanz λ = 0,00008 Ω/m (wenn keine Kabeldaten bekannt)</li><li>Gewählter Grenzwert 3 % (eigener Grenzwert)</li><li>Geprüfte Normquerschnitte: Reihe IEC 60228 von 0,5 bis 300 mm²</li><li>Der kleinste Querschnitt folgt allein aus dem gewählten Spannungsfall-Grenzwert: Strombelastbarkeit Iz, Überlast- und Kurzschlussschutz und Abschaltung werden hier nicht geprüft (dafür: Schutzorgan &amp; Leitung, Schleifenimpedanz)</li><li>Verfahrensvergleich mit θ = 70 °C (M2), κ = 56 m/(Ω·mm²) (M3), X&#39; = 0,00008 Ω/m <span class="small">(Standardwert)</span></li></ul></div><div><h4>Rechenweg</h4><ol class="steps"><li>ρ1 = 0,0225 Ω·mm²/m (Anhang G, enthält den Zuschlag für die Betriebstemperatur)</li><li>R = ρ × L / S = 0,0225 Ω·mm²/m × 18 m / 1,5 mm² = 0,27 Ω</li><li>sin φ = √(1 − cos² φ) = √(1 − 1²) = 0</li><li>u = b × (R × cos φ + X&#39;/n × L × sin φ) × I = 2 × (0,27 Ω × 1 + 0,00008 Ω/m × 18 m × 0) × 16 A = 8,64 V</li><li>Δu = 100 × u / U0 = 100 × 8,64 V / 230 V = 3,76 %</li><li>U_Ende = U − u = 230 V − 8,64 V = 221,36 V</li><li>P_Verlust = 2 × I² × R = 2 × 16 A² × 0,27 Ω = 138,24 W</li><li>L_max = Grenzwert × U0 / (100 × b × I × (ρ/S_eff × cos φ + X&#39;/n × sin φ)) = 3 % × 230 V / (100 × 2 × 16 A × (0,0225 Ω·mm²/m / 1,5 mm² × 1 + 0,00008 Ω/m × 0)) = 14,3 m</li><li>Kleinster Normquerschnitt mit Δu ≤ 3 %: 2,5 mm² (Δu = 2,26 %)</li><li>Nächstkleinerer Querschnitt 1,5 mm²: Δu = 3,76 %, über 3 %</li><li>M2 Physik bei Leitertemperatur: Δu = 3,45 %</li><li>M3 feste Leitfähigkeit κ: Δu = 2,99 %</li></ol></div><div><h4>Quellen</h4><ul class="sources"><li><b>Deutsche Installationspraxis: ΔU = 2·L·I·cos φ/(κ·S)</b><br>κ ≈ 56 m/(Ω·mm²) Kupfer, 35 Aluminium<br><span class="badge pub">öffentliche Quelle</span><div class="small url">https://www.elektrikerwissen.de/spannungsfall/</div></li><li><b>IEC 60228 / DIN EN 60228 Leiter für Kabel und isolierte Leitungen</b>, IEC 60228:2004<br>Nennquerschnitte 0,5 … 300 mm² (hier verwendete Reihe)<br><span class="badge lic">lizenzierte Norm: Abschnitt zitiert, Text nicht wiedergegeben</span><div class="small url">https://en.wikipedia.org/wiki/IEC_60228</div></li><li><b>IEC 60364-5-52 / DIN VDE 0100-520, Anhang G (informativ): Spannungsfall</b>, IEC 60364-5-52:2009+AMD1:2024<br>Anhang G: u = b(ρ1·L/S·cos φ + λ·L·sin φ)·IB; Δu = 100·u/U0; ρ1 Cu 0,0225, Al 0,036 Ω·mm²/m; λ 0,08 mΩ/m; Empfehlung 3 % Beleuchtung / 5 % andere Verbraucher<br><span class="badge lic">lizenzierte Norm: Abschnitt zitiert, Text nicht wiedergegeben</span><div class="small url">https://www.trace-software.com/en/verification-of-voltage-drops/</div><div class="small">Noch nicht am Originaltext bestätigt: Die Konstanten ρ1 und λ stammen aus öffentlichen Wiedergaben der Norm; sie wurden nicht am lizenzierten Normtext geprüft.</div></li><li><b>Physik: P = U·I·cos φ, S = U·I, Q = S·sin φ (×√3 bei Drehstrom); Ohmsches Gesetz U = I·R</b><br>Leistungsbeziehungen bei Wechselstrom, symmetrischer Drehstrom<br><span class="badge pub">öffentliche Quelle</span><div class="small url">https://en.wikipedia.org/wiki/AC_power</div></li><li><b>Physik: R = ρ·L/S, ρθ = ρ20·(1 + α20·(θ − 20 °C))</b><br>lineares Temperaturmodell des spezifischen Widerstands von Metallen<br><span class="badge pub">öffentliche Quelle</span><div class="small url">https://en.wikipedia.org/wiki/Electrical_resistivity_and_conductivity</div></li></ul></div><p class="calc-note">Rechenhilfe. Die Ergebnisse hängen von Ihren Eingaben und den angezeigten Annahmen ab. Sie sind keine Planungsfreigabe, keine Prüfung auf Normeinhaltung und kein Prüfnachweis. Sie sind dafür verantwortlich, sie anhand der für Ihre Anlage geltenden Normen und Regeln, der Herstellerangaben und der Vorgaben des Netzbetreibers zu prüfen.</p></section>
+</td></tr></tbody>
+</table>
+</body></html>

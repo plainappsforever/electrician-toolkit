@@ -1,0 +1,433 @@
+appId: ${APP_ID}
+name: "RELEASE: Examples E1-E8 typed through the screens reproduce the oracle values (E1 and E4 are in their own flows, E3 in coord-table) (typed through the screens on the Release build)"
+tags:
+  - preview-only
+  - release
+---
+# Release build: no seeds or dev links exist; the app starts from its own defaults (no flow here changes a setting).
+- runFlow:
+    file: ../subflows/release-start.yaml
+# ---- E2: 3~ 400 V, 22 kW, cos φ 1, 30 m, Cu 6 mm², M1, 3 % -> I 31.75 A, Δu 1.546875 %, ΔU_LL 6.19 V, U_end 393.81 V, L_max 58.1 m
+- tapOn:
+    id: calc-open-vdrop
+- tapOn:
+    id: system-ac3
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-voltage
+      TEXT: "400"
+- tapOn:
+    id: load-power
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-power
+      TEXT: "22"
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "30"
+- scrollUntilVisible:
+    element:
+      id: size-chip-6
+- tapOn:
+    id: size-chip-6
+- assertVisible:
+    id: strip-main
+    text: "1.55 %"
+- scrollUntilVisible:
+    element:
+      id: result-uEnd
+- assertVisible:
+    id: result-uEnd
+    text: "393.81 V"
+- assertVisible:
+    id: result-powerLoss
+    text: "340.31 W"
+- assertVisible:
+    id: result-lMax
+    text: "58.1 m"
+# ---- E2b: 1~ 230 V, 16 A, 25 m, Cu 2.5 mm², cos φ 0.9 -> 2.8295 %
+- scrollUntilVisible:
+    element:
+      id: reset-button
+- tapOn:
+    id: reset-button
+- scrollUntilVisible:
+    element:
+      id: input-current
+    direction: UP
+    centerElement: true
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-current
+      TEXT: "16"
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-cosPhi
+      TEXT: "0.9"
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "25"
+- scrollUntilVisible:
+    element:
+      id: size-chip-2.5
+- tapOn:
+    id: size-chip-2.5
+- assertVisible:
+    id: strip-main
+    text: "2.83 %"
+# ---- E2c: DC 24 V, 20 A, 10 m, Cu 6 mm² -> 6.25 %; the cos φ field is hidden for DC (SPEC §13)
+- scrollUntilVisible:
+    element:
+      id: reset-button
+- tapOn:
+    id: reset-button
+- scrollUntilVisible:
+    element:
+      id: system-dc
+    direction: UP
+    centerElement: true
+- tapOn:
+    id: system-dc
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-voltage
+      TEXT: "24"
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-current
+      TEXT: "20"
+- assertNotVisible:
+    id: input-cosPhi
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "10"
+- scrollUntilVisible:
+    element:
+      id: size-chip-6
+- tapOn:
+    id: size-chip-6
+- assertVisible:
+    id: strip-main
+    text: "6.25 %"
+# ---- E8: 3~ 400 V, 50 kW, cos φ 0.9, 80 m, Cu, M1 -> 16 mm² 3.62 %, min size 25 mm²; 25 mm² 2.35 %; 2 x 25 mm² 1.18 %
+- scrollUntilVisible:
+    element:
+      id: reset-button
+- tapOn:
+    id: reset-button
+- scrollUntilVisible:
+    element:
+      id: system-ac3
+    direction: UP
+    centerElement: true
+- tapOn:
+    id: system-ac3
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-voltage
+      TEXT: "400"
+- tapOn:
+    id: load-power
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-power
+      TEXT: "50"
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-cosPhi
+      TEXT: "0.9"
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "80"
+- scrollUntilVisible:
+    element:
+      id: size-chip-16
+- tapOn:
+    id: size-chip-16
+- assertVisible:
+    id: strip-main
+    text: "3.62 %"
+- scrollUntilVisible:
+    element:
+      id: result-minSize
+- assertVisible:
+    id: result-minSize
+    text: "25 mm²"
+- scrollUntilVisible:
+    element:
+      id: size-chip-25
+    direction: UP
+    centerElement: true
+- tapOn:
+    id: size-chip-25
+- assertVisible:
+    id: strip-main
+    text: "2.35 %"
+- scrollUntilVisible:
+    element:
+      id: input-parallel
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-parallel
+      TEXT: "2"
+- assertVisible:
+    id: strip-main
+    text: "1.18 %"
+# ---- E6 last row: 1~ 120 V, 16 A, 50 ft, AWG 12 Cu, M2 θ 75 °C -> 2.5754 %
+- scrollUntilVisible:
+    element:
+      id: reset-button
+- tapOn:
+    id: reset-button
+- scrollUntilVisible:
+    element:
+      id: input-voltage
+    direction: UP
+    centerElement: true
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-voltage
+      TEXT: "120"
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-current
+      TEXT: "16"
+- scrollUntilVisible:
+    element:
+      id: length-unit-ft
+- tapOn:
+    id: length-unit-ft
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "50"
+- scrollUntilVisible:
+    element:
+      id: size-unit-awg
+- tapOn:
+    id: size-unit-awg
+- scrollUntilVisible:
+    element:
+      id: input-size
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-size
+      TEXT: "12"
+- scrollUntilVisible:
+    element:
+      id: options-toggle
+- tapOn:
+    id: options-toggle
+- scrollUntilVisible:
+    element:
+      id: method-M2
+- tapOn:
+    id: method-M2
+- scrollUntilVisible:
+    element:
+      id: input-theta
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-theta
+      TEXT: "75"
+- assertVisible:
+    id: strip-main
+    text: "2.58 %"
+# ---- E7: 3~ 400 V, 7.5 kW, cos φ 0.85, η 0.9 -> 14.15 A, 9803.92 VA, 8333.33 W, 5164.54 var; 1~ 230 V 3680 W -> 16 A
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: calc-open-current
+- tapOn:
+    id: system-ac3
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-voltage
+      TEXT: "400"
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-power
+      TEXT: "7.5"
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-cosPhi
+      TEXT: "0.85"
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-efficiency
+      TEXT: "0.9"
+- assertVisible:
+    id: strip-main
+    text: "14.15 A"
+- scrollUntilVisible:
+    element:
+      id: result-apparentPower
+- assertVisible:
+    id: result-apparentPower
+    text: "9803.92 VA"
+- assertVisible:
+    id: result-inputPower
+    text: "8333.33 W"
+- assertVisible:
+    id: result-reactivePower
+    text: "5164.54 var"
+- scrollUntilVisible:
+    element:
+      id: reset-button
+- tapOn:
+    id: reset-button
+- scrollUntilVisible:
+    element:
+      id: input-voltage
+    direction: UP
+    centerElement: true
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-power
+      TEXT: "3680"
+- tapOn:
+    id: power-unit-W
+- assertVisible:
+    id: strip-main
+    text: "16 A"
+# ---- Ohm's law (segment of Current & power): 230 V and 16 A -> 14.375 Ω, 3680 W
+- scrollUntilVisible:
+    element:
+      id: calc-mode-ohm
+    direction: UP
+    centerElement: true
+- tapOn:
+    id: calc-mode-ohm
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-voltage
+      TEXT: "230"
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-current
+      TEXT: "16"
+- scrollUntilVisible:
+    element:
+      id: result-resistance
+- assertVisible:
+    id: result-resistance
+    text: "14.375 Ω"
+# ---- E5: Cu 2.5 mm², 50 m, 70 °C -> R20 0.345 Ω, R70 0.413 Ω; Al 16 mm², 100 m -> R20 0.177 Ω
+- runFlow:
+    file: ../subflows/open-calc.yaml
+    env:
+      KIND: resistance
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "50"
+- scrollUntilVisible:
+    element:
+      id: size-chip-2.5
+- tapOn:
+    id: size-chip-2.5
+- assertVisible:
+    id: strip-main
+    text: "0.413 Ω"
+- scrollUntilVisible:
+    element:
+      id: result-r20
+- assertVisible:
+    id: result-r20
+    text: "0.345 Ω"
+- scrollUntilVisible:
+    element:
+      id: material-al
+    direction: UP
+    centerElement: true
+- tapOn:
+    id: material-al
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "100"
+- scrollUntilVisible:
+    element:
+      id: size-chip-16
+- tapOn:
+    id: size-chip-16
+- scrollUntilVisible:
+    element:
+      id: result-r20
+- assertVisible:
+    id: result-r20
+    text: "0.177 Ω"
+# ---- E6 conversions: AWG 12 -> 3.309 mm²; AWG 4/0 -> 107.219 mm²; 250 kcmil -> 126.677 mm²
+- runFlow:
+    file: ../subflows/open-calc.yaml
+    env:
+      KIND: convert
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-value
+      TEXT: "12"
+- assertVisible:
+    id: strip-main
+    text: "3.309 mm²"
+- scrollUntilVisible:
+    element:
+      id: result-diameterMm
+- assertVisible:
+    id: result-diameterMm
+    text: "2.053 mm"
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-value
+      TEXT: "4/0"
+- assertVisible:
+    id: strip-main
+    text: "107.219 mm²"
+- scrollUntilVisible:
+    element:
+      id: from-kcmil
+    direction: UP
+    centerElement: true
+- tapOn:
+    id: from-kcmil
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-value
+      TEXT: "250"
+- assertVisible:
+    id: strip-main
+    text: "126.677 mm²"

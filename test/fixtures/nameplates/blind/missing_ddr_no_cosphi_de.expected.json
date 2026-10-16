@@ -1,0 +1,98 @@
+{
+  "fixture": "missing_ddr_no_cosphi_de",
+  "kind": "motor-iec",
+  "lang": "de",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "VEM",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "KMR 100 L4",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "845123",
+      "unit": "",
+      "line": 2
+    },
+    "year": {
+      "value": 1987,
+      "unit": "",
+      "line": 2
+    },
+    "voltage": {
+      "value": 380,
+      "unit": "V",
+      "line": 3
+    },
+    "connection": {
+      "value": "Y",
+      "unit": "",
+      "line": 3
+    },
+    "current": {
+      "value": 5.1,
+      "unit": "A",
+      "line": 3
+    },
+    "ratedPowerKw": {
+      "value": 2.2,
+      "unit": "kW",
+      "line": 3
+    },
+    "speedRpm": {
+      "value": 1410,
+      "unit": "rpm",
+      "line": 4
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 4
+    },
+    "ipRating": {
+      "value": "IP44",
+      "unit": "",
+      "line": 4
+    },
+    "insulationClass": {
+      "value": "B",
+      "unit": "",
+      "line": 5
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "cosPhi",
+    "efficiencyClass",
+    "efficiencyPct",
+    "duty",
+    "weightKg"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 2.2,
+      "U": 380,
+      "I": 5.1,
+      "cosPhi": 0.81,
+      "eta": 0.8,
+      "assumed": [
+        "cosPhi",
+        "eta"
+      ]
+    }
+  ],
+  "notes": "No cos φ: a parser must not take 2,2 or 5,1 as cos φ."
+}

@@ -1,0 +1,156 @@
+{
+  "fixture": "sew_r47_gearmotor_de",
+  "kind": "gearmotor",
+  "lang": "de",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "SEW-EURODRIVE",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "R47 DRN90L4/BE2/TF",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "01.7465489302.0001.24",
+      "unit": "",
+      "line": 2
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 3
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 3
+    },
+    "efficiencyClass": {
+      "value": "IE3",
+      "unit": "",
+      "line": 3
+    },
+    "efficiencyPct": {
+      "value": 85.3,
+      "unit": "%",
+      "line": 3
+    },
+    "ratedPowerKw": {
+      "value": 1.5,
+      "unit": "kW",
+      "line": 4
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 4
+    },
+    "cosPhi": {
+      "value": 0.79,
+      "unit": "",
+      "line": 4
+    },
+    "speedRpm": {
+      "value": 1440,
+      "unit": "rpm",
+      "line": 4
+    },
+    "outputSpeedRpm": {
+      "value": 41,
+      "unit": "rpm",
+      "line": 4
+    },
+    "voltage": {
+      "value": [
+        220,
+        242,
+        380,
+        420
+      ],
+      "unit": "V",
+      "line": [
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    "connection": {
+      "value": [
+        "Δ",
+        "Y"
+      ],
+      "unit": "",
+      "line": [
+        5,
+        5
+      ]
+    },
+    "current": {
+      "value": [
+        5.6,
+        3.25
+      ],
+      "unit": "A",
+      "line": [
+        6,
+        6
+      ]
+    },
+    "ipRating": {
+      "value": "IP54",
+      "unit": "",
+      "line": 6
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 7
+    },
+    "gearRatio": {
+      "value": 35.02,
+      "unit": "",
+      "line": 7
+    },
+    "brakeVoltage": {
+      "value": 230,
+      "unit": "V",
+      "line": 8
+    },
+    "weightKg": {
+      "value": 34,
+      "unit": "kg",
+      "line": 9
+    }
+  },
+  "absent": [
+    "ratedPowerHp"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 1.5,
+      "U": 220,
+      "I": 5.6,
+      "cosPhi": 0.79,
+      "eta": 0.853,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 1.5,
+      "U": 380,
+      "I": 3.25,
+      "cosPhi": 0.79,
+      "eta": 0.853,
+      "assumed": []
+    }
+  ],
+  "notes": "230 V is the BRAKE voltage, not the motor voltage; 41 is gearbox output speed; 'CLP 220' is oil grade; '0,65 l' oil volume."
+}

@@ -1,0 +1,158 @@
+{
+  "fixture": "nema_baldor_10hp_en",
+  "kind": "motor-nema",
+  "lang": "en",
+  "ocrDamage": [],
+  "fields": {
+    "manufacturer": {
+      "value": "BALDOR",
+      "unit": "",
+      "line": 0
+    },
+    "efficiencyClass": {
+      "value": "NEMA Premium",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "EM2334T",
+      "unit": "",
+      "line": 1
+    },
+    "ratedPowerHp": {
+      "value": 10,
+      "unit": "hp",
+      "line": 2
+    },
+    "voltage": {
+      "value": [
+        230,
+        460
+      ],
+      "unit": "V",
+      "line": [
+        2,
+        2
+      ]
+    },
+    "current": {
+      "value": [
+        24.4,
+        12.2
+      ],
+      "unit": "A",
+      "line": [
+        2,
+        2
+      ]
+    },
+    "speedRpm": {
+      "value": 1770,
+      "unit": "rpm",
+      "line": 3
+    },
+    "frequencyHz": {
+      "value": 60,
+      "unit": "Hz",
+      "line": 3
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 3
+    },
+    "serviceFactor": {
+      "value": 1.15,
+      "unit": "",
+      "line": 3
+    },
+    "serviceFactorCurrent": {
+      "value": [
+        28.0,
+        14.0
+      ],
+      "unit": "A",
+      "line": [
+        4,
+        4
+      ]
+    },
+    "efficiencyPct": {
+      "value": 91.7,
+      "unit": "%",
+      "line": 4
+    },
+    "cosPhi": {
+      "value": 0.82,
+      "unit": "",
+      "line": 4
+    },
+    "frame": {
+      "value": "215T",
+      "unit": "",
+      "line": 5
+    },
+    "codeLetter": {
+      "value": "H",
+      "unit": "",
+      "line": 5
+    },
+    "nemaDesign": {
+      "value": "B",
+      "unit": "",
+      "line": 5
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 5
+    },
+    "ambientC": {
+      "value": 40,
+      "unit": "°C",
+      "line": 6
+    },
+    "duty": {
+      "value": "CONT",
+      "unit": "",
+      "line": 6
+    },
+    "enclosure": {
+      "value": "TEFC",
+      "unit": "",
+      "line": 6
+    },
+    "serial": {
+      "value": "Z1903041234",
+      "unit": "",
+      "line": 7
+    }
+  },
+  "absent": [
+    "ratedPowerKw",
+    "ipRating",
+    "connection",
+    "weightKg"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_hp": 10,
+      "U": 230,
+      "I": 24.4,
+      "cosPhi": 0.82,
+      "eta": 0.917,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_hp": 10,
+      "U": 460,
+      "I": 12.2,
+      "cosPhi": 0.82,
+      "eta": 0.917,
+      "assumed": []
+    }
+  ],
+  "notes": "SF AMPS 28.0/14.0 are service-factor currents. 'PF 82' means 0.82."
+}

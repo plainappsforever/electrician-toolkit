@@ -1,0 +1,10 @@
+WILO
+Stratos 30/1-8
+1~230 V   50/60 Hz
+P1 8 - 130 W
+I 0,08 - 1,08 A
+IP X4D   Iso.-Kl. F
+TF 110   PN 6/10
+EEI ≤ 0,20
+Nr. 2098 4567 1234   2019
+Made in Germany

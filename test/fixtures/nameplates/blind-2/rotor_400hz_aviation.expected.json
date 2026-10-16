@@ -1,0 +1,109 @@
+{
+ "fixture": "rotor_400hz_aviation",
+ "kind": "motor-iec",
+ "lang": "en",
+ "ocrDamage": [
+  "thousands-space"
+ ],
+ "fields": {
+  "manufacturer": {
+   "value": "Rotor",
+   "unit": "",
+   "line": 0
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 1
+  },
+  "type": {
+   "value": "9RX 90 L4-400",
+   "unit": "",
+   "line": 1
+  },
+  "serial": {
+   "value": "21-04473",
+   "unit": "",
+   "line": 2
+  },
+  "voltage": {
+   "value": 200,
+   "unit": "V",
+   "line": 3
+  },
+  "connection": {
+   "value": "Y",
+   "unit": "",
+   "line": 3
+  },
+  "frequencyHz": {
+   "value": 400,
+   "unit": "Hz",
+   "line": 3
+  },
+  "ratedPowerKw": {
+   "value": 2.2,
+   "unit": "kW",
+   "line": 3
+  },
+  "current": {
+   "value": 8.7,
+   "unit": "A",
+   "line": 3
+  },
+  "speedRpm": {
+   "value": 11400,
+   "unit": "rpm",
+   "line": 4
+  },
+  "cosPhi": {
+   "value": 0.85,
+   "unit": "",
+   "line": 4
+  },
+  "duty": {
+   "value": "S1",
+   "unit": "",
+   "line": 4
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 5
+  },
+  "ipRating": {
+   "value": "IP54",
+   "unit": "",
+   "line": 5
+  },
+  "ambientC": {
+   "value": 40,
+   "unit": "°C",
+   "line": 5
+  },
+  "weightKg": {
+   "value": 14,
+   "unit": "kg",
+   "line": 5
+  }
+ },
+ "absent": [
+  "ratedPowerHp",
+  "efficiencyClass",
+  "efficiencyPct"
+ ],
+ "checks": [
+  {
+   "kind": "3ph",
+   "P_kW": 2.2,
+   "U": 200,
+   "I": 8.7,
+   "cosPhi": 0.85,
+   "eta": 0.86,
+   "assumed": [
+    "eta"
+   ]
+  }
+ ],
+ "notes": "400 Hz aviation-style supply (200 V Y, 115 V phase not printed). Speed 11 400 r/min with a thousands space (4 poles at 400 Hz -> 12 000 synchronous). '400' inside the type is not the voltage. Must not assume 50 Hz."
+}

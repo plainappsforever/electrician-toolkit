@@ -1,0 +1,86 @@
+appId: ${APP_ID}
+name: "RELEASE report PDF - the real share sheet opens for a calculation PDF, a project PDF and the CSV, and the notice names the file (Release build, nothing is skipped)"
+tags:
+  - preview-only
+  - release
+---
+- runFlow: ../subflows/release-start.yaml
+- tapOn:
+    id: calc-open-vdrop
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-current
+      TEXT: "16"
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "18"
+- scrollUntilVisible:
+    element:
+      id: size-chip-1.5
+- tapOn:
+    id: size-chip-1.5
+# the live result as a PDF
+- scrollUntilVisible:
+    element:
+      id: pdf-button
+- tapOn:
+    id: pdf-button
+- runFlow: ../subflows/dismiss-share.yaml
+- scrollUntilVisible:
+    element:
+      id: pdf-done
+    timeout: 60000
+- assertVisible:
+    id: pdf-done
+    text: "PDF created: vdrop-.*\\.pdf.*"
+- takeScreenshot: release-pdf-notice
+# save it to a new project, then the project report
+- scrollUntilVisible:
+    element:
+      id: save-open
+- tapOn:
+    id: save-open
+- tapOn:
+    id: save-new-project
+- tapOn:
+    id: save-project-name
+- inputText: "Mueller Release"
+- pressKey: Enter
+- scrollUntilVisible:
+    element:
+      id: save-confirm
+- tapOn:
+    id: save-confirm
+- assertVisible:
+    id: saved-banner
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: tab-projects
+- tapOn: ".*Mueller Release.*"
+- scrollUntilVisible:
+    element:
+      id: project-report
+- tapOn:
+    id: project-report
+- runFlow: ../subflows/dismiss-share.yaml
+- scrollUntilVisible:
+    element:
+      id: pdf-done
+    timeout: 60000
+- assertVisible:
+    id: pdf-done
+    text: "PDF created: Mueller-Release-.*\\.pdf \\(.*, pages: [1-9][0-9]*\\).*"
+- tapOn:
+    id: project-csv
+- runFlow: ../subflows/dismiss-share.yaml
+- scrollUntilVisible:
+    element:
+      id: csv-done
+    timeout: 60000
+- assertVisible:
+    id: csv-done
+    text: "CSV created: electrician-toolkit-calculations-.*\\.csv.*"

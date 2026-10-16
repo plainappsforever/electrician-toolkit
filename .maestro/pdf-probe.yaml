@@ -1,0 +1,16 @@
+appId: ${APP_ID}
+name: PDF probe - the report documents (EN/DE, A4/Letter, one calculation and 30) are written for scripts/verify-pdfs.mjs
+tags:
+  - core
+---
+- runFlow: subflows/launch.yaml
+- runFlow:
+    file: subflows/link.yaml
+    env:
+      URL: ${APP_SCHEME}://debug/pdfprobe
+- extendedWaitUntil:
+    visible: "PDFPROBE OK 4 files.*"
+    timeout: 180000
+- assertVisible:
+    id: probe-line-2
+    text: "project30-en-a4.pdf: .* pages, .* bytes, .* ms .* 30 calculations"

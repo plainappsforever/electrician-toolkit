@@ -1,0 +1,107 @@
+{
+  "fixture": "transformer_630kva_dyn5_de",
+  "kind": "transformer",
+  "lang": "de",
+  "ocrDamage": [
+    "decimal-comma",
+    "thousands-space"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "SGB-SMIT",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "DOTEL 630/20",
+      "unit": "",
+      "line": 2
+    },
+    "serial": {
+      "value": "1234567",
+      "unit": "",
+      "line": 2
+    },
+    "year": {
+      "value": 2019,
+      "unit": "",
+      "line": 2
+    },
+    "ratedPowerKva": {
+      "value": 630,
+      "unit": "kVA",
+      "line": 3
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 3
+    },
+    "vectorGroup": {
+      "value": "Dyn5",
+      "unit": "",
+      "line": 4
+    },
+    "ukPct": {
+      "value": 4.0,
+      "unit": "%",
+      "line": 4
+    },
+    "cooling": {
+      "value": "ONAN",
+      "unit": "",
+      "line": 4
+    },
+    "primaryVoltage": {
+      "value": 20000,
+      "unit": "V",
+      "line": 5
+    },
+    "primaryCurrent": {
+      "value": 18.2,
+      "unit": "A",
+      "line": 5
+    },
+    "secondaryVoltage": {
+      "value": 400,
+      "unit": "V",
+      "line": 6
+    },
+    "secondaryCurrent": {
+      "value": 909.3,
+      "unit": "A",
+      "line": 6
+    },
+    "weightKg": {
+      "value": 1850,
+      "unit": "kg",
+      "line": 8
+    }
+  },
+  "absent": [
+    "insulationClass",
+    "ipRating"
+  ],
+  "checks": [
+    {
+      "kind": "transformer3",
+      "S_kVA": 630,
+      "U": 20000,
+      "I": 18.2,
+      "assumed": []
+    },
+    {
+      "kind": "transformer3",
+      "S_kVA": 630,
+      "U": 400,
+      "I": 909.3,
+      "assumed": []
+    }
+  ],
+  "notes": "'AC 50' is the power-frequency test level in kV, not 50 Hz; 380 kg is oil mass."
+}

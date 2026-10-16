@@ -1,0 +1,111 @@
+{
+ "fixture": "sgb_oil_transformer_dyn5_de",
+ "kind": "transformer",
+ "lang": "de",
+ "ocrDamage": [
+  "thousands-space",
+  "decimal-comma"
+ ],
+ "fields": {
+  "manufacturer": {
+   "value": "SGB",
+   "unit": "",
+   "line": 0
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 1
+  },
+  "type": {
+   "value": "DOTE 630/20",
+   "unit": "",
+   "line": 2
+  },
+  "serial": {
+   "value": "2021-40771",
+   "unit": "",
+   "line": 2
+  },
+  "year": {
+   "value": 2021,
+   "unit": "",
+   "line": 2
+  },
+  "ratedPowerKva": {
+   "value": 630,
+   "unit": "kVA",
+   "line": 3
+  },
+  "frequencyHz": {
+   "value": 50,
+   "unit": "Hz",
+   "line": 3
+  },
+  "vectorGroup": {
+   "value": "Dyn5",
+   "unit": "",
+   "line": 3
+  },
+  "primaryVoltage": {
+   "value": 20000,
+   "unit": "V",
+   "line": 4
+  },
+  "primaryCurrent": {
+   "value": 18.2,
+   "unit": "A",
+   "line": 4
+  },
+  "secondaryVoltage": {
+   "value": 400,
+   "unit": "V",
+   "line": 5
+  },
+  "secondaryCurrent": {
+   "value": 909,
+   "unit": "A",
+   "line": 5
+  },
+  "ukPct": {
+   "value": 6.1,
+   "unit": "%",
+   "line": 6
+  },
+  "cooling": {
+   "value": "ONAN",
+   "unit": "",
+   "line": 6
+  },
+  "weightKg": {
+   "value": 2150,
+   "unit": "kg",
+   "line": 6
+  },
+  "ipRating": {
+   "value": "IP00",
+   "unit": "",
+   "line": 7
+  }
+ },
+ "absent": [
+  "insulationClass"
+ ],
+ "checks": [
+  {
+   "kind": "transformer3",
+   "S_kVA": 630,
+   "U": 20000,
+   "I": 18.2,
+   "assumed": []
+  },
+  {
+   "kind": "transformer3",
+   "S_kVA": 630,
+   "U": 400,
+   "I": 909,
+   "assumed": []
+  }
+ ],
+ "notes": "German oil distribution transformer: OS = HV side, US = LV side. '20 000 V' with a thousands space. Type 'DOTE 630/20' repeats kVA and kV - not separate ratings. No insulation class printed. Phases from 'Drehstrom'."
+}

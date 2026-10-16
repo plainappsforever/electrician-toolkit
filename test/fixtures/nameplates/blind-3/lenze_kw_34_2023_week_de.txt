@@ -1,0 +1,11 @@
+Lenze
+Drehstrommotor   3~
+Typ MDERAXX080-32
+Nr. 13456789
+KW 34/2023
+IEC/EN 60034   IE3
+230/400 V   Δ/Y   50 Hz
+4,4/2,55 A   1,1 kW   S1
+cos φ 0,75   1435 min-1
+η 84,1 %   IP55   Wärmeklasse F
+13 kg

@@ -1,0 +1,119 @@
+{
+  "fixture": "grundfos_cm_1ph_p1_p2",
+  "kind": "pump",
+  "lang": "en",
+  "ocrDamage": [
+    "rn/m",
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "GRUNDFOS",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "CM3-5 A-R-A-E-AQQE",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "A 97516630 P1 2341 0012",
+      "unit": "",
+      "line": 2
+    },
+    "flowM3h": {
+      "value": 3.0,
+      "unit": "m3/h",
+      "line": 3
+    },
+    "headM": {
+      "value": 25.5,
+      "unit": "m",
+      "line": 3
+    },
+    "phases": {
+      "value": 1,
+      "unit": "",
+      "line": 4
+    },
+    "voltage": {
+      "value": [
+        220,
+        240
+      ],
+      "unit": "V",
+      "line": [
+        4,
+        4
+      ]
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 4
+    },
+    "current": {
+      "value": 3.1,
+      "unit": "A",
+      "line": 4
+    },
+    "inputPowerKw": {
+      "value": 0.65,
+      "unit": "kW",
+      "line": 5
+    },
+    "ratedPowerKw": {
+      "value": 0.45,
+      "unit": "kW",
+      "line": 5
+    },
+    "cosPhi": {
+      "value": 0.95,
+      "unit": "",
+      "line": 5
+    },
+    "speedRpm": {
+      "value": 2850,
+      "unit": "rpm",
+      "line": 6
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 6
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 6
+    },
+    "capacitorUf": {
+      "value": 16,
+      "unit": "µF",
+      "line": 7
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "efficiencyClass",
+    "efficiencyPct",
+    "duty",
+    "connection",
+    "weightKg"
+  ],
+  "checks": [
+    {
+      "kind": "1ph",
+      "P_kW": 0.65,
+      "U": 220,
+      "I": 3.1,
+      "cosPhi": 0.95,
+      "eta": 1.0,
+      "assumed": [
+        "eta"
+      ]
+    }
+  ],
+  "notes": "P1 (input) 0,65 kW vs P2 (output) 0,45 kW: ratedPowerKw = P2. 'P1 2341' in the Model line is a plant/date code. 'I1/1' = full-load current. 450 V is the capacitor voltage. 'rn³/h' = m³/h."
+}

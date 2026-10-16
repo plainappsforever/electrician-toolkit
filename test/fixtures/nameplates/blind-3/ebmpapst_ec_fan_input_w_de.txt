@@ -1,0 +1,9 @@
+ebm-papst
+Typ R3G310-AN43-71
+Nr. 1234567 / 2311
+1~200-277V  50/60Hz
+P 154W   I 0,8OA
+n 2260min-l
+lP54  Isol.-Kl. B
+Tmax 60°C
+Made in Germany

@@ -1,0 +1,137 @@
+{
+  "fixture": "siemens_1la7_ocr_heavy",
+  "kind": "motor-iec",
+  "lang": "en",
+  "ocrDamage": [
+    "0/O",
+    "1/l/I",
+    "5/S",
+    "rn/m",
+    "Δ->D",
+    "φ->o",
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "SIEMENS",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "1LA7090-4AA10",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "UD 0712/1234567-001",
+      "unit": "",
+      "line": 2
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 3
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 3
+    },
+    "weightKg": {
+      "value": 17,
+      "unit": "kg",
+      "line": 3
+    },
+    "connection": {
+      "value": "Δ/Y",
+      "unit": "",
+      "line": 4
+    },
+    "voltage": {
+      "value": [
+        230,
+        400
+      ],
+      "unit": "V",
+      "line": [
+        4,
+        4
+      ]
+    },
+    "current": {
+      "value": [
+        6.0,
+        3.45
+      ],
+      "unit": "A",
+      "line": [
+        4,
+        4
+      ]
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 4
+    },
+    "ratedPowerKw": {
+      "value": 1.5,
+      "unit": "kW",
+      "line": 5
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 5
+    },
+    "cosPhi": {
+      "value": 0.82,
+      "unit": "",
+      "line": 5
+    },
+    "speedRpm": {
+      "value": 1415,
+      "unit": "rpm",
+      "line": 5
+    },
+    "efficiencyClass": {
+      "value": "IE1",
+      "unit": "",
+      "line": 6
+    },
+    "efficiencyPct": {
+      "value": 77.4,
+      "unit": "%",
+      "line": 6
+    }
+  },
+  "absent": [
+    "ratedPowerHp"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 1.5,
+      "U": 400,
+      "I": 3.45,
+      "cosPhi": 0.82,
+      "eta": 0.774,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 1.5,
+      "U": 230,
+      "I": 6.0,
+      "cosPhi": 0.82,
+      "eta": 0.774,
+      "assumed": []
+    }
+  ],
+  "notes": "Every 0 may be O, every 1 may be l, 5 may be S. 'D/Y' is Δ/Y. 'coso' is cos φ. '/rnin' is /min. 'Sl' is duty S1, not a number."
+}

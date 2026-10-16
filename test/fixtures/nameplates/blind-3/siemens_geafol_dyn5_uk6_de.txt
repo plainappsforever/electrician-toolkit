@@ -1,0 +1,13 @@
+SIEMENS
+GEAFOL Drehstrom-Gießharztransformator
+Typ 4GB5444-3CA
+Nr. 2312345   Baujahr 2023   DIN EN 60076-11
+Bemessungsleistung 400 kVA   AN
+Bemessungsfrequenz 50 Hz
+OS 10 kV   ± 2 x 2,5 %   23,1 A
+US 0,4 kV   577 A
+Schaltgruppe Dyn5
+Uk 6 %
+Isolationspegel OS LI 75 AC 28 kV   US AC 3 kV
+Wärmeklasse F   E2 C2 F1
+IP00   Gesamtgewicht 1350 kg

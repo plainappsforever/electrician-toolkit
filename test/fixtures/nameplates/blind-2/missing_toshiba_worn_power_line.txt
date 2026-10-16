@@ -1,0 +1,6 @@
+TOSHIBA                 THREE PHASE INDUCTION MOTOR
+TYPE IKK-FBKW21E   FRAME 132M
+, '  .. :;   ' ,    . ..
+400 V   Δ   50 Hz   1460 r/min
+15.2 A   .' ,. ;   IP55   INS. F
+S1   ,'.  .   MADE IN JAPAN

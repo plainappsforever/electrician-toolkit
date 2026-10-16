@@ -1,0 +1,19 @@
+appId: ${APP_ID}
+name: Device probes - foreign keys, triggers, write queue, history order, search, Intl and the display rule pass on this platform's real SQLite and JS engine
+tags:
+  - core
+---
+- runFlow: subflows/launch.yaml
+- runFlow:
+    file: subflows/link.yaml
+    env:
+      URL: ${APP_SCHEME}://debug/probe
+- extendedWaitUntil:
+    visible:
+      id: probe-summary
+    timeout: 60000
+- extendedWaitUntil:
+    visible: "PROBES .*"
+    timeout: 120000
+- assertVisible: "PROBES PASSED.*"
+- assertNotVisible: ".*FAIL .*"

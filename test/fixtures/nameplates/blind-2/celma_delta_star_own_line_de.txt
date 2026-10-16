@@ -1,0 +1,8 @@
+CELMA   Cantoni Group   Cieszyn
+3~Mot.   Sh 160M-4   Nr. 1907734   2019
+11 kW   S1   50 Hz   1460 1/min
+      Δ           Y
+    400         690      V
+    21,4        12,4     A
+cos φ 0,84   IE2   89,8 %
+IP55   Iso.-Kl. F   94 kg

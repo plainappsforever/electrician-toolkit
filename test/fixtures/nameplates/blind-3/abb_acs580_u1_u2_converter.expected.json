@@ -1,0 +1,96 @@
+{
+  "fixture": "abb_acs580_u1_u2_converter",
+  "kind": "motor-fc",
+  "lang": "en",
+  "ocrDamage": [],
+  "fields": {
+    "manufacturer": {
+      "value": "ABB",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "ACS580-01-033A-4",
+      "unit": "",
+      "line": 0
+    },
+    "serial": {
+      "value": "1203105678",
+      "unit": "",
+      "line": 1
+    },
+    "year": {
+      "value": 2022,
+      "unit": "",
+      "line": 1
+    },
+    "voltage": {
+      "value": [
+        380,
+        480
+      ],
+      "unit": "V",
+      "line": [
+        2,
+        2
+      ]
+    },
+    "current": {
+      "value": 33,
+      "unit": "A",
+      "line": 3
+    },
+    "frequencyHz": {
+      "value": [
+        0,
+        500
+      ],
+      "unit": "Hz",
+      "line": [
+        3,
+        3
+      ]
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 3
+    },
+    "ratedPowerKw": {
+      "value": 15,
+      "unit": "kW",
+      "line": 4
+    },
+    "ipRating": {
+      "value": "IP21",
+      "unit": "",
+      "line": 5
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "cosPhi",
+    "speedRpm",
+    "efficiencyClass",
+    "efficiencyPct",
+    "insulationClass",
+    "duty",
+    "connection",
+    "weightKg"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 15,
+      "U": 380,
+      "I": 33,
+      "cosPhi": 0.8,
+      "eta": 0.9,
+      "assumed": [
+        "cosPhi",
+        "eta"
+      ]
+    }
+  ],
+  "notes": "Converter plate: the OUTPUT side is the motor rating. current = I2 33 A (I1 32 A input and Imax 41.6 A are traps), frequency = f2 0...500 Hz (f1 48...63 Hz is the supply). U2 is printed as '0...U1' (no number), so voltage = U1 380...480 V, the most the output can reach. '033A' in the type is a size code."
+}

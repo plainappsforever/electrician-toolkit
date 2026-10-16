@@ -1,0 +1,18 @@
+NORD   Getriebebau NORD GmbH & Co. KG   D-22941 Bargteheide
+Typ SK 33100AZBH-100LP/4 TF/BRE20   Nr. 202312345678
+3~ Mot.   IEC 60034
+50 Hz
+230/400 V Δ/Y
+10,4/6,0 A
+3,0 kW   S1
+cos φ 0,81
+1440 min-1
+IE3  87,7 %
+i = 36,92
+n2 = 39 min-1
+M2 = 735 Nm
+IM M1
+Öl CLP PG 220   1,0 l
+Bremse 205 V DC   20 Nm
+IP55   Th.Cl. F
+58 kg

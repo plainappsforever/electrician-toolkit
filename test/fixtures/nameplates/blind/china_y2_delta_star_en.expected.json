@@ -1,0 +1,131 @@
+{
+  "fixture": "china_y2_delta_star_en",
+  "kind": "motor-iec",
+  "lang": "en",
+  "ocrDamage": [
+    "glued-unit"
+  ],
+  "fields": {
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "Y2-100L1-4",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "2105A0317",
+      "unit": "",
+      "line": 1
+    },
+    "ratedPowerKw": {
+      "value": 2.2,
+      "unit": "kW",
+      "line": 2
+    },
+    "voltage": {
+      "value": [
+        400,
+        690
+      ],
+      "unit": "V",
+      "line": [
+        2,
+        2
+      ]
+    },
+    "current": {
+      "value": [
+        4.7,
+        2.7
+      ],
+      "unit": "A",
+      "line": [
+        2,
+        2
+      ]
+    },
+    "connection": {
+      "value": "Δ/Y",
+      "unit": "",
+      "line": 2
+    },
+    "speedRpm": {
+      "value": 1430,
+      "unit": "rpm",
+      "line": 3
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 3
+    },
+    "cosPhi": {
+      "value": 0.81,
+      "unit": "",
+      "line": 3
+    },
+    "efficiencyPct": {
+      "value": 84.3,
+      "unit": "%",
+      "line": 3
+    },
+    "ipRating": {
+      "value": "IP54",
+      "unit": "",
+      "line": 4
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 4
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 4
+    },
+    "efficiencyClass": {
+      "value": "IE2",
+      "unit": "",
+      "line": 4
+    },
+    "weightKg": {
+      "value": 34,
+      "unit": "kg",
+      "line": 4
+    },
+    "manufacturer": {
+      "value": "ZHEJIANG DONGHAI MOTOR CO.,LTD.",
+      "unit": "",
+      "line": 6
+    }
+  },
+  "absent": [
+    "ratedPowerHp"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 2.2,
+      "U": 400,
+      "I": 4.7,
+      "cosPhi": 0.81,
+      "eta": 0.843,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 2.2,
+      "U": 690,
+      "I": 2.7,
+      "cosPhi": 0.81,
+      "eta": 0.843,
+      "assumed": []
+    }
+  ],
+  "notes": "'Y2-100L1-4' contains Y but is the type; 'DATE 2021.05' is not a decimal."
+}

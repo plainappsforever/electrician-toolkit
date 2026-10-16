@@ -1,0 +1,115 @@
+{
+  "fixture": "ocr_wilo_pump_de",
+  "kind": "pump",
+  "lang": "de",
+  "ocrDamage": [
+    "0/O",
+    "1/l/I",
+    "5/S",
+    "rn/m",
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "WILO",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "IL 50/170-3/2",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "2153412345",
+      "unit": "",
+      "line": 2
+    },
+    "year": {
+      "value": 2022,
+      "unit": "",
+      "line": 2
+    },
+    "flowM3h": {
+      "value": 24,
+      "unit": "m3/h",
+      "line": 3
+    },
+    "headM": {
+      "value": 18,
+      "unit": "m",
+      "line": 3
+    },
+    "ratedPowerKw": {
+      "value": 3,
+      "unit": "kW",
+      "line": 4
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 4
+    },
+    "voltage": {
+      "value": 400,
+      "unit": "V",
+      "line": 4
+    },
+    "current": {
+      "value": 6.1,
+      "unit": "A",
+      "line": 4
+    },
+    "speedRpm": {
+      "value": 2900,
+      "unit": "rpm",
+      "line": 5
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 5
+    },
+    "cosPhi": {
+      "value": 0.86,
+      "unit": "",
+      "line": 5
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 6
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 6
+    },
+    "efficiencyClass": {
+      "value": "IE3",
+      "unit": "",
+      "line": 7
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "efficiencyPct",
+    "duty",
+    "connection",
+    "weightKg"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 3,
+      "U": 400,
+      "I": 6.1,
+      "cosPhi": 0.86,
+      "eta": 0.87,
+      "assumed": [
+        "eta"
+      ]
+    }
+  ],
+  "notes": "'l/min' is the speed unit 1/min; '3/2' in the type is not a ratio."
+}

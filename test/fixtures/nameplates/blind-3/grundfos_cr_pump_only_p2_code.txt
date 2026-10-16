@@ -1,0 +1,8 @@
+GRUNDFOS
+Type: CR 10-04 B-FJ-A-E-HQQE
+Model: B 96501886 P2 2338 0001
+Q: 10 m³/h   H: 41,3 m
+n: 2900 min-1
+p/t max: 25/120 bar/°C
+PN 25
+Made in Hungary

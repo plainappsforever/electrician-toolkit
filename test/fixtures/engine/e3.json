@@ -1,0 +1,29 @@
+{
+  "id": "E3",
+  "spec": "SPEC §8 E3 — Ib 13 A, MCB B16, user table Iz 20.0 A (example value, not from any standard), θmax 70, θref 30, θa 35 °C, f_group 0.8",
+  "cases": [
+    {
+      "name": "coordination with a user table row",
+      "kind": "coord",
+      "input": {
+        "ib": 13,
+        "device": { "type": "mcb", "curve": "B", "ratedCurrent": 16 },
+        "table": { "tableName": "Example", "sourceNote": "example value — not from any standard", "sizeMm2": 1.5, "izA": 20, "insulationMaxC": 70, "referenceAmbientC": 30 },
+        "ambientC": 35,
+        "fGroup": 0.8
+      },
+      "expected": {
+        "values.fTheta": { "printed": "0.9354143467" },
+        "values.iz": { "printed": "14.9666295471" },
+        "checks.coord.c1": true,
+        "checks.coord.c2": false,
+        "checks.coord.c3": false,
+        "values.i2": 23.2,
+        "values.i2Limit": { "printed": "21.7016128433" },
+        "texts.suggestion": "B13",
+        "values.suggestedIn": 13,
+        "values.suggestedI2": 18.85
+      }
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "fixture": "ocr_abb_split_row_en",
+  "kind": "motor-iec",
+  "lang": "en",
+  "ocrDamage": [
+    "0/O",
+    "1/l/I",
+    "φ->phi",
+    "split-lines"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "ABB",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "M3BP 160MLB 4",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "3G1Z162214",
+      "unit": "",
+      "line": 2
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 3
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 3
+    },
+    "voltage": {
+      "value": [
+        400,
+        690
+      ],
+      "unit": "V",
+      "line": [
+        5,
+        7
+      ]
+    },
+    "connection": {
+      "value": [
+        "Δ",
+        "Y"
+      ],
+      "unit": "",
+      "line": [
+        5,
+        7
+      ]
+    },
+    "frequencyHz": {
+      "value": [
+        50,
+        50
+      ],
+      "unit": "Hz",
+      "line": [
+        5,
+        7
+      ]
+    },
+    "ratedPowerKw": {
+      "value": [
+        11,
+        11
+      ],
+      "unit": "kW",
+      "line": [
+        5,
+        7
+      ]
+    },
+    "speedRpm": {
+      "value": [
+        1470,
+        1470
+      ],
+      "unit": "rpm",
+      "line": [
+        5,
+        7
+      ]
+    },
+    "current": {
+      "value": [
+        20.7,
+        12.0
+      ],
+      "unit": "A",
+      "line": [
+        5,
+        7
+      ]
+    },
+    "cosPhi": {
+      "value": [
+        0.84,
+        0.84
+      ],
+      "unit": "",
+      "line": [
+        6,
+        7
+      ]
+    },
+    "efficiencyClass": {
+      "value": "IE3",
+      "unit": "",
+      "line": 8
+    },
+    "efficiencyPct": {
+      "value": [
+        91.4,
+        91.6,
+        90.9
+      ],
+      "unit": "%",
+      "line": [
+        8,
+        8,
+        8
+      ]
+    },
+    "efficiencyLoadPct": {
+      "value": [
+        100,
+        75,
+        50
+      ],
+      "unit": "%",
+      "line": [
+        8,
+        8,
+        8
+      ]
+    },
+    "weightKg": {
+      "value": 101,
+      "unit": "kg",
+      "line": 9
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "duty"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 11,
+      "U": 400,
+      "I": 20.7,
+      "cosPhi": 0.84,
+      "eta": 0.914,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 11,
+      "U": 690,
+      "I": 12.0,
+      "cosPhi": 0.84,
+      "eta": 0.914,
+      "assumed": []
+    }
+  ],
+  "notes": "The lone '0.84' line belongs to the 400 V row."
+}

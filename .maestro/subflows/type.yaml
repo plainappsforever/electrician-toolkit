@@ -1,0 +1,20 @@
+appId: ${APP_ID}
+---
+# Replaces the content of the field ${ID} with ${TEXT} (typed through the keyboard, never pasted), then closes the keyboard
+# so the next field or button is not hidden behind it. iOS decimal keyboards have no "done" key: a tap on the strip at the
+# top of the calculator and table screens closes it (it also does that for a person). Android: hideKeyboard.
+- tapOn:
+    id: ${ID}
+- eraseText: 20
+- inputText: ${TEXT}
+- runFlow:
+    when:
+      platform: iOS
+    commands:
+      - tapOn:
+          id: dismiss-strip
+- runFlow:
+    when:
+      platform: Android
+    commands:
+      - hideKeyboard

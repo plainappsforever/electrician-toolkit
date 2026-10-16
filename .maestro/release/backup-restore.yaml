@@ -1,0 +1,141 @@
+appId: ${APP_ID}
+name: "RELEASE backup and restore through the real system picker - back up (real share sheet), an edited file is refused, restore twice, undo; counts match (v1.1 F13)"
+tags:
+  - preview-only
+  - release
+---
+# Needs the two files placed for the system picker first (Release builds have no dev links, D95):
+#   scripts/push-picker-files.sh <ios|android> test/fixtures/files/release-backup.json test/fixtures/files/release-backup-edited.json
+# Rerunnable: it never asserts what the phone held before (D86).
+- runFlow: ../subflows/release-start.yaml
+- tapOn:
+    id: tab-more
+- tapOn:
+    id: open-backup
+- extendedWaitUntil:
+    visible:
+      id: backup-screen
+    timeout: 20000
+- runFlow:
+    when:
+      platform: Android
+    commands:
+      - assertVisible:
+          id: backup-android-note
+# 1. back up: the real share sheet opens (closed here) and the file is written
+- tapOn:
+    id: backup-export
+- runFlow: ../subflows/dismiss-share.yaml
+# the iPhone sheet sometimes swallows the first tap while it is still animating in: tap above it once more
+- runFlow:
+    when:
+      visible: "Save to Files"
+    commands:
+      - tapOn:
+          point: "50%,12%"
+- extendedWaitUntil:
+    visible:
+      id: backup-done
+    timeout: 60000
+- assertVisible:
+    id: backup-done
+    text: "Backup created: electrician-toolkit-backup-.*\\.json.*"
+# 2. the hand-edited file (probe D1 with a recomputed checksum) is refused
+- tapOn:
+    id: backup-restore
+- runFlow:
+    file: ../subflows/pick-file.yaml
+    env:
+      NAME: release-backup-edited
+- extendedWaitUntil:
+    visible:
+      id: restore-error
+    timeout: 30000
+- assertVisible:
+    id: restore-error
+    text: ".*changed after it was made.*Nothing was changed.*"
+# 3. restore the good file through the picker
+- tapOn:
+    id: backup-restore
+- runFlow:
+    file: ../subflows/pick-file.yaml
+    env:
+      NAME: release-backup
+- extendedWaitUntil:
+    visible:
+      id: restore-preview
+    timeout: 30000
+- assertVisible:
+    id: restore-summary
+    text: ".*1 projects, 1 circuits, 3 saved calculations, 0 history entries, 1 tables.*"
+- scrollUntilVisible:
+    element:
+      id: restore-confirm
+- tapOn:
+    id: restore-confirm
+- extendedWaitUntil:
+    visible:
+      id: restore-done
+    timeout: 60000
+- scrollUntilVisible:
+    element:
+      id: backup-counts
+    direction: UP
+- assertVisible:
+    id: backup-counts
+    text: ".*1 projects, 1 circuits, 3 saved calculations, 1 tables.*"
+# 4. restore it again: now a safety copy of the same data is kept, and Undo brings it back
+- tapOn:
+    id: backup-restore
+- runFlow:
+    file: ../subflows/pick-file.yaml
+    env:
+      NAME: release-backup
+- extendedWaitUntil:
+    visible:
+      id: restore-preview
+    timeout: 30000
+- scrollUntilVisible:
+    element:
+      id: restore-confirm
+- tapOn:
+    id: restore-confirm
+- extendedWaitUntil:
+    visible:
+      id: restore-done
+    timeout: 60000
+- assertVisible:
+    id: restore-done
+    text: ".*Undo last restore.*"
+- scrollUntilVisible:
+    element:
+      id: restore-undo
+    direction: UP
+- tapOn:
+    id: restore-undo
+- extendedWaitUntil:
+    visible:
+      id: restore-preview
+    timeout: 30000
+- scrollUntilVisible:
+    element:
+      id: restore-confirm
+- tapOn:
+    id: restore-confirm
+- extendedWaitUntil:
+    visible:
+      id: restore-done
+    timeout: 60000
+- scrollUntilVisible:
+    element:
+      id: backup-counts
+    direction: UP
+- assertVisible:
+    id: backup-counts
+    text: ".*1 projects, 1 circuits, 3 saved calculations, 1 tables.*"
+# the restored data is the real thing: the project and its frozen E1 result
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: tab-projects
+- assertVisible: ".*Müller, Küche.*"

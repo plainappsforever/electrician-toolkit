@@ -1,0 +1,94 @@
+appId: ${APP_ID}
+name: Table CSV from a file - A12, the picker path with a bad line, an ambiguous number and a German file (BOM, semicolon, decimal comma, trailing separator)
+tags:
+  - core
+---
+- runFlow:
+    file: subflows/seed.yaml
+    env:
+      SEED: table
+- runFlow:
+    file: subflows/link.yaml
+    env:
+      URL: ${APP_SCHEME}://debug/import-table?fixture=table-bad.csv
+- extendedWaitUntil:
+    visible:
+      id: table-import-screen
+    timeout: 20000
+- tapOn:
+    id: import-choose
+- extendedWaitUntil:
+    visible:
+      id: import-error-0
+    timeout: 20000
+- assertVisible:
+    id: import-file
+    text: "File: table-bad.csv"
+- assertVisible:
+    id: import-error-0
+    text: "Line 3:.*abc.*not a number.*"
+- assertNotVisible:
+    id: import-success
+- runFlow:
+    file: subflows/link.yaml
+    env:
+      URL: ${APP_SCHEME}://debug/import-table?fixture=table-ambiguous.csv
+- extendedWaitUntil:
+    visible:
+      id: table-import-screen
+    timeout: 20000
+- tapOn:
+    id: import-choose
+- extendedWaitUntil:
+    visible:
+      id: import-error-0
+    timeout: 20000
+- assertVisible:
+    id: import-error-0
+    text: "Line 2:.*ambiguous.*"
+- runFlow:
+    file: subflows/link.yaml
+    env:
+      URL: ${APP_SCHEME}://debug/import-table?fixture=table-de.csv
+- extendedWaitUntil:
+    visible:
+      id: table-import-screen
+    timeout: 20000
+- tapOn:
+    id: import-choose
+- extendedWaitUntil:
+    visible:
+      id: import-success
+    timeout: 20000
+- assertVisible: "Imported 4 rows.*"
+- tapOn:
+    id: import-back
+- scrollUntilVisible:
+    element:
+      id: row-iz-3
+- assertVisible:
+    id: row-size-3
+    text: "6"
+- assertVisible:
+    id: row-iz-3
+    text: "48"
+# export it again (dev builds skip the share sheet) and read the notice
+- runFlow:
+    file: subflows/flags.yaml
+    env:
+      QUERY: share=off&pick=none
+- tapOn:
+    id: tab-tables
+- tapOn: ".*Example.*"
+- scrollUntilVisible:
+    element:
+      id: table-export
+- tapOn:
+    id: table-export
+- scrollUntilVisible:
+    element:
+      id: table-export-done
+    timeout: 60000
+- assertVisible:
+    id: table-export-done
+    text: "Table exported: .*\\.csv.*"

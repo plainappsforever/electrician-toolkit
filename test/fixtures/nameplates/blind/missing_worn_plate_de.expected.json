@@ -1,0 +1,76 @@
+{
+  "fixture": "missing_worn_plate_de",
+  "kind": "motor-iec",
+  "lang": "de",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "voltage": {
+      "value": 400,
+      "unit": "V",
+      "line": 2
+    },
+    "connection": {
+      "value": "Δ",
+      "unit": "",
+      "line": 2
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 2
+    },
+    "current": {
+      "value": 6.2,
+      "unit": "A",
+      "line": 2
+    },
+    "ratedPowerKw": {
+      "value": 3.0,
+      "unit": "kW",
+      "line": 2
+    },
+    "cosPhi": {
+      "value": 0.82,
+      "unit": "",
+      "line": 2
+    },
+    "speedRpm": {
+      "value": 1420,
+      "unit": "rpm",
+      "line": 2
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 4
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "efficiencyClass",
+    "efficiencyPct",
+    "ipRating",
+    "duty",
+    "serial",
+    "type",
+    "manufacturer",
+    "phases",
+    "weightKg"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 3.0,
+      "U": 400,
+      "I": 6.2,
+      "cosPhi": 0.82,
+      "eta": 0.85,
+      "assumed": [
+        "eta"
+      ]
+    }
+  ],
+  "notes": "Manufacturer, type, serial, IP rating and phases are not recoverable; the '1LA7 1' fragment must not be returned as a complete type."
+}

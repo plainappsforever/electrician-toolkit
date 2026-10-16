@@ -1,0 +1,7 @@
+Lenze Drive Systems GmbH   Hameln
+Type MFEMAXX080-32   No. 13542871   3~
+0.75 kW   50 Hz   1395 rpm   S1
+Δ                     Y
+380-420 V             660-725 V
+1.80 A                1.04 A
+cos φ 0.76   IE3   82.5 %   IP54   Th.Cl. F   9.5 kg

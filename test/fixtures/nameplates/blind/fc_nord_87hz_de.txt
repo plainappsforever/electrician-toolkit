@@ -1,0 +1,7 @@
+Getriebebau NORD   D-22941 Bargteheide
+3~Mot.  Typ SK 80LP/4 TF   IE3
+Nr. 202412345678   IP55   Th.Cl. F   S1
+50 Hz  230/400 V Δ/Y  3,00/1,73 A  0,75 kW  cosφ 0,76  1440 min-1  η 82,5 %
+87 Hz  400 V Δ  3,00 A  1,30 kW  cosφ 0,77  2525 min-1
+Umrichterbetrieb 5 - 87 Hz   Mmax 5,0 Nm
+11,5 kg

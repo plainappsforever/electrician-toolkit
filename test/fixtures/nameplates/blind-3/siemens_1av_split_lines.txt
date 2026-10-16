@@ -1,0 +1,12 @@
+SIEMENS   SIMOTICS GP
+3~Mot. 1AV3104B
+UD 2208/0123456-002-1     IEC/EN 60034
+100L   IM B3   IP55   Th.Cl. 155(F)   22 kg
+230/400
+V Δ/Y   50 Hz
+7,62/4,40
+A   2,2 kW   cosφ 0,81
+1460
+1/min   S1
+IE4
+89,5 %

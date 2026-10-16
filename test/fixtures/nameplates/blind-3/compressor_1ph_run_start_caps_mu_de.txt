@@ -1,0 +1,9 @@
+ATB   Motorentechnik
+Kondensatormotor   1~
+Typ SEG 90L-2   Nr. 7712345   2021
+230 V   50 Hz   9,8 A
+1,5 kW   S1   cos φ 0,96   2850 min-1
+Betriebskondensator 30 μF 450 V
+Anlaufkondensator 100 µF 330 V
+IP54   Isol.-Kl. F   17 kg
+für Kompressor 250 l/min   10 bar

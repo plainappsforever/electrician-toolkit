@@ -1,0 +1,61 @@
+{
+ "fixture": "ksb_etanorm_pump_only_de",
+ "kind": "pump",
+ "lang": "de",
+ "ocrDamage": [],
+ "fields": {
+  "manufacturer": {
+   "value": "KSB",
+   "unit": "",
+   "line": 0
+  },
+  "type": {
+   "value": "Etanorm 050-032-200.1 GG",
+   "unit": "",
+   "line": 1
+  },
+  "serial": {
+   "value": "9971234567/000100/0001",
+   "unit": "",
+   "line": 2
+  },
+  "year": {
+   "value": 2020,
+   "unit": "",
+   "line": 2
+  },
+  "flowM3h": {
+   "value": 25,
+   "unit": "m3/h",
+   "line": 3
+  },
+  "headM": {
+   "value": 50,
+   "unit": "m",
+   "line": 3
+  },
+  "speedRpm": {
+   "value": 2900,
+   "unit": "rpm",
+   "line": 3
+  }
+ },
+ "absent": [
+  "ratedPowerKw",
+  "ratedPowerHp",
+  "voltage",
+  "current",
+  "frequencyHz",
+  "cosPhi",
+  "efficiencyClass",
+  "efficiencyPct",
+  "ipRating",
+  "insulationClass",
+  "duty",
+  "phases",
+  "connection",
+  "weightKg"
+ ],
+ "checks": [],
+ "notes": "Bare-shaft pump plate: hydraulic data only, no electrical rating at all - every motor field is absent and must not be invented from the 2900 1/min. The numbers in the type (050-032-200) are nozzle and impeller sizes; impeller diameter 209 mm and the postcode are not ratings."
+}

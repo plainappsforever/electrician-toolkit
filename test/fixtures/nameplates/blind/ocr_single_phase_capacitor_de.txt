@@ -1,0 +1,6 @@
+1~ Kondensatormotor   Typ EC 80B-2
+ATB   Austria
+230V 50Hz 0,75kW 4,9A
+cosphi 0,93  2820 1/rnin  IP 54
+CB 25uF/450V   Th.Cl.F  S1
+Nr. 0718/33421   9,Bkg

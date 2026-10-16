@@ -1,0 +1,149 @@
+{
+ "fixture": "elektrim_sg132_range_ocr",
+ "kind": "motor-iec",
+ "lang": "en",
+ "ocrDamage": [
+  "0/O",
+  "1/l/I",
+  "5/S",
+  "rn/m",
+  "W/VV",
+  "Δ->A",
+  "φ->o",
+  "decimal-comma",
+  "glued-unit",
+  "dropped-spaces"
+ ],
+ "fields": {
+  "manufacturer": {
+   "value": "Elektrim",
+   "unit": "",
+   "line": 0
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 1
+  },
+  "type": {
+   "value": "Sg 132M-4",
+   "unit": "",
+   "line": 1
+  },
+  "serial": {
+   "value": "0718432",
+   "unit": "",
+   "line": 1
+  },
+  "ratedPowerKw": {
+   "value": 7.5,
+   "unit": "kW",
+   "line": 2
+  },
+  "speedRpm": {
+   "value": 1455,
+   "unit": "rpm",
+   "line": 2
+  },
+  "frequencyHz": {
+   "value": 50,
+   "unit": "Hz",
+   "line": 2
+  },
+  "voltage": {
+   "value": [
+    380,
+    420,
+    660,
+    725
+   ],
+   "unit": "V",
+   "line": [
+    3,
+    3,
+    3,
+    3
+   ]
+  },
+  "connection": {
+   "value": "Δ/Y",
+   "unit": "",
+   "line": 3
+  },
+  "current": {
+   "value": [
+    14.9,
+    8.6
+   ],
+   "unit": "A",
+   "line": [
+    4,
+    4
+   ]
+  },
+  "cosPhi": {
+   "value": 0.82,
+   "unit": "",
+   "line": 4
+  },
+  "efficiencyClass": {
+   "value": "IE2",
+   "unit": "",
+   "line": 5
+  },
+  "efficiencyPct": {
+   "value": 88.7,
+   "unit": "%",
+   "line": 5
+  },
+  "ipRating": {
+   "value": "IP55",
+   "unit": "",
+   "line": 5
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 5
+  },
+  "duty": {
+   "value": "S1",
+   "unit": "",
+   "line": 5
+  },
+  "weightKg": {
+   "value": 58,
+   "unit": "kg",
+   "line": 6
+  },
+  "year": {
+   "value": 2019,
+   "unit": "",
+   "line": 6
+  }
+ },
+ "absent": [
+  "ratedPowerHp"
+ ],
+ "checks": [
+  {
+   "kind": "3ph",
+   "P_kW": 7.5,
+   "U": 380,
+   "I": 14.9,
+   "cosPhi": 0.82,
+   "eta": 0.887,
+   "assumed": []
+  },
+  {
+   "kind": "3ph",
+   "P_kW": 7.5,
+   "U": 660,
+   "I": 8.6,
+   "cosPhi": 0.82,
+   "eta": 0.887,
+   "assumed": []
+  }
+ ],
+ "notes": "Range plate 380-420 V Δ / 660-725 V Y with currents for the range (printed once per connection). Δ read as 'A' right after '42OV'. IE2 efficiency printed only at full load (88,7 %). '7,SkVV' = 7.5 kW, 'SOHz' = 50 Hz, 'rnin' = min, 'coso' = cos φ, 'lPSS' = IP55. EN 60034-1 is a standard, not a value."
+}

@@ -1,0 +1,97 @@
+{
+  "fixture": "sew_movitrac_eingang_ausgang_de",
+  "kind": "motor-fc",
+  "lang": "de",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "SEW-EURODRIVE",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "MC07B0040-5A3-4-00",
+      "unit": "",
+      "line": 2
+    },
+    "serial": {
+      "value": "01.7621234501.0001.22",
+      "unit": "",
+      "line": 3
+    },
+    "voltage": {
+      "value": [
+        380,
+        500
+      ],
+      "unit": "V",
+      "line": [
+        4,
+        4
+      ]
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 5
+    },
+    "frequencyHz": {
+      "value": [
+        0,
+        599
+      ],
+      "unit": "Hz",
+      "line": [
+        5,
+        5
+      ]
+    },
+    "current": {
+      "value": 9.5,
+      "unit": "A",
+      "line": 5
+    },
+    "ratedPowerKw": {
+      "value": 4.0,
+      "unit": "kW",
+      "line": 6
+    },
+    "ratedPowerHp": {
+      "value": 5,
+      "unit": "hp",
+      "line": 6
+    },
+    "ipRating": {
+      "value": "IP20",
+      "unit": "",
+      "line": 7
+    }
+  },
+  "absent": [
+    "cosPhi",
+    "speedRpm",
+    "efficiencyClass",
+    "efficiencyPct",
+    "insulationClass",
+    "duty",
+    "connection",
+    "weightKg"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 4.0,
+      "U": 380,
+      "I": 9.5,
+      "cosPhi": 0.8,
+      "eta": 0.85,
+      "assumed": [
+        "cosPhi",
+        "eta"
+      ]
+    }
+  ],
+  "notes": "Converter: current = Ausgang 9,5 A (Eingang 8,6 A is the supply side), frequency = Ausgang 0-599 Hz. Output voltage is '0-U Netz', so voltage = the Eingang range 380-500 V. Sach-Nr. is the part number, Serien-Nr. the serial."
+}

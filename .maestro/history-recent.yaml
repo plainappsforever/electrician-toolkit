@@ -1,0 +1,53 @@
+appId: ${APP_ID}
+name: History and favourites - a calculation left on the screen appears under Recent and reopens with its inputs; the star moves a calculator to the top
+tags:
+  - core
+---
+- runFlow:
+    file: subflows/seed.yaml
+    env:
+      SEED: empty
+- tapOn:
+    id: calc-open-vdrop
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-current
+      TEXT: "16"
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "18"
+- scrollUntilVisible:
+    element:
+      id: size-chip-1.5
+- tapOn:
+    id: size-chip-1.5
+- assertVisible:
+    id: strip-main
+    text: "3.76 %"
+# leaving the screen at once stores the entry (no waiting for the 2 s pause)
+- tapOn:
+    id: nav-back
+- extendedWaitUntil:
+    visible:
+      id: recent-.*
+    timeout: 10000
+- assertVisible: ".*3.76 %.*"
+- tapOn:
+    id: recent-.*
+- assertVisible:
+    id: strip-main
+    text: "3.76 %"
+- assertVisible:
+    id: input-length
+    text: "18"
+- tapOn:
+    id: nav-back
+# favourites: the star moves Conversions to the top
+- tapOn:
+    id: calc-fav-convert
+- assertVisible:
+    id: calc-fav-convert
+    selected: true

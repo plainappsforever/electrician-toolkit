@@ -1,0 +1,167 @@
+{
+ "fixture": "marathon_nema_designB_60hz",
+ "kind": "motor-nema",
+ "lang": "en",
+ "ocrDamage": [],
+ "fields": {
+  "manufacturer": {
+   "value": "Marathon Electric",
+   "unit": "",
+   "line": 0
+  },
+  "type": {
+   "value": "184TTFW16026",
+   "unit": "",
+   "line": 1
+  },
+  "serial": {
+   "value": "GL4712205",
+   "unit": "",
+   "line": 1
+  },
+  "frame": {
+   "value": "184T",
+   "unit": "",
+   "line": 2
+  },
+  "enclosure": {
+   "value": "TEFC",
+   "unit": "",
+   "line": 2
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 2
+  },
+  "frequencyHz": {
+   "value": 60,
+   "unit": "Hz",
+   "line": 2
+  },
+  "ratedPowerHp": {
+   "value": 5,
+   "unit": "hp",
+   "line": 3
+  },
+  "speedRpm": {
+   "value": 1755,
+   "unit": "rpm",
+   "line": 3
+  },
+  "voltage": {
+   "value": [
+    208,
+    230,
+    460
+   ],
+   "unit": "V",
+   "line": [
+    4,
+    4,
+    4
+   ]
+  },
+  "current": {
+   "value": [
+    13.8,
+    12.6,
+    6.3
+   ],
+   "unit": "A",
+   "line": [
+    4,
+    4,
+    4
+   ]
+  },
+  "serviceFactor": {
+   "value": 1.15,
+   "unit": "",
+   "line": 5
+  },
+  "serviceFactorCurrent": {
+   "value": [
+    14.5,
+    7.2
+   ],
+   "unit": "A",
+   "line": [
+    5,
+    5
+   ]
+  },
+  "nemaDesign": {
+   "value": "B",
+   "unit": "",
+   "line": 6
+  },
+  "codeLetter": {
+   "value": "J",
+   "unit": "",
+   "line": 6
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 6
+  },
+  "ambientC": {
+   "value": 40,
+   "unit": "°C",
+   "line": 6
+  },
+  "efficiencyPct": {
+   "value": 89.5,
+   "unit": "%",
+   "line": 7
+  },
+  "cosPhi": {
+   "value": 0.82,
+   "unit": "",
+   "line": 7
+  },
+  "duty": {
+   "value": "CONT",
+   "unit": "",
+   "line": 7
+  }
+ },
+ "absent": [
+  "ratedPowerKw",
+  "efficiencyClass",
+  "ipRating",
+  "connection",
+  "weightKg"
+ ],
+ "checks": [
+  {
+   "kind": "3ph",
+   "P_hp": 5,
+   "U": 208,
+   "I": 13.8,
+   "cosPhi": 0.82,
+   "eta": 0.895,
+   "assumed": []
+  },
+  {
+   "kind": "3ph",
+   "P_hp": 5,
+   "U": 230,
+   "I": 12.6,
+   "cosPhi": 0.82,
+   "eta": 0.895,
+   "assumed": []
+  },
+  {
+   "kind": "3ph",
+   "P_hp": 5,
+   "U": 460,
+   "I": 6.3,
+   "cosPhi": 0.82,
+   "eta": 0.895,
+   "assumed": []
+  }
+ ],
+ "notes": "60 Hz-only NEMA plate: 208-230/460 V with three FLA values; SF AMPS 14.5/7.2 are service-factor amps, not FLA. DES B = NEMA design, CODE J = locked-rotor code. PF 82 = 0.82. No kW printed; frame 184T also starts the model."
+}

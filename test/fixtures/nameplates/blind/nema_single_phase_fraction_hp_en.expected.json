@@ -1,0 +1,136 @@
+{
+  "fixture": "nema_single_phase_fraction_hp_en",
+  "kind": "motor-nema",
+  "lang": "en",
+  "ocrDamage": [],
+  "fields": {
+    "manufacturer": {
+      "value": "A.O. SMITH",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "C48J2DB11C3",
+      "unit": "",
+      "line": 1
+    },
+    "ratedPowerHp": {
+      "value": 0.75,
+      "unit": "hp",
+      "line": 2
+    },
+    "speedRpm": {
+      "value": 1725,
+      "unit": "rpm",
+      "line": 2
+    },
+    "phases": {
+      "value": 1,
+      "unit": "",
+      "line": 2
+    },
+    "frequencyHz": {
+      "value": 60,
+      "unit": "Hz",
+      "line": 2
+    },
+    "voltage": {
+      "value": [
+        115,
+        230
+      ],
+      "unit": "V",
+      "line": [
+        3,
+        3
+      ]
+    },
+    "current": {
+      "value": [
+        10.8,
+        5.4
+      ],
+      "unit": "A",
+      "line": [
+        3,
+        3
+      ]
+    },
+    "serviceFactor": {
+      "value": 1.25,
+      "unit": "",
+      "line": 3
+    },
+    "frame": {
+      "value": "48Y",
+      "unit": "",
+      "line": 4
+    },
+    "codeLetter": {
+      "value": "L",
+      "unit": "",
+      "line": 4
+    },
+    "insulationClass": {
+      "value": "B",
+      "unit": "",
+      "line": 4
+    },
+    "ambientC": {
+      "value": 40,
+      "unit": "°C",
+      "line": 4
+    },
+    "duty": {
+      "value": "CONT",
+      "unit": "",
+      "line": 4
+    },
+    "enclosure": {
+      "value": "ODP",
+      "unit": "",
+      "line": 5
+    },
+    "serial": {
+      "value": "0619 B12",
+      "unit": "",
+      "line": 5
+    }
+  },
+  "absent": [
+    "ratedPowerKw",
+    "cosPhi",
+    "efficiencyClass",
+    "efficiencyPct",
+    "ipRating",
+    "connection",
+    "weightKg"
+  ],
+  "checks": [
+    {
+      "kind": "1ph",
+      "P_hp": 0.75,
+      "U": 115,
+      "I": 10.8,
+      "cosPhi": 0.68,
+      "eta": 0.66,
+      "assumed": [
+        "cosPhi",
+        "eta"
+      ]
+    },
+    {
+      "kind": "1ph",
+      "P_hp": 0.75,
+      "U": 230,
+      "I": 5.4,
+      "cosPhi": 0.68,
+      "eta": 0.66,
+      "assumed": [
+        "cosPhi",
+        "eta"
+      ]
+    }
+  ],
+  "notes": "'3/4' is 0.75 hp, not a ratio of 3 and 4; frame '48Y' contains Y but is not a star connection."
+}

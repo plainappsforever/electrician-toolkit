@@ -1,0 +1,89 @@
+appId: ${APP_ID}
+name: More screens - About shows the responsibility note, Sources lists licence status, Backup shows what is stored, Settings changes the default unit and limit
+tags:
+  - core
+---
+- runFlow:
+    file: subflows/seed.yaml
+    env:
+      SEED: e1
+- tapOn:
+    id: tab-more
+- tapOn:
+    id: open-about
+- assertVisible:
+    id: about-note
+    text: "Calculation aid.*"
+# v1.1 (RELEASE_KIT 1c 8-10): privacy policy link, contact line, open-source licences
+- scrollUntilVisible:
+    element:
+      id: open-licences
+- assertVisible:
+    id: about-privacy-link
+- assertVisible:
+    id: about-contact
+    text: ".*info@taulon.org.*"
+- assertVisible:
+    id: about-versions
+    text: ".*1\\.1\\.0.*engine 1\\.1\\.0.*"
+- tapOn:
+    id: open-licences
+- assertVisible:
+    id: licence-@expo/ui
+- assertVisible: ".*30 open-source packages.*"
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: open-sources
+- scrollUntilVisible:
+    element:
+      id: source-card-iec60364-5-52-G
+- assertVisible: ".*licensed standard: clause cited.*"
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: open-backup
+- assertVisible:
+    id: backup-counts
+    text: ".*1 projects, 1 circuits, 3 saved calculations, 0 tables.*"
+- tapOn:
+    id: nav-back
+# a changed default (feet, custom limit 5 %) is used by a new calculation
+- tapOn:
+    id: open-settings
+- tapOn:
+    id: unit-ft
+- scrollUntilVisible:
+    element:
+      id: default-limit-iec-g-other
+- tapOn:
+    id: default-limit-iec-g-other
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: tab-calculators
+- tapOn:
+    id: calc-open-vdrop
+- assertVisible:
+    id: length-unit-ft
+    selected: true
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-current
+      TEXT: "16"
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "59"
+- scrollUntilVisible:
+    element:
+      id: size-chip-1.5
+- tapOn:
+    id: size-chip-1.5
+- assertVisible:
+    id: strip-verdict
+    text: ".*within the selected limit 5 %.*"

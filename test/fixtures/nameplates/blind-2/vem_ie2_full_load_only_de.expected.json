@@ -1,0 +1,140 @@
+{
+ "fixture": "vem_ie2_full_load_only_de",
+ "kind": "motor-iec",
+ "lang": "de",
+ "ocrDamage": [
+  "decimal-comma"
+ ],
+ "fields": {
+  "manufacturer": {
+   "value": "VEM",
+   "unit": "",
+   "line": 0
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 1
+  },
+  "type": {
+   "value": "WE2R 132 M4",
+   "unit": "",
+   "line": 1
+  },
+  "serial": {
+   "value": "7724105/0031",
+   "unit": "",
+   "line": 1
+  },
+  "year": {
+   "value": 2015,
+   "unit": "",
+   "line": 1
+  },
+  "efficiencyClass": {
+   "value": "IE2",
+   "unit": "",
+   "line": 2
+  },
+  "efficiencyPct": {
+   "value": 88.5,
+   "unit": "%",
+   "line": 2
+  },
+  "ipRating": {
+   "value": "IP55",
+   "unit": "",
+   "line": 2
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 2
+  },
+  "duty": {
+   "value": "S1",
+   "unit": "",
+   "line": 2
+  },
+  "frequencyHz": {
+   "value": 50,
+   "unit": "Hz",
+   "line": 3
+  },
+  "ratedPowerKw": {
+   "value": 7.5,
+   "unit": "kW",
+   "line": 3
+  },
+  "speedRpm": {
+   "value": 1455,
+   "unit": "rpm",
+   "line": 3
+  },
+  "cosPhi": {
+   "value": 0.82,
+   "unit": "",
+   "line": 3
+  },
+  "voltage": {
+   "value": [
+    380,
+    420,
+    660,
+    725
+   ],
+   "unit": "V",
+   "line": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "connection": {
+   "value": "Δ/Y",
+   "unit": "",
+   "line": 4
+  },
+  "current": {
+   "value": [
+    15.2,
+    8.7
+   ],
+   "unit": "A",
+   "line": [
+    5,
+    5
+   ]
+  },
+  "weightKg": {
+   "value": 61,
+   "unit": "kg",
+   "line": 6
+  }
+ },
+ "absent": [
+  "ratedPowerHp"
+ ],
+ "checks": [
+  {
+   "kind": "3ph",
+   "P_kW": 7.5,
+   "U": 380,
+   "I": 15.2,
+   "cosPhi": 0.82,
+   "eta": 0.885,
+   "assumed": []
+  },
+  {
+   "kind": "3ph",
+   "P_kW": 7.5,
+   "U": 660,
+   "I": 8.7,
+   "cosPhi": 0.82,
+   "eta": 0.885,
+   "assumed": []
+  }
+ ],
+ "notes": "IE2 with efficiency only at 100 % load, glued to the class ('IE2-88,5%'): no 75/50 % points. Range plate 380-420 V Δ / 660-725 V Y; the two currents belong to the low end of each range. Currents on their own line."
+}

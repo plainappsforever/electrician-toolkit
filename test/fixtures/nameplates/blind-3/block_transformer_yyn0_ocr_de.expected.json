@@ -1,0 +1,119 @@
+{
+  "fixture": "block_transformer_yyn0_ocr_de",
+  "kind": "transformer",
+  "lang": "de",
+  "ocrDamage": [
+    "0/O",
+    "1/l/I",
+    "8/B",
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "BLOCK",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 3
+    },
+    "type": {
+      "value": "DTN 10000",
+      "unit": "",
+      "line": 2
+    },
+    "serial": {
+      "value": "4071234",
+      "unit": "",
+      "line": 2
+    },
+    "year": {
+      "value": 2019,
+      "unit": "",
+      "line": 2
+    },
+    "primaryVoltage": {
+      "value": 400,
+      "unit": "V",
+      "line": 3
+    },
+    "primaryCurrent": {
+      "value": 14.4,
+      "unit": "A",
+      "line": 3
+    },
+    "secondaryVoltage": {
+      "value": [
+        400,
+        230
+      ],
+      "unit": "V",
+      "line": [
+        4,
+        4
+      ]
+    },
+    "secondaryCurrent": {
+      "value": 14.4,
+      "unit": "A",
+      "line": 4
+    },
+    "ratedPowerKva": {
+      "value": 10,
+      "unit": "kVA",
+      "line": 5
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 5
+    },
+    "vectorGroup": {
+      "value": "Yyn0",
+      "unit": "",
+      "line": 5
+    },
+    "ukPct": {
+      "value": 3.9,
+      "unit": "%",
+      "line": 6
+    },
+    "ipRating": {
+      "value": "IP00",
+      "unit": "",
+      "line": 6
+    },
+    "insulationClass": {
+      "value": "B",
+      "unit": "",
+      "line": 7
+    },
+    "weightKg": {
+      "value": 68,
+      "unit": "kg",
+      "line": 7
+    }
+  },
+  "absent": [
+    "cooling"
+  ],
+  "checks": [
+    {
+      "kind": "transformer3",
+      "S_kVA": 10,
+      "U": 400,
+      "I": 14.4,
+      "assumed": []
+    },
+    {
+      "kind": "transformer3",
+      "S_kVA": 10,
+      "U": 400,
+      "I": 14.4,
+      "assumed": []
+    }
+  ],
+  "notes": "Secondary 400/230 V = line/phase voltage of the Yyn winding. 'ta 4O °C / B' is ambient and class. 'lOOOO' = 10000 VA in the type. No cooling mark on the plate. EN 61558-2-4 is a standard."
+}

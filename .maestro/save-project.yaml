@@ -1,0 +1,96 @@
+appId: ${APP_ID}
+name: Save to project - U2, E1 saved to a new project and circuit appears in Projects and is shown frozen
+tags:
+  - core
+---
+- runFlow:
+    file: subflows/seed.yaml
+    env:
+      SEED: empty
+- tapOn:
+    id: calc-open-vdrop
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-current
+      TEXT: "16"
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "18"
+- scrollUntilVisible:
+    element:
+      id: size-chip-1.5
+- tapOn:
+    id: size-chip-1.5
+# D54: typing and saving at once (no pause) saves what the screen shows
+- scrollUntilVisible:
+    element:
+      id: input-voltage
+    direction: UP
+    centerElement: true
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-voltage
+      TEXT: "230"
+- scrollUntilVisible:
+    element:
+      id: save-open
+- tapOn:
+    id: save-open
+- assertVisible:
+    id: save-sheet
+- tapOn:
+    id: save-project-name
+- inputText: "Müller, Küche"
+- pressKey: Enter
+- tapOn:
+    id: save-title
+- inputText: "Voltage drop F3"
+- pressKey: Enter
+- scrollUntilVisible:
+    element:
+      id: save-new-circuit
+- tapOn:
+    id: save-new-circuit
+- scrollUntilVisible:
+    element:
+      id: save-circuit-label
+- tapOn:
+    id: save-circuit-label
+- inputText: "F3 Steckdosen"
+- pressKey: Enter
+- scrollUntilVisible:
+    element:
+      id: save-confirm
+- tapOn:
+    id: save-confirm
+- assertVisible:
+    id: saved-banner
+- assertVisible: "Saved to Müller, Küche.*"
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: tab-projects
+- extendedWaitUntil:
+    visible: "Müller, Küche"
+    timeout: 10000
+- tapOn: "Müller, Küche"
+- scrollUntilVisible:
+    element: ".*F3 Steckdosen.*"
+- tapOn: ".*F3 Steckdosen.*"
+- assertVisible: ".*Voltage drop F3.*"
+- tapOn: ".*Voltage drop F3.*"
+# the frozen result exactly as saved
+- assertVisible:
+    id: result-main
+    text: "3.76 %"
+- assertVisible:
+    id: saved-inputs
+- scrollUntilVisible:
+    element:
+      id: responsibility-note
+- assertVisible:
+    id: responsibility-note

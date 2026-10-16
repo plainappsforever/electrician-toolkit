@@ -1,0 +1,136 @@
+{
+ "fixture": "celma_delta_star_own_line_de",
+ "kind": "motor-iec",
+ "lang": "de",
+ "ocrDamage": [
+  "decimal-comma"
+ ],
+ "fields": {
+  "manufacturer": {
+   "value": "Celma",
+   "unit": "",
+   "line": 0
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 1
+  },
+  "type": {
+   "value": "Sh 160M-4",
+   "unit": "",
+   "line": 1
+  },
+  "serial": {
+   "value": "1907734",
+   "unit": "",
+   "line": 1
+  },
+  "year": {
+   "value": 2019,
+   "unit": "",
+   "line": 1
+  },
+  "ratedPowerKw": {
+   "value": 11,
+   "unit": "kW",
+   "line": 2
+  },
+  "duty": {
+   "value": "S1",
+   "unit": "",
+   "line": 2
+  },
+  "frequencyHz": {
+   "value": 50,
+   "unit": "Hz",
+   "line": 2
+  },
+  "speedRpm": {
+   "value": 1460,
+   "unit": "rpm",
+   "line": 2
+  },
+  "connection": {
+   "value": "Δ/Y",
+   "unit": "",
+   "line": 3
+  },
+  "voltage": {
+   "value": [
+    400,
+    690
+   ],
+   "unit": "V",
+   "line": [
+    4,
+    4
+   ]
+  },
+  "current": {
+   "value": [
+    21.4,
+    12.4
+   ],
+   "unit": "A",
+   "line": [
+    5,
+    5
+   ]
+  },
+  "cosPhi": {
+   "value": 0.84,
+   "unit": "",
+   "line": 6
+  },
+  "efficiencyClass": {
+   "value": "IE2",
+   "unit": "",
+   "line": 6
+  },
+  "efficiencyPct": {
+   "value": 89.8,
+   "unit": "%",
+   "line": 6
+  },
+  "ipRating": {
+   "value": "IP55",
+   "unit": "",
+   "line": 7
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 7
+  },
+  "weightKg": {
+   "value": 94,
+   "unit": "kg",
+   "line": 7
+  }
+ },
+ "absent": [
+  "ratedPowerHp"
+ ],
+ "checks": [
+  {
+   "kind": "3ph",
+   "P_kW": 11,
+   "U": 400,
+   "I": 21.4,
+   "cosPhi": 0.84,
+   "eta": 0.898,
+   "assumed": []
+  },
+  {
+   "kind": "3ph",
+   "P_kW": 11,
+   "U": 690,
+   "I": 12.4,
+   "cosPhi": 0.84,
+   "eta": 0.898,
+   "assumed": []
+  }
+ ],
+ "notes": "Column layout: Δ and Y on their own line above the voltages; units V and A trail at the end of each row. 400 belongs to Δ, 690 to Y. IE2 with full-load efficiency only."
+}

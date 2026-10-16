@@ -1,0 +1,150 @@
+{
+  "fixture": "crane_s3_duty_de",
+  "kind": "motor-iec",
+  "lang": "de",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "DEMAG",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "KBA 100 B 4",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "40712233",
+      "unit": "",
+      "line": 1
+    },
+    "voltage": {
+      "value": 400,
+      "unit": "V",
+      "line": 2
+    },
+    "connection": {
+      "value": "Y",
+      "unit": "",
+      "line": 2
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 2
+    },
+    "ipRating": {
+      "value": "IP54",
+      "unit": "",
+      "line": 2
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 2
+    },
+    "duty": {
+      "value": [
+        "S3 40%",
+        "S1"
+      ],
+      "unit": "",
+      "line": [
+        3,
+        4
+      ]
+    },
+    "ratedPowerKw": {
+      "value": [
+        3.3,
+        2.6
+      ],
+      "unit": "kW",
+      "line": [
+        3,
+        4
+      ]
+    },
+    "current": {
+      "value": [
+        7.9,
+        6.6
+      ],
+      "unit": "A",
+      "line": [
+        3,
+        4
+      ]
+    },
+    "cosPhi": {
+      "value": [
+        0.78,
+        0.74
+      ],
+      "unit": "",
+      "line": [
+        3,
+        4
+      ]
+    },
+    "speedRpm": {
+      "value": [
+        1380,
+        1410
+      ],
+      "unit": "rpm",
+      "line": [
+        3,
+        4
+      ]
+    },
+    "brakeVoltage": {
+      "value": 180,
+      "unit": "V",
+      "line": 5
+    },
+    "weightKg": {
+      "value": 42,
+      "unit": "kg",
+      "line": 6
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "efficiencyClass",
+    "efficiencyPct"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 3.3,
+      "U": 400,
+      "I": 7.9,
+      "cosPhi": 0.78,
+      "eta": 0.8,
+      "assumed": [
+        "eta"
+      ]
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 2.6,
+      "U": 400,
+      "I": 6.6,
+      "cosPhi": 0.74,
+      "eta": 0.78,
+      "assumed": [
+        "eta"
+      ]
+    }
+  ],
+  "notes": "'40%' is relative duty cycle, not efficiency."
+}

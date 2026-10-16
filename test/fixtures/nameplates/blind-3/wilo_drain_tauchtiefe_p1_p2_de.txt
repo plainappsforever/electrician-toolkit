@@ -1,0 +1,10 @@
+WILO
+Drain TS 40/14 A
+Nr. 2063512   2023
+3~400 V   50 Hz   2,8 A
+P1 1,6 kW   P2 1,2 kW   cos φ 0,82
+n 2830 1/min
+Qmax 19 m³/h   Hmax 16 m
+Tauchtiefe max. 7 m
+lP6B   Iso.-Kl. F   S1
+T 3-35 °C   16,5 kg

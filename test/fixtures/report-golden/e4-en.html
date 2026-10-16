@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Calculation report — F3</title><style>
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 9.5pt; line-height: 1.35; color: #111; padding: 0 13mm; }
+table.page { width: 100%; border-collapse: collapse; }
+table.page > thead > tr > td, table.page > tfoot > tr > td, table.page > tbody > tr > td { padding: 0; }
+.top-space { height: 11mm; }
+.foot { border-top: 1px solid #888; margin-top: 4mm; padding: 2mm 0 9mm; font-size: 7.5pt; color: #333; }
+.foot p { margin: 0 0 1mm; }
+.letterhead { display: flex; justify-content: space-between; align-items: flex-start; gap: 8mm; border-bottom: 2px solid #111; padding-bottom: 3mm; margin-bottom: 4mm; }
+.letterhead img { max-height: 18mm; max-width: 55mm; }
+.company { text-align: right; font-size: 8.5pt; white-space: pre-line; }
+.company b { font-size: 11pt; }
+h1 { font-size: 16pt; margin: 0 0 2mm; }
+h2 { font-size: 12.5pt; margin: 6mm 0 2mm; border-bottom: 1px solid #bbb; padding-bottom: 1mm; break-after: avoid; page-break-after: avoid; }
+h3 { font-size: 11pt; margin: 4mm 0 1mm; break-after: avoid; page-break-after: avoid; }
+h4 { font-size: 9pt; text-transform: uppercase; letter-spacing: 0.04em; color: #444; margin: 3mm 0 1mm; break-after: avoid; page-break-after: avoid; }
+.small { font-size: 8pt; color: #444; }
+.url { word-break: break-all; }
+.user, .multiline { white-space: pre-line; }
+table.kv { border-collapse: collapse; width: 100%; }
+table.kv th, table.kv td { text-align: left; vertical-align: top; padding: 0.8mm 2mm 0.8mm 0; border-bottom: 1px solid #e3e3e3; }
+table.kv th { font-weight: 600; width: 46%; }
+table.kv td.num { font-variant-numeric: tabular-nums; }
+tr, li { break-inside: avoid; page-break-inside: avoid; }
+ul, ol { margin: 0; padding-left: 5mm; }
+ol.steps li { margin-bottom: 1mm; font-variant-numeric: tabular-nums; }
+ul.sources { list-style: none; padding-left: 0; }
+ul.sources li { margin-bottom: 1.5mm; }
+.badge { display: inline-block; font-size: 7.5pt; padding: 0 1.5mm; border: 1px solid #777; border-radius: 2mm; }
+.badge.lic { background: #f1f1f1; }
+.warn { color: #7a3b00; }
+section.calc { margin-bottom: 4mm; }
+.calc-note { display: none; margin: 2mm 0 0; padding-top: 1mm; border-top: 1px solid #bbb; font-size: 7.5pt; color: #333; }
+.checks-note { margin: 1.5mm 0 0; padding: 1mm 0 0; border-top: 1px dotted #999; font-size: 7.5pt; color: #333; }
+.keep { break-inside: avoid; page-break-inside: avoid; }
+.circuit { margin-top: 3mm; }
+</style></head>
+<body>
+<table class="page">
+<thead><tr><td><div class="top-space"></div></td></tr></thead>
+<tfoot><tr><td><div class="foot">
+<!-- OWNER WORDING: draft wording of the responsibility note (SPEC §15); the owner decides the final text. -->
+<p class="resp-note">Calculation aid. Results depend on your inputs and the assumptions shown. They are not a design approval, a compliance check or a certificate. You are responsible for checking them against the standards and rules that apply to your installation, the manufacturer&#39;s data and the network operator&#39;s requirements.</p>
+<p>Electrician Toolkit 1.0.0 · engine 1.1.0 · profile eu-de v1</p>
+</div></td></tr></tfoot>
+<tbody><tr><td>
+<div class="letterhead"><div></div><div class="company"><b>Elektro Muster GmbH</b>
+Hauptstr. 1</div></div>
+<h1>Calculation report</h1><table class="kv"><tr><th>Date</th><td>2026-10-01</td></tr></table><section class="calc"><h2>F3 — Loop impedance &amp; disconnection</h2><div class="small">Computed with engine 1.1.0, profile eu-de (version 1), saved 2026-09-30</div><div class="keep"><h4>Results</h4><table class="kv"><tr><th>Loop impedance Zs</th><td class="num">1.038 Ω</td></tr><tr><th>Highest loop impedance Zs_max</th><td class="num">2.875 Ω</td></tr><tr><th>Maximum length for Zs ≤ Zs_max (disconnection only, not voltage drop)</th><td class="num">91.7 m</td></tr><tr><th>Prospective fault current Ik</th><td class="num">221.65 A</td></tr><tr><th>Disconnection current Ia</th><td class="num">80 A</td></tr></table></div><div class="keep"><h4>Checks against the limits you selected</h4><ul><li>Zs 1.038 Ω ≤ Zs_max 2.875 Ω — condition met <span class="small">[IEC 60364-4-41 / DIN VDE 0100-410: protection against electric shock, TN systems]</span></li><li>Ik ≥ Ia required: Ik 221.65 A ≥ Ia 80 A — met <span class="small">[IEC 60364-4-41 / DIN VDE 0100-410: protection against electric shock, TN systems]</span></li></ul><p class="checks-note">Calculation aid. Results depend on your inputs and the assumptions shown. They are not a design approval, a compliance check or a certificate. You are responsible for checking them against the standards and rules that apply to your installation, the manufacturer&#39;s data and the network operator&#39;s requirements.</p></div><div class="keep"><h4>Inputs</h4><table class="kv"><tr><th>Mode</th><td>calculated</td></tr><tr><th>Nominal voltage to earth U0</th><td>230 V</td></tr><tr><th>Protective device</th><td>B16</td></tr><tr><th>Voltage factor Cmin</th><td>1</td></tr><tr><th>External loop impedance Ze</th><td>0.35 Ω</td></tr><tr><th>Conductor material</th><td>copper</td></tr><tr><th>Line conductor cross-section</th><td>1.5 mm²</td></tr><tr><th>Protective conductor cross-section</th><td>1.5 mm²</td></tr><tr><th>Length</th><td>25 m</td></tr><tr><th>Conductor temperature for the loop</th><td>70 °C</td></tr></table></div><div class="keep"><h4>Assumptions</h4><ul><li>Curve B: Ia = 5 × In (upper limit of the instantaneous range)</li><li>TN system</li><li>Disconnection time: 0.4 s for final circuits ≤ 63 A at 230 V in TN systems, 5 s for distribution circuits — Ia must be the device current for that time</li><li>U0 = 230 V</li><li>Voltage factor Cmin = 1</li><li>Conductor copper: ρ20 = 0.0172414 Ω·mm²/m, α20 = 0.00393 1/K</li><li>Conductor temperature θ = 70 °C</li><li>Ze = 0.35 Ω (measured or from the network operator)</li><li>Cable reactance neglected</li><li>L is the one-way cable length</li></ul></div><div><h4>Working</h4><ol class="steps"><li>Ia = 5 × In = 5 × 16 A = 80 A</li><li>Zs_max = Cmin × U0 / Ia = 1 × 230 V / 80 A = 2.875 Ω</li><li>ρθ = ρ20 × (1 + α20 × (θ − 20 °C)) = 0.0172414 Ω·mm²/m × (1 + 0.00393 1/K × (70 °C − 20 °C)) = 0.0206293 Ω·mm²/m</li><li>R&#39;_loop = ρθ × (1/S_L + 1/S_PE) = 0.0206293 Ω·mm²/m × (1/1.5 mm² + 1/1.5 mm²) = 0.0275057 Ω/m</li><li>Zs = Ze + R&#39;_loop × L = 0.35 Ω + 0.0275057 Ω/m × 25 m = 1.038 Ω</li><li>L_max = (Zs_max − Ze) / R&#39;_loop = (2.875 Ω − 0.35 Ω) / 0.0275057 Ω/m = 91.7 m</li><li>Ik = Cmin × U0 / Zs = 1 × 230 V / 1.038 Ω = 221.65 A</li></ol></div><div><h4>Sources</h4><ul class="sources"><li><b>IEC 60028 International standard of resistance for copper</b>, 1925 (current)<br>annealed copper: 1/58 Ω·mm²/m at 20 °C, α20 = 0.00393 1/K<br><span class="badge lic">licensed standard: clause cited, text not reproduced</span><div class="small url">https://en.wikipedia.org/wiki/Electrical_resistivity_and_conductivity</div></li><li><b>IEC 60364-4-41 / DIN VDE 0100-410: protection against electric shock, TN systems</b>, IEC 60364-4-41:2005+AMD1:2017<br>411.4.4: Zs × Ia ≤ U0 (here with Cmin: Zs ≤ Cmin·U0/Ia)<br><span class="badge lic">licensed standard: clause cited, text not reproduced</span><div class="small url">https://de.wikipedia.org/wiki/Schleifenimpedanz</div></li><li><b>IEC 60364-4-41 / DIN VDE 0100-410: maximum disconnection times</b>, IEC 60364-4-41:2005+AMD1:2017<br>Table 41.1 / 411.3.2: 0.4 s final circuits ≤ 63 A at 230 V TN; 5 s distribution circuits<br><span class="badge lic">licensed standard: clause cited, text not reproduced</span><div class="small url">https://de.wikipedia.org/wiki/Schleifenimpedanz</div></li><li><b>IEC 60898-1 / DIN EN 60898-1: circuit-breakers for household installations</b>, IEC 60898-1:2015+AMD1:2019<br>preferred In; instantaneous trip B 3–5·In, C 5–10·In, D 10–20·In; conventional tripping current I2 = 1.45·In<br><span class="badge lic">licensed standard: clause cited, text not reproduced</span><div class="small url">https://de.wikipedia.org/wiki/Leitungsschutzschalter</div></li><li><b>Physics: R = ρ·L/S, ρθ = ρ20·(1 + α20·(θ − 20 °C))</b><br>linear temperature model of metallic resistivity<br><span class="badge pub">public source</span><div class="small url">https://en.wikipedia.org/wiki/Electrical_resistivity_and_conductivity</div></li></ul></div><p class="calc-note">Calculation aid. Results depend on your inputs and the assumptions shown. They are not a design approval, a compliance check or a certificate. You are responsible for checking them against the standards and rules that apply to your installation, the manufacturer&#39;s data and the network operator&#39;s requirements.</p></section>
+</td></tr></tbody>
+</table>
+</body></html>

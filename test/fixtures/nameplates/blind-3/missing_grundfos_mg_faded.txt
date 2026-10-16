@@ -1,0 +1,8 @@
+GRUNDFOS
+MG 100LC2-28FT130-C
+P.c. 2309   3~MOT   IEC 60034
+P2 3,00 kW   50 Hz
+U 380-415D/660-690Y V
+I  . . . / . . .
+n 2890 min-1   cos φ 0,88
+IP55   CL F   IE3 87,1 %

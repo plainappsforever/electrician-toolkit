@@ -1,0 +1,6 @@
+ABB   ACS580-01-033A-4
+S/N 1203105678   2022
+Input    U1 3~ 380...480 V   I1 32 A   f1 48...63 Hz
+Output   U2 3~ 0...U1        I2 33 A   f2 0...500 Hz
+PN 15 kW   Imax 41.6 A
+IP21   UL Type 1

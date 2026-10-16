@@ -1,0 +1,10 @@
+AEG
+Drehstrom-Motor
+Typ AM 112MZ 4
+Nr. 8812345   1994
+230/400 V
+Δ/Y   50 Hz
+13,3/7,7 A
+4 kW   cos φ 0,84   1440 U/min
+IP 54   Isol.-Kl. F   S1
+VDE 0530   40 kg

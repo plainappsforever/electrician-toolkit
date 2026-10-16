@@ -1,0 +1,5 @@
+HANNING ELEKTRO-WERKE
+/// ///  ////
+1~   230 V   50 Hz   P1 80 W   0,45 A
+IPX4   Iso.-Kl. B
+Made in Germany   KW 12/23

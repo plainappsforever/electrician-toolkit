@@ -1,0 +1,86 @@
+appId: ${APP_ID}
+name: Table CSV import - A12, a bad line is refused with its line number and nothing is imported; a good file with decimal comma and semicolon is imported
+tags:
+  - core
+---
+- runFlow:
+    file: subflows/seed.yaml
+    env:
+      SEED: empty
+- tapOn:
+    id: tab-tables
+- tapOn:
+    id: table-new
+- tapOn:
+    id: table-name
+- inputText: "Imported table"
+- pressKey: Enter
+- tapOn:
+    id: table-source
+- inputText: "My CSV from the cable maker"
+- scrollUntilVisible:
+    element:
+      id: table-import
+- tapOn:
+    id: table-import
+- extendedWaitUntil:
+    visible:
+      id: import-csv-text
+    timeout: 10000
+# line 2 is not a number: all or nothing, the message names the line
+- tapOn:
+    id: import-csv-text
+- inputText: "size_mm2;iz_a"
+- pressKey: Enter
+- inputText: "abc;20"
+- tapOn:
+    id: import-run
+- extendedWaitUntil:
+    visible:
+      id: import-error-0
+    timeout: 10000
+- assertVisible:
+    id: import-error-0
+    text: "Line 2:.*abc.*not a number.*"
+- assertNotVisible:
+    id: import-success
+# ambiguous 1.500 (decimal or thousands?) is refused too
+- tapOn:
+    id: import-csv-text
+- eraseText: 60
+- inputText: "size_mm2;iz_a"
+- pressKey: Enter
+- inputText: "1.500;20"
+- tapOn:
+    id: import-run
+- assertVisible:
+    id: import-error-0
+    text: "Line 2:.*ambiguous.*"
+# a good file: decimal comma, semicolon
+- tapOn:
+    id: import-csv-text
+- eraseText: 60
+- inputText: "size_mm2;iz_a"
+- pressKey: Enter
+- inputText: "1,5;20"
+- pressKey: Enter
+- inputText: "2,5;28"
+- tapOn:
+    id: import-run
+- extendedWaitUntil:
+    visible:
+      id: import-success
+    timeout: 10000
+- assertVisible: "Imported 2 rows.*"
+# the success card can sit behind the open keyboard now that the page has a Choose-file button: scroll it into view
+- scrollUntilVisible:
+    element:
+      id: import-back
+- tapOn:
+    id: import-back
+- scrollUntilVisible:
+    element:
+      id: row-iz-1
+- assertVisible:
+    id: row-iz-1
+    text: "28"

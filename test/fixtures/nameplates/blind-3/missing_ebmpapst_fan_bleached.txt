@@ -1,0 +1,4 @@
+ebm-papst
+A4D300-AP12-01
+3~ 400 V Y   50 Hz
+IP44   Th.Cl. B

@@ -1,0 +1,150 @@
+{
+  "fixture": "sew_drn_gearmotor_brake_230ac_de",
+  "kind": "gearmotor",
+  "lang": "de",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "SEW-EURODRIVE",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "R37DRN90L4/BE2HF/TF",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "01.7154302301.0001.23",
+      "unit": "",
+      "line": 2
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 3
+    },
+    "speedRpm": {
+      "value": 1450,
+      "unit": "rpm",
+      "line": 4
+    },
+    "outputSpeedRpm": {
+      "value": 58,
+      "unit": "rpm",
+      "line": 4
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 4
+    },
+    "voltage": {
+      "value": [
+        220,
+        242,
+        380,
+        420
+      ],
+      "unit": "V",
+      "line": [
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    "connection": {
+      "value": "Δ/Y",
+      "unit": "",
+      "line": 5
+    },
+    "current": {
+      "value": [
+        5.95,
+        3.45
+      ],
+      "unit": "A",
+      "line": [
+        6,
+        6
+      ]
+    },
+    "ratedPowerKw": {
+      "value": 1.5,
+      "unit": "kW",
+      "line": 7
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 7
+    },
+    "cosPhi": {
+      "value": 0.76,
+      "unit": "",
+      "line": 7
+    },
+    "efficiencyClass": {
+      "value": "IE3",
+      "unit": "",
+      "line": 8
+    },
+    "efficiencyPct": {
+      "value": 85.3,
+      "unit": "%",
+      "line": 8
+    },
+    "ipRating": {
+      "value": "IP54",
+      "unit": "",
+      "line": 8
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 8
+    },
+    "gearRatio": {
+      "value": 24.96,
+      "unit": "",
+      "line": 9
+    },
+    "brakeVoltage": {
+      "value": 230,
+      "unit": "V",
+      "line": 10
+    },
+    "weightKg": {
+      "value": 36,
+      "unit": "kg",
+      "line": 11
+    }
+  },
+  "absent": [
+    "ratedPowerHp"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 1.5,
+      "U": 380,
+      "I": 3.45,
+      "cosPhi": 0.76,
+      "eta": 0.853,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 1.5,
+      "U": 220,
+      "I": 5.95,
+      "cosPhi": 0.76,
+      "eta": 0.853,
+      "assumed": []
+    }
+  ],
+  "notes": "'1/min 1450/58' = motor speed / output speed n2 (58 is NOT a second motor speed). Brake coil 230 V AC is not the motor voltage. Nm 245 / Nm 20 are output and brake torque. 'Inverter duty VPWM' is not a duty code."
+}

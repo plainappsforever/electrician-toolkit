@@ -1,0 +1,48 @@
+{
+  "id": "E1",
+  "spec": "SPEC §8 E1 — 1~ 230 V, 16 A, 18 m, Cu 1.5 mm², cos φ 1, limit 3 %",
+  "cases": [
+    {
+      "name": "M1 Annex G (default method)",
+      "kind": "vdrop",
+      "input": { "system": "ac1", "voltage": 230, "current": 16, "length": { "value": 18, "unit": "m" }, "material": "cu", "size": { "value": 1.5, "unit": "mm2" }, "cosPhi": 1, "limitPercent": 3 },
+      "expected": {
+        "values.r": 0.27,
+        "values.u": 8.64,
+        "values.deltaUPercent": { "printed": "3.7565217391" },
+        "values.uEnd": 221.36,
+        "values.powerLoss": 138.24,
+        "texts.verdict": "exceeds",
+        "checks.vdrop.limit": false,
+        "values.minSize": 2.5,
+        "values.minSizePercent": { "printed": "2.2539130435" },
+        "values.lMax": 14.375,
+        "values.percentM2": { "printed": "3.4441979010" },
+        "values.percentM3": { "printed": "2.9813664596" },
+        "warnings": ["method.disagree"]
+      }
+    },
+    {
+      "name": "M2 physics at 70 °C",
+      "kind": "vdrop",
+      "input": { "system": "ac1", "voltage": 230, "current": 16, "length": { "value": 18, "unit": "m" }, "material": "cu", "size": { "value": 1.5, "unit": "mm2" }, "cosPhi": 1, "method": "M2", "conductorTempC": 70, "limitPercent": 3 },
+      "expected": {
+        "values.u": { "printed": "7.9216551724" },
+        "values.deltaUPercent": { "printed": "3.4441979010" },
+        "texts.verdict": "exceeds"
+      }
+    },
+    {
+      "name": "M3 κ 56",
+      "kind": "vdrop",
+      "input": { "system": "ac1", "voltage": 230, "current": 16, "length": { "value": 18, "unit": "m" }, "material": "cu", "size": { "value": 1.5, "unit": "mm2" }, "cosPhi": 1, "method": "M3", "kappa": 56, "limitPercent": 3 },
+      "expected": {
+        "values.u": { "printed": "6.8571428571" },
+        "values.deltaUPercent": { "printed": "2.9813664596" },
+        "texts.verdict": "within",
+        "checks.vdrop.limit": true,
+        "warnings": ["method.disagree"]
+      }
+    }
+  ]
+}

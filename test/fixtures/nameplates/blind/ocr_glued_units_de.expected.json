@@ -1,0 +1,113 @@
+{
+  "fixture": "ocr_glued_units_de",
+  "kind": "motor-iec",
+  "lang": "de",
+  "ocrDamage": [
+    "1/l/I",
+    "decimal-comma",
+    "glued-unit",
+    "dropped-spaces"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "VEM",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "W41R 132 M4",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "ratedPowerKw": {
+      "value": 7.5,
+      "unit": "kW",
+      "line": 1
+    },
+    "voltage": {
+      "value": 400,
+      "unit": "V",
+      "line": 1
+    },
+    "connection": {
+      "value": "Δ",
+      "unit": "",
+      "line": 1
+    },
+    "current": {
+      "value": 14.3,
+      "unit": "A",
+      "line": 1
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 1
+    },
+    "cosPhi": {
+      "value": 0.84,
+      "unit": "",
+      "line": 2
+    },
+    "speedRpm": {
+      "value": 1455,
+      "unit": "rpm",
+      "line": 2
+    },
+    "efficiencyClass": {
+      "value": "IE3",
+      "unit": "",
+      "line": 2
+    },
+    "efficiencyPct": {
+      "value": 90.4,
+      "unit": "%",
+      "line": 2
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 2
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 3
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 3
+    },
+    "weightKg": {
+      "value": 52,
+      "unit": "kg",
+      "line": 3
+    },
+    "serial": {
+      "value": "912345/0021",
+      "unit": "",
+      "line": 3
+    }
+  },
+  "absent": [
+    "ratedPowerHp"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 7.5,
+      "U": 400,
+      "I": 14.3,
+      "cosPhi": 0.84,
+      "eta": 0.904,
+      "assumed": []
+    }
+  ],
+  "notes": "Single voltage only (no 690 V), so arrays must not be invented."
+}

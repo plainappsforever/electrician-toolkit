@@ -1,0 +1,67 @@
+appId: ${APP_ID}
+name: Settings German - U7, Spannungsfall, input 1,5 accepted, results with decimal comma
+tags:
+  - core
+---
+- runFlow:
+    file: subflows/seed.yaml
+    env:
+      SEED: empty
+- tapOn:
+    id: tab-more
+- tapOn:
+    id: open-settings
+- tapOn:
+    id: language-de
+- assertVisible: "Sprache"
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: tab-calculators
+- assertVisible: ".*Spannungsfall.*"
+- tapOn:
+    id: calc-open-vdrop
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-current
+      TEXT: "16"
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "18"
+- scrollUntilVisible:
+    element:
+      id: input-size
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-size
+      TEXT: "1,5"
+- assertVisible:
+    id: strip-main
+    text: "3,76 %"
+- assertVisible:
+    id: strip-verdict
+    text: ".*überschreitet.*"
+- scrollUntilVisible:
+    element:
+      id: warning-method.disagree
+- tapOn:
+    id: working-toggle
+- scrollUntilVisible:
+    element:
+      id: responsibility-note
+- assertVisible:
+    id: responsibility-note
+    text: "Rechenhilfe.*"
+# back to the device language for the next flow
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: tab-more
+- tapOn:
+    id: open-settings
+- tapOn:
+    id: language-system

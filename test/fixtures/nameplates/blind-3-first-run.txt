@@ -1,0 +1,87 @@
+# blind set 3, FIRST AND ONLY RUN — 2026-10-15 23:39:28, HEAD ceac8a1, nameplate.ts blob 9cc96c7e7a0ead62c41480011f601b73241afae7, score blob 92f0fae8bad65e3afe1913771b89755183680064, fixtures blob daea68b0f3bc16a0c303a81564030afc7f51e3d4
+blind-3: 36 plates, 113 ms — text compared EXACTLY (headline)
+field             plates  exact    top1     recall   extra  false+  conn(Δ/Y)  line
+power                30   93.3%   96.7%   95.2%      0       0  -          45/45
+voltage              32   90.6%   96.9%   95.4%      1       2  36/47      65/65
+current              30   73.3%   83.3%   90.9%      8       0  -          52/52
+frequency            33   84.8%   87.9%   80.5%      4       0  -          40/40
+cosPhi               20  100.0%  100.0%  100.0%      0       0  -          28/28
+speed                26   88.5%   88.5%   87.5%      0       0  -          32/32
+efficiency           16   75.0%   75.0%   75.0%      0       0  -          12/12
+ieClass              17   94.1%   94.1%   94.1%      0       0  -          16/16
+ipRating             32   96.9%   96.9%   97.0%      0       0  -          32/32
+insulationClass      28  100.0%  100.0%  100.0%      0       0  -          28/28
+duty                 15   93.3%   93.3%   93.8%      0       0  -          16/16
+phases               32   93.8%   93.8%   96.9%      1       0  -          30/31
+serial               30   60.0%   60.0%   60.0%      2       0  -          18/18
+type                 35   37.1%   48.6%   48.6%     10       1  -          17/17
+ALL                 376   83.0%   85.9%                         3
+ALL folded          376   83.8%   86.7%                         3   (O→0, I/L→1, S→5, B→8 folded: lenient)
+  abb_acs580_u1_u2_converter voltage: want [380, 480] offered []
+  abb_acs580_u1_u2_converter current: want [33] offered [32, 33] best 32
+  abb_acs580_u1_u2_converter frequency: want [0, 500] offered []
+  abb_acs580_u1_u2_converter ipRating: want [IP21] offered []
+  abb_acs580_u1_u2_converter type: want [ACS58001033A4] offered [1] best 1
+  abb_m2bax_table_read_by_columns current: want [8.1, 4.7] offered [8.1] best 8.1
+  abb_m2bax_table_read_by_columns type: want [M2BAX112MB4] offered []
+  abb_m3bp_four_rows_cos_phi type: want [M3BP160MLA4] offered [M3BP160MLA4IEC] best M3BP160MLA4IEC
+  bitzer_compressor_y_yy_de current: want [9] offered [9, 56.8] best 9
+  block_transformer_yyn0_ocr_de serial: want [4071234] offered [4O71234] best 4O71234
+  block_transformer_yyn0_ocr_de type: want [DTN10000] offered [DTNLOOOO] best DTNLOOOO
+  danfoss_fc51_1ph_in_3ph_out current: want [4.2] offered [9.9, 4.2, 1] best 9.9
+  danfoss_fc51_1ph_in_3ph_out frequency: want [0, 200] offered [50, 60] best 50
+  danfoss_fc51_1ph_in_3ph_out phases: want [3] offered [1, 3] best 1
+  danfoss_fc51_1ph_in_3ph_out type: want [FC051PK75S2E20H3XXCXXXSXXX] offered []
+  ebmpapst_ec_fan_input_w_de speed: want [2260] offered []
+  ebmpapst_ec_fan_input_w_de serial: want [1234567] offered [1234567/2311] best 1234567/2311
+  grundfos_cm_1ph_p1_p2 serial: want [A97516630P123410012] offered []
+  grundfos_cr_pump_only_p2_code serial: want [B96501886P223380001] offered []
+  grundfos_cr_pump_only_p2_code type: want [CR1004BFJAEHQQE] offered [CR1004BFJAEHQQE, B96501886P22338] best CR1004BFJAEHQQE
+  kaeser_screw_compressor_two_motors_de power: want [11000W, 250W] offered [11000W] best 11000W
+  kaeser_screw_compressor_two_motors_de voltage: want [400, 690, 230] offered [400, 690] best 400
+  kaeser_screw_compressor_two_motors_de current: want [20.8, 12, 1.3, 0.75] offered [20.8, 12, 35] best 20.8
+  kaeser_screw_compressor_two_motors_de serial: want [1234] offered []
+  ksb_etaline_p2_only_ocr type: want [ETALINEGN065160/754G11] offered []
+  missing_abb_m2_cropped_right type: want [M2AA90L4] offered []
+  missing_ebmpapst_fan_bleached type: want [A4D300AP1201] offered []
+  missing_grundfos_mg_faded type: want [MG100LC228FT130C] offered [IEC60034] best IEC60034
+  missing_nord_oil_soaked type: want [] offered [IEC60034]
+  missing_sew_drn_label_scratched_de efficiency: want [82.5] offered []
+  missing_sew_drn_label_scratched_de serial: want [017012345601000322] offered []
+  missing_sew_drn_label_scratched_de type: want [DRN80M4/TF] offered []
+  missing_siemens_1le1_overspray serial: want [E1912/098765405003] offered []
+  nord_87hz_row_ocr frequency: want [50, 87] offered [50] best 50
+  nord_87hz_row_ocr speed: want [1410, 2500] offered []
+  nord_87hz_row_ocr type: want [SK80LP/4TF] offered [SK80LP/4TF, IEC60034] best SK80LP/4TF
+  nord_two_columns_left_then_right_de type: want [SK33100AZBH100LP/4TF/BRE20] offered [SK33100AZBH100LP/4TF/BRE20, IEC60034] best SK33100AZBH100LP/4TF/BRE20
+  schneider_lc1d_dc_coil_contactor voltage: want [] offered [24]
+  schneider_lc1d_dc_coil_contactor type: want [LC1D09BD] offered []
+  sew_dre_gearmotor_dropped_spaces_ocr power: want [3000W] offered []
+  sew_dre_gearmotor_dropped_spaces_ocr current: want [10.6, 6.1] offered []
+  sew_dre_gearmotor_dropped_spaces_ocr frequency: want [50] offered []
+  sew_dre_gearmotor_dropped_spaces_ocr speed: want [1435] offered []
+  sew_dre_gearmotor_dropped_spaces_ocr efficiency: want [86.5] offered []
+  sew_dre_gearmotor_dropped_spaces_ocr ieClass: want [IE2] offered []
+  sew_dre_gearmotor_dropped_spaces_ocr duty: want [S1] offered []
+  sew_dre_gearmotor_dropped_spaces_ocr serial: want [013012345678000212] offered []
+  sew_dre_gearmotor_dropped_spaces_ocr type: want [KA47DRE100M4/TF] offered []
+  sew_drn_gearmotor_brake_230ac_de efficiency: want [85.3] offered []
+  sew_drn_gearmotor_brake_230ac_de serial: want [017154302301000123] offered []
+  sew_drn_gearmotor_brake_230ac_de type: want [R37DRN90L4/BE2HF/TF] offered []
+  sew_movitrac_eingang_ausgang_de voltage: want [380, 500] offered [380, 500, 3] best 380
+  sew_movitrac_eingang_ausgang_de current: want [9.5] offered [8.6, 9.5] best 8.6
+  sew_movitrac_eingang_ausgang_de frequency: want [0, 599] offered [50, 60] best 50
+  sew_movitrac_eingang_ausgang_de phases: want [3] offered []
+  siemens_1av_split_lines efficiency: want [89.5] offered []
+  siemens_1av_split_lines serial: want [UD2208/01234560021] offered []
+  siemens_1la7_ocr_heavy serial: want [UD0712/1234567001] offered []
+  siemens_1la7_ocr_heavy type: want [1LA70904AA10] offered [LLA7O9O4AA1O] best LLA7O9O4AA1O
+  siemens_1le1_eta_quarter_loads_60hz serial: want [E2309/123456701001] offered []
+  siemens_3rt2_dc_coil_contactor voltage: want [] offered [24]
+  siemens_3rt2_dc_coil_contactor type: want [3RT20261BB40] offered []
+  weg_w22_ocr_vv_8b type: want [W22] offered [132S/M04P] best 132S/M04P
+  wilo_drain_tauchtiefe_p1_p2_de current: want [2.8] offered [40, 14, 2.8] best 40
+  wilo_drain_tauchtiefe_p1_p2_de type: want [DRAINTS40/14A] offered []
+  wilo_stratos_p1_range_eei_de type: want [STRATOS30/18] offered []
+  ziehl_abegg_two_speed_delta_star_de type: want [FN063VDK4IV7P1] offered [FN063VDK4IV7P1, 140121] best FN063VDK4IV7P1
+

@@ -1,0 +1,108 @@
+appId: ${APP_ID}
+name: Large text - E1 typed, results, working, save to project and the other tabs stay reachable and readable at the largest system text size (run with the device set to a large size; also passes at the normal size)
+tags:
+  - large-text
+---
+# Not part of scripts/e2e.sh's default run (extra/ is a subfolder): scripts/e2e.sh <platform> development .maestro/extra/large-text.yaml
+# after setting the text size (iOS: xcrun simctl ui <udid> content_size accessibility-extra-large; Android: settings put system font_scale 2.0).
+- runFlow:
+    file: ../subflows/seed.yaml
+    env:
+      SEED: e1
+- takeScreenshot: large-1-calculators
+- tapOn:
+    id: calc-open-vdrop
+- scrollUntilVisible:
+    element:
+      id: input-current
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-current
+      TEXT: "16"
+- scrollUntilVisible:
+    element:
+      id: input-length
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "18"
+- scrollUntilVisible:
+    element:
+      id: size-chip-1.5
+- tapOn:
+    id: size-chip-1.5
+- assertVisible:
+    id: strip-main
+    text: "3.76 %"
+- takeScreenshot: large-2-result-strip
+- scrollUntilVisible:
+    element:
+      id: result-lMax
+- assertVisible:
+    id: result-lMax
+    text: "14.3 m"
+- takeScreenshot: large-3-result-card
+- scrollUntilVisible:
+    element:
+      id: working-toggle
+- tapOn:
+    id: working-toggle
+- scrollUntilVisible:
+    element:
+      id: responsibility-note
+    timeout: 120000
+    speed: 60
+    visibilityPercentage: 40
+- assertVisible:
+    id: responsibility-note
+    text: "Calculation aid.*"
+- takeScreenshot: large-4-note
+- scrollUntilVisible:
+    element:
+      id: save-open
+    timeout: 120000
+    speed: 60
+    visibilityPercentage: 40
+- tapOn:
+    id: save-open
+- assertVisible:
+    id: save-sheet
+- takeScreenshot: large-5-save-sheet
+- scrollUntilVisible:
+    element:
+      id: save-new-project
+- tapOn:
+    id: save-new-project
+- scrollUntilVisible:
+    element:
+      id: save-project-name
+- tapOn:
+    id: save-project-name
+- inputText: "Large Text Test"
+- pressKey: Enter
+- scrollUntilVisible:
+    element:
+      id: save-confirm
+- tapOn:
+    id: save-confirm
+- assertVisible:
+    id: saved-banner
+- takeScreenshot: large-5b-saved
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: tab-projects
+- assertVisible:
+    id: projects-screen
+- takeScreenshot: large-6-projects
+- tapOn:
+    id: tab-tables
+- assertVisible:
+    id: tables-screen
+- tapOn:
+    id: tab-more
+- assertVisible:
+    id: more-screen
+- takeScreenshot: large-7-more

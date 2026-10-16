@@ -1,0 +1,121 @@
+{
+  "fixture": "missing_sew_drn_label_scratched_de",
+  "kind": "motor-iec",
+  "lang": "de",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "SEW-EURODRIVE",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "DRN80M4/TF",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "01.7012345601.0003.22",
+      "unit": "",
+      "line": 2
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 3
+    },
+    "efficiencyClass": {
+      "value": "IE3",
+      "unit": "",
+      "line": 3
+    },
+    "speedRpm": {
+      "value": 1435,
+      "unit": "rpm",
+      "line": 4
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 4
+    },
+    "current": {
+      "value": [
+        3.15,
+        1.82
+      ],
+      "unit": "A",
+      "line": [
+        6,
+        6
+      ]
+    },
+    "ratedPowerKw": {
+      "value": 0.75,
+      "unit": "kW",
+      "line": 7
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 7
+    },
+    "cosPhi": {
+      "value": 0.72,
+      "unit": "",
+      "line": 7
+    },
+    "efficiencyPct": {
+      "value": 82.5,
+      "unit": "%",
+      "line": 8
+    },
+    "ipRating": {
+      "value": "IP54",
+      "unit": "",
+      "line": 8
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 8
+    },
+    "weightKg": {
+      "value": 10.5,
+      "unit": "kg",
+      "line": 9
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "voltage",
+    "connection"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 0.75,
+      "U": 400,
+      "I": 1.82,
+      "cosPhi": 0.72,
+      "eta": 0.825,
+      "assumed": [
+        "U"
+      ]
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 0.75,
+      "U": 230,
+      "I": 3.15,
+      "cosPhi": 0.72,
+      "eta": 0.825,
+      "assumed": [
+        "U"
+      ]
+    }
+  ],
+  "notes": "The 'V' label survives but its values are scratched off: voltage and connection are absent; a parser must not borrow 230/400 from the currents."
+}

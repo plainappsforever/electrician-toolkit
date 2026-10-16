@@ -1,0 +1,130 @@
+{
+  "fixture": "missing_siemens_1le1_overspray",
+  "kind": "motor-iec",
+  "lang": "en",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "SIEMENS",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "1LE1001-0EB42-2AA4",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "E1912/0987654 05 003",
+      "unit": "",
+      "line": 2
+    },
+    "year": {
+      "value": 2019,
+      "unit": "",
+      "line": 2
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 3
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 3
+    },
+    "weightKg": {
+      "value": 24,
+      "unit": "kg",
+      "line": 3
+    },
+    "connection": {
+      "value": "Δ/Y",
+      "unit": "",
+      "line": 4
+    },
+    "voltage": {
+      "value": [
+        230,
+        400
+      ],
+      "unit": "V",
+      "line": [
+        4,
+        4
+      ]
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 4
+    },
+    "current": {
+      "value": [
+        7.8,
+        4.5
+      ],
+      "unit": "A",
+      "line": [
+        5,
+        5
+      ]
+    },
+    "speedRpm": {
+      "value": 1455,
+      "unit": "rpm",
+      "line": 5
+    },
+    "efficiencyClass": {
+      "value": "IE3",
+      "unit": "",
+      "line": 6
+    },
+    "efficiencyPct": {
+      "value": 86.7,
+      "unit": "%",
+      "line": 6
+    }
+  },
+  "absent": [
+    "ratedPowerKw",
+    "ratedPowerHp",
+    "cosPhi",
+    "duty"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 2.2,
+      "U": 400,
+      "I": 4.5,
+      "cosPhi": 0.81,
+      "eta": 0.867,
+      "assumed": [
+        "P_kW",
+        "cosPhi"
+      ]
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 2.2,
+      "U": 230,
+      "I": 7.8,
+      "cosPhi": 0.81,
+      "eta": 0.867,
+      "assumed": [
+        "P_kW",
+        "cosPhi"
+      ]
+    }
+  ],
+  "notes": "Power is gone; a parser must not guess it from the IE3 efficiency or the frame. Checks use an assumed 2.2 kW (catalogue value for 100L 4-pole IE3 86.7 %)."
+}

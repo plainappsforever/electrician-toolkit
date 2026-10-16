@@ -1,0 +1,177 @@
+{
+ "fixture": "bonfiglioli_gearmotor_ranges",
+ "kind": "gearmotor",
+ "lang": "en",
+ "ocrDamage": [
+  "φ->phi"
+ ],
+ "fields": {
+  "manufacturer": {
+   "value": "Bonfiglioli",
+   "unit": "",
+   "line": 0
+  },
+  "type": {
+   "value": "C41 2_24.2 P90 BN90LA4",
+   "unit": "",
+   "line": 1
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 2
+  },
+  "serial": {
+   "value": "4520193847/001",
+   "unit": "",
+   "line": 2
+  },
+  "year": {
+   "value": 2024,
+   "unit": "",
+   "line": 2
+  },
+  "ratedPowerKw": {
+   "value": 1.5,
+   "unit": "kW",
+   "line": 3
+  },
+  "frequencyHz": {
+   "value": 50,
+   "unit": "Hz",
+   "line": 3
+  },
+  "speedRpm": {
+   "value": 1435,
+   "unit": "rpm",
+   "line": 3
+  },
+  "cosPhi": {
+   "value": 0.78,
+   "unit": "",
+   "line": 3
+  },
+  "voltage": {
+   "value": [
+    220,
+    240,
+    380,
+    415
+   ],
+   "unit": "V",
+   "line": [
+    4,
+    4,
+    5,
+    5
+   ]
+  },
+  "current": {
+   "value": [
+    5.95,
+    3.45
+   ],
+   "unit": "A",
+   "line": [
+    4,
+    5
+   ]
+  },
+  "connection": {
+   "value": [
+    "Δ",
+    "Y"
+   ],
+   "unit": "",
+   "line": [
+    4,
+    5
+   ]
+  },
+  "efficiencyClass": {
+   "value": "IE3",
+   "unit": "",
+   "line": 6
+  },
+  "efficiencyPct": {
+   "value": [
+    82.8,
+    83.2,
+    81.4
+   ],
+   "unit": "%",
+   "line": [
+    6,
+    6,
+    6
+   ]
+  },
+  "efficiencyLoadPct": {
+   "value": [
+    100,
+    75,
+    50
+   ],
+   "unit": "%",
+   "line": [
+    6,
+    6,
+    6
+   ]
+  },
+  "duty": {
+   "value": "S1",
+   "unit": "",
+   "line": 7
+  },
+  "ipRating": {
+   "value": "IP55",
+   "unit": "",
+   "line": 7
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 7
+  },
+  "gearRatio": {
+   "value": 24.2,
+   "unit": "",
+   "line": 7
+  },
+  "outputSpeedRpm": {
+   "value": 59,
+   "unit": "rpm",
+   "line": 7
+  },
+  "weightKg": {
+   "value": 19,
+   "unit": "kg",
+   "line": 7
+  }
+ },
+ "absent": [
+  "ratedPowerHp"
+ ],
+ "checks": [
+  {
+   "kind": "3ph",
+   "P_kW": 1.5,
+   "U": 220,
+   "I": 5.95,
+   "cosPhi": 0.78,
+   "eta": 0.828,
+   "assumed": []
+  },
+  {
+   "kind": "3ph",
+   "P_kW": 1.5,
+   "U": 380,
+   "I": 3.45,
+   "cosPhi": 0.78,
+   "eta": 0.828,
+   "assumed": []
+  }
+ ],
+ "notes": "Voltage ranges per connection row (Δ 220-240, Y 380-415): four voltage entries, two currents, connection is one mark per row. The type string repeats the ratio 24.2 and frame 90; n2 59 is the gearbox output, not motor speed. 'cosphi' is φ spelled out."
+}

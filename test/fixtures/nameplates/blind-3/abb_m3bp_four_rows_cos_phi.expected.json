@@ -1,0 +1,240 @@
+{
+  "fixture": "abb_m3bp_four_rows_cos_phi",
+  "kind": "motor-iec",
+  "lang": "en",
+  "ocrDamage": [
+    "φ->phi"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "ABB",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "M3BP 160MLA 4",
+      "unit": "",
+      "line": 0
+    },
+    "serial": {
+      "value": "3G2321234567",
+      "unit": "",
+      "line": 1
+    },
+    "year": {
+      "value": 2023,
+      "unit": "",
+      "line": 1
+    },
+    "efficiencyClass": {
+      "value": "IE3",
+      "unit": "",
+      "line": 2
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 2
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 2
+    },
+    "ambientC": {
+      "value": 40,
+      "unit": "°C",
+      "line": 2
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 2
+    },
+    "voltage": {
+      "value": [
+        690,
+        400,
+        415,
+        460
+      ],
+      "unit": "V",
+      "line": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "connection": {
+      "value": [
+        "Y",
+        "Δ",
+        "Δ",
+        "Δ"
+      ],
+      "unit": "",
+      "line": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "frequencyHz": {
+      "value": [
+        50,
+        50,
+        50,
+        60
+      ],
+      "unit": "Hz",
+      "line": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "ratedPowerKw": {
+      "value": [
+        11,
+        11,
+        11,
+        12.6
+      ],
+      "unit": "kW",
+      "line": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "speedRpm": {
+      "value": [
+        1471,
+        1471,
+        1474,
+        1771
+      ],
+      "unit": "rpm",
+      "line": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "current": {
+      "value": [
+        11.7,
+        20.2,
+        19.9,
+        20.0
+      ],
+      "unit": "A",
+      "line": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "cosPhi": {
+      "value": [
+        0.84,
+        0.84,
+        0.81,
+        0.84
+      ],
+      "unit": "",
+      "line": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "efficiencyPct": {
+      "value": [
+        91.8,
+        92.0,
+        91.4
+      ],
+      "unit": "%",
+      "line": [
+        8,
+        8,
+        8
+      ]
+    },
+    "efficiencyLoadPct": {
+      "value": [
+        100,
+        75,
+        50
+      ],
+      "unit": "%",
+      "line": [
+        8,
+        8,
+        8
+      ]
+    },
+    "weightKg": {
+      "value": 101,
+      "unit": "kg",
+      "line": 9
+    }
+  },
+  "absent": [
+    "ratedPowerHp"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 11,
+      "U": 690,
+      "I": 11.7,
+      "cosPhi": 0.84,
+      "eta": 0.918,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 11,
+      "U": 400,
+      "I": 20.2,
+      "cosPhi": 0.84,
+      "eta": 0.918,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 11,
+      "U": 415,
+      "I": 19.9,
+      "cosPhi": 0.81,
+      "eta": 0.918,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 12.6,
+      "U": 460,
+      "I": 20.0,
+      "cosPhi": 0.84,
+      "eta": 0.92,
+      "assumed": [
+        "eta"
+      ]
+    }
+  ],
+  "notes": "First row is 690 Y (not 400). efficiencyClass is printed twice (line 2 and line 8); cited at its first occurrence. 'Prod. code 3GBP...' is not the serial. Tamb 40 °C is not a voltage or current."
+}

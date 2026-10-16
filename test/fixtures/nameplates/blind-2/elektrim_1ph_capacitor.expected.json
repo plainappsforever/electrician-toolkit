@@ -1,0 +1,103 @@
+{
+ "fixture": "elektrim_1ph_capacitor",
+ "kind": "motor-iec",
+ "lang": "en",
+ "ocrDamage": [],
+ "fields": {
+  "manufacturer": {
+   "value": "Elektrim",
+   "unit": "",
+   "line": 0
+  },
+  "phases": {
+   "value": 1,
+   "unit": "",
+   "line": 1
+  },
+  "type": {
+   "value": "Sh 80-4C",
+   "unit": "",
+   "line": 1
+  },
+  "serial": {
+   "value": "2208117",
+   "unit": "",
+   "line": 1
+  },
+  "ratedPowerKw": {
+   "value": 0.75,
+   "unit": "kW",
+   "line": 2
+  },
+  "voltage": {
+   "value": 230,
+   "unit": "V",
+   "line": 2
+  },
+  "frequencyHz": {
+   "value": 50,
+   "unit": "Hz",
+   "line": 2
+  },
+  "current": {
+   "value": 5.3,
+   "unit": "A",
+   "line": 2
+  },
+  "speedRpm": {
+   "value": 1400,
+   "unit": "rpm",
+   "line": 3
+  },
+  "cosPhi": {
+   "value": 0.93,
+   "unit": "",
+   "line": 3
+  },
+  "duty": {
+   "value": "S1",
+   "unit": "",
+   "line": 3
+  },
+  "capacitorUf": {
+   "value": 20,
+   "unit": "µF",
+   "line": 4
+  },
+  "ipRating": {
+   "value": "IP54",
+   "unit": "",
+   "line": 5
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 5
+  },
+  "weightKg": {
+   "value": 9.6,
+   "unit": "kg",
+   "line": 5
+  }
+ },
+ "absent": [
+  "ratedPowerHp",
+  "efficiencyClass",
+  "efficiencyPct",
+  "connection"
+ ],
+ "checks": [
+  {
+   "kind": "1ph",
+   "P_kW": 0.75,
+   "U": 230,
+   "I": 5.3,
+   "cosPhi": 0.93,
+   "eta": 0.67,
+   "assumed": [
+    "eta"
+   ]
+  }
+ ],
+ "notes": "Single-phase capacitor-run motor. 450 V~ is the run capacitor's voltage rating, NOT the motor voltage (230 V). Use the 1-phase formula; a 3-phase formula gives a current 1.7x too small."
+}

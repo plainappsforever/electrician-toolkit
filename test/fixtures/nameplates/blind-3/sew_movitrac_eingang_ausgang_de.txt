@@ -1,0 +1,8 @@
+SEW-EURODRIVE
+MOVITRAC B
+Typ MC07B0040-5A3-4-00
+Sach-Nr. 08291234   Serien-Nr. 01.7621234501.0001.22
+Eingang/Input    U = 3 x AC 380-500 V   f = 50/60 Hz   I = 8,6 A AC
+Ausgang/Output   U = 3 x AC 0-U Netz    f = 0-599 Hz   I = 9,5 A AC
+Motor 4,0 kW / 5 HP
+IP20   T = 0...+40 °C

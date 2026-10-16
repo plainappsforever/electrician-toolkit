@@ -1,0 +1,9 @@
+Bauer Gear Rnotor
+Typ BG20-1l/D09LA4-TF
+Nr. 1234567-001   3~Mot.
+230/400 V   D/Y   50 Hz
+4,6/2,65
+A   1,1
+kW   coso 0,76   1410 rpm
+IP65  Th.Cl.F  S1   i=34,37   n2=41 1/min
+26 kg

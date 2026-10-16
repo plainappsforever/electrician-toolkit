@@ -1,0 +1,118 @@
+{
+ "fixture": "brook_crompton_exd_t4",
+ "kind": "motor-iec",
+ "lang": "en",
+ "ocrDamage": [],
+ "fields": {
+  "manufacturer": {
+   "value": "Brook Crompton",
+   "unit": "",
+   "line": 0
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 1
+  },
+  "type": {
+   "value": "W-DA160MB",
+   "unit": "",
+   "line": 1
+  },
+  "serial": {
+   "value": "BC4471820/02",
+   "unit": "",
+   "line": 1
+  },
+  "ambientC": {
+   "value": 40,
+   "unit": "°C",
+   "line": 3
+  },
+  "ipRating": {
+   "value": "IP66",
+   "unit": "",
+   "line": 3
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 3
+  },
+  "duty": {
+   "value": "S1",
+   "unit": "",
+   "line": 3
+  },
+  "ratedPowerKw": {
+   "value": 11,
+   "unit": "kW",
+   "line": 4
+  },
+  "voltage": {
+   "value": 400,
+   "unit": "V",
+   "line": 4
+  },
+  "connection": {
+   "value": "Δ",
+   "unit": "",
+   "line": 4
+  },
+  "frequencyHz": {
+   "value": 50,
+   "unit": "Hz",
+   "line": 4
+  },
+  "current": {
+   "value": 21.0,
+   "unit": "A",
+   "line": 4
+  },
+  "speedRpm": {
+   "value": 1465,
+   "unit": "rpm",
+   "line": 5
+  },
+  "cosPhi": {
+   "value": 0.84,
+   "unit": "",
+   "line": 5
+  },
+  "efficiencyClass": {
+   "value": "IE3",
+   "unit": "",
+   "line": 5
+  },
+  "efficiencyPct": {
+   "value": 91.4,
+   "unit": "%",
+   "line": 5
+  },
+  "weightKg": {
+   "value": 125,
+   "unit": "kg",
+   "line": 6
+  },
+  "year": {
+   "value": 2021,
+   "unit": "",
+   "line": 6
+  }
+ },
+ "absent": [
+  "ratedPowerHp"
+ ],
+ "checks": [
+  {
+   "kind": "3ph",
+   "P_kW": 11,
+   "U": 400,
+   "I": 21.0,
+   "cosPhi": 0.84,
+   "eta": 0.914,
+   "assumed": []
+  }
+ ],
+ "notes": "Explosion-proof: 'II 2G Ex db IIB T4 Gb'. T4 is the temperature class, NOT a duty (duty is S1); IIB is the gas group, not insulation class; '2G' is not phases. Certificate 12ATEX0081X holds no ratings. Ambient range -20..+40, ambientC = 40."
+}

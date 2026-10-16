@@ -1,0 +1,82 @@
+appId: ${APP_ID}
+name: Logo - Settings accepts a PNG, refuses a file above 512 KB and a text file named .png, and removes the logo
+tags:
+  - core
+---
+- runFlow:
+    file: subflows/seed.yaml
+    env:
+      SEED: empty
+- runFlow:
+    file: subflows/flags.yaml
+    env:
+      QUERY: pick=logo.png
+- tapOn:
+    id: tab-more
+- tapOn:
+    id: open-settings
+- scrollUntilVisible:
+    element:
+      id: logo-choose
+- tapOn:
+    id: logo-choose
+- scrollUntilVisible:
+    element:
+      id: logo-set
+    timeout: 30000
+- assertVisible:
+    id: logo-preview
+# too big: refused, the old logo stays
+- runFlow:
+    file: subflows/flags.yaml
+    env:
+      QUERY: pick=logo-big.png
+- tapOn:
+    id: tab-more
+- tapOn:
+    id: open-settings
+- scrollUntilVisible:
+    element:
+      id: logo-choose
+- tapOn:
+    id: logo-choose
+- scrollUntilVisible:
+    element:
+      id: logo-error
+    timeout: 60000
+- assertVisible:
+    id: logo-error
+    text: ".*larger than 512 KB.*"
+- scrollUntilVisible:
+    element:
+      id: logo-set
+- assertVisible:
+    id: logo-set
+# not an image
+- runFlow:
+    file: subflows/flags.yaml
+    env:
+      QUERY: pick=not-image.png
+- tapOn:
+    id: tab-more
+- tapOn:
+    id: open-settings
+- scrollUntilVisible:
+    element:
+      id: logo-choose
+- tapOn:
+    id: logo-choose
+- scrollUntilVisible:
+    element:
+      id: logo-error
+    timeout: 60000
+- assertVisible:
+    id: logo-error
+    text: ".*not a PNG or JPEG image.*"
+- scrollUntilVisible:
+    element:
+      id: logo-remove
+- tapOn:
+    id: logo-remove
+- assertNotVisible:
+    id: logo-set

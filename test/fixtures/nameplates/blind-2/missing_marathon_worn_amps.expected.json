@@ -1,0 +1,92 @@
+{
+ "fixture": "missing_marathon_worn_amps",
+ "kind": "motor-nema",
+ "lang": "en",
+ "ocrDamage": [],
+ "fields": {
+  "manufacturer": {
+   "value": "Marathon Electric",
+   "unit": "",
+   "line": 0
+  },
+  "type": {
+   "value": "145THFR5329",
+   "unit": "",
+   "line": 1
+  },
+  "ratedPowerHp": {
+   "value": 1.5,
+   "unit": "hp",
+   "line": 2
+  },
+  "speedRpm": {
+   "value": 1745,
+   "unit": "rpm",
+   "line": 2
+  },
+  "frequencyHz": {
+   "value": 60,
+   "unit": "Hz",
+   "line": 2
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 2
+  },
+  "voltage": {
+   "value": [
+    230,
+    460
+   ],
+   "unit": "V",
+   "line": [
+    3,
+    3
+   ]
+  },
+  "frame": {
+   "value": "145T",
+   "unit": "",
+   "line": 4
+  },
+  "nemaDesign": {
+   "value": "B",
+   "unit": "",
+   "line": 4
+  },
+  "insulationClass": {
+   "value": "B",
+   "unit": "",
+   "line": 4
+  },
+  "enclosure": {
+   "value": "ODP",
+   "unit": "",
+   "line": 5
+  },
+  "duty": {
+   "value": "CONT",
+   "unit": "",
+   "line": 5
+  },
+  "ambientC": {
+   "value": 40,
+   "unit": "°C",
+   "line": 5
+  }
+ },
+ "absent": [
+  "ratedPowerKw",
+  "current",
+  "cosPhi",
+  "efficiencyClass",
+  "efficiencyPct",
+  "ipRating",
+  "serial",
+  "connection",
+  "weightKg"
+ ],
+ "checks": [],
+ "notes": "Worn NEMA plate: AMPS, serial, code letter, efficiency and PF are illegible. 'HP 1 1/2' is 1.5 HP. DES B and INS CL B are two different B's (design letter and insulation class)."
+}

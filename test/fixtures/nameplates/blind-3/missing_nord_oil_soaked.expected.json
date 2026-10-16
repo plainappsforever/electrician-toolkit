@@ -1,0 +1,115 @@
+{
+  "fixture": "missing_nord_oil_soaked",
+  "kind": "motor-iec",
+  "lang": "de",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "NORD",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "efficiencyClass": {
+      "value": "IE3",
+      "unit": "",
+      "line": 1
+    },
+    "voltage": {
+      "value": [
+        230,
+        400
+      ],
+      "unit": "V",
+      "line": [
+        2,
+        2
+      ]
+    },
+    "connection": {
+      "value": "Δ/Y",
+      "unit": "",
+      "line": 2
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 2
+    },
+    "current": {
+      "value": [
+        8.0,
+        4.6
+      ],
+      "unit": "A",
+      "line": [
+        3,
+        3
+      ]
+    },
+    "ratedPowerKw": {
+      "value": 2.2,
+      "unit": "kW",
+      "line": 3
+    },
+    "cosPhi": {
+      "value": 0.79,
+      "unit": "",
+      "line": 4
+    },
+    "speedRpm": {
+      "value": 1440,
+      "unit": "rpm",
+      "line": 4
+    },
+    "efficiencyPct": {
+      "value": 86.7,
+      "unit": "%",
+      "line": 5
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 5
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 5
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "duty",
+    "serial",
+    "type",
+    "weightKg"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 2.2,
+      "U": 400,
+      "I": 4.6,
+      "cosPhi": 0.79,
+      "eta": 0.867,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 2.2,
+      "U": 230,
+      "I": 8.0,
+      "cosPhi": 0.79,
+      "eta": 0.867,
+      "assumed": []
+    }
+  ],
+  "notes": "Type and serial lines are lost; a parser must not promote 'IEC 60034' to a type or a serial."
+}

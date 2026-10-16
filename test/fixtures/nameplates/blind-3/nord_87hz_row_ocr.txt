@@ -1,0 +1,8 @@
+NORD
+Type SK 80LP/4 TF   No. 202204567891
+3~Mot.   IEC 60034   IE3
+50 Hz   23O/4OO V A/Y   3,2/l,B5 A
+O,75 kW   cos φ O,72   l4lO min-l
+B7 Hz   4OO V A   3,2 A
+l,3 kW   cos φ O,72   25OO min-l
+η 82,5 %   IP55   Th.Cl. F   S1

@@ -1,0 +1,128 @@
+{
+ "fixture": "ksb_amarex_submersible_p1p2",
+ "kind": "pump",
+ "lang": "en",
+ "ocrDamage": [
+  "rn/m"
+ ],
+ "fields": {
+  "manufacturer": {
+   "value": "KSB",
+   "unit": "",
+   "line": 0
+  },
+  "type": {
+   "value": "Amarex KRT K 100-250/74UG-S",
+   "unit": "",
+   "line": 1
+  },
+  "serial": {
+   "value": "9972455102/000200/01",
+   "unit": "",
+   "line": 2
+  },
+  "year": {
+   "value": 2022,
+   "unit": "",
+   "line": 2
+  },
+  "flowM3h": {
+   "value": 90,
+   "unit": "m3/h",
+   "line": 3
+  },
+  "headM": {
+   "value": 14.5,
+   "unit": "m",
+   "line": 3
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 4
+  },
+  "voltage": {
+   "value": 400,
+   "unit": "V",
+   "line": 4
+  },
+  "frequencyHz": {
+   "value": 50,
+   "unit": "Hz",
+   "line": 4
+  },
+  "current": {
+   "value": 15.0,
+   "unit": "A",
+   "line": 4
+  },
+  "speedRpm": {
+   "value": 1450,
+   "unit": "rpm",
+   "line": 4
+  },
+  "inputPowerKw": {
+   "value": 8.6,
+   "unit": "kW",
+   "line": 5
+  },
+  "ratedPowerKw": {
+   "value": 7.4,
+   "unit": "kW",
+   "line": 5
+  },
+  "cosPhi": {
+   "value": 0.83,
+   "unit": "",
+   "line": 5
+  },
+  "ipRating": {
+   "value": "IP68",
+   "unit": "",
+   "line": 6
+  },
+  "insulationClass": {
+   "value": "H",
+   "unit": "",
+   "line": 6
+  },
+  "duty": {
+   "value": "S1",
+   "unit": "",
+   "line": 6
+  },
+  "weightKg": {
+   "value": 165,
+   "unit": "kg",
+   "line": 6
+  }
+ },
+ "absent": [
+  "ratedPowerHp",
+  "efficiencyClass",
+  "efficiencyPct",
+  "connection"
+ ],
+ "checks": [
+  {
+   "kind": "3ph-input",
+   "P_kW": 8.6,
+   "U": 400,
+   "I": 15.0,
+   "cosPhi": 0.83,
+   "assumed": []
+  },
+  {
+   "kind": "3ph",
+   "P_kW": 7.4,
+   "U": 400,
+   "I": 15.0,
+   "cosPhi": 0.83,
+   "eta": 0.86,
+   "assumed": [
+    "eta"
+   ]
+  }
+ ],
+ "notes": "Submersible pump: P1 8.6 kW = input, P2 7.4 kW = rated output (ratedPowerKw). 'max. submergence 20 m' is the immersion depth, NOT the head (head is H 14.5 m). 'rn³/h' = m³/h. '74' in the type is a motor code."
+}

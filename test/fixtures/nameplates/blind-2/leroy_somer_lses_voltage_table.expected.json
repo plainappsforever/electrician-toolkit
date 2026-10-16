@@ -1,0 +1,226 @@
+{
+ "fixture": "leroy_somer_lses_voltage_table",
+ "kind": "motor-iec",
+ "lang": "en",
+ "ocrDamage": [],
+ "fields": {
+  "manufacturer": {
+   "value": "Leroy-Somer",
+   "unit": "",
+   "line": 0
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 0
+  },
+  "type": {
+   "value": "LSES 132 S T",
+   "unit": "",
+   "line": 1
+  },
+  "serial": {
+   "value": "4471392001/005",
+   "unit": "",
+   "line": 1
+  },
+  "year": {
+   "value": 2021,
+   "unit": "",
+   "line": 1
+  },
+  "efficiencyClass": {
+   "value": "IE3",
+   "unit": "",
+   "line": 2
+  },
+  "ipRating": {
+   "value": "IP55",
+   "unit": "",
+   "line": 2
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 2
+  },
+  "ambientC": {
+   "value": 40,
+   "unit": "°C",
+   "line": 2
+  },
+  "duty": {
+   "value": "S1",
+   "unit": "",
+   "line": 2
+  },
+  "weightKg": {
+   "value": 43,
+   "unit": "kg",
+   "line": 2
+  },
+  "ratedPowerKw": {
+   "value": 5.5,
+   "unit": "kW",
+   "line": 3
+  },
+  "efficiencyPct": {
+   "value": [
+    89.6,
+    90.1,
+    89.0
+   ],
+   "unit": "%",
+   "line": [
+    3,
+    3,
+    3
+   ]
+  },
+  "efficiencyLoadPct": {
+   "value": [
+    100,
+    75,
+    50
+   ],
+   "unit": "%",
+   "line": [
+    3,
+    3,
+    3
+   ]
+  },
+  "voltage": {
+   "value": [
+    380,
+    400,
+    415,
+    660
+   ],
+   "unit": "V",
+   "line": [
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  "connection": {
+   "value": [
+    "Δ",
+    "Δ",
+    "Δ",
+    "Y"
+   ],
+   "unit": "",
+   "line": [
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  "frequencyHz": {
+   "value": [
+    50,
+    50,
+    50,
+    50
+   ],
+   "unit": "Hz",
+   "line": [
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  "speedRpm": {
+   "value": [
+    1455,
+    1460,
+    1465,
+    1455
+   ],
+   "unit": "rpm",
+   "line": [
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  "current": {
+   "value": [
+    11.7,
+    11.2,
+    11.0,
+    6.7
+   ],
+   "unit": "A",
+   "line": [
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  "cosPhi": {
+   "value": [
+    0.81,
+    0.8,
+    0.78,
+    0.81
+   ],
+   "unit": "",
+   "line": [
+    5,
+    6,
+    7,
+    8
+   ]
+  }
+ },
+ "absent": [
+  "ratedPowerHp"
+ ],
+ "checks": [
+  {
+   "kind": "3ph",
+   "P_kW": 5.5,
+   "U": 380,
+   "I": 11.7,
+   "cosPhi": 0.81,
+   "eta": 0.896,
+   "assumed": []
+  },
+  {
+   "kind": "3ph",
+   "P_kW": 5.5,
+   "U": 400,
+   "I": 11.2,
+   "cosPhi": 0.8,
+   "eta": 0.896,
+   "assumed": []
+  },
+  {
+   "kind": "3ph",
+   "P_kW": 5.5,
+   "U": 415,
+   "I": 11.0,
+   "cosPhi": 0.78,
+   "eta": 0.896,
+   "assumed": []
+  },
+  {
+   "kind": "3ph",
+   "P_kW": 5.5,
+   "U": 660,
+   "I": 6.7,
+   "cosPhi": 0.81,
+   "eta": 0.896,
+   "assumed": []
+  }
+ ],
+ "notes": "Column table: header row 'V Hz min-1 A cos φ', then one row per voltage (380/400/415 Δ, 660 Y). Values belong to columns, not to labels on their own line. IK08 is impact protection, not IP. 40 °C is ambient."
+}

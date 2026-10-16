@@ -1,0 +1,6 @@
+GRUNDFOS   Made in Hungary
+Type: MGE 90LC2-24FT100-H3   IP55   Th.Cl. F
+Model: 98303542   P.c. 2241   Serial no. 0012345678
+P2 1.5 kW   P1 1.68 kW   3x380-500 V   50/60 Hz
+I1/1 2.75-2.10 A   cos φ 0.93   n 360-4000 min-1
+IE5   η 100% 89.3 %   15 kg

@@ -1,0 +1,165 @@
+{
+ "fixture": "toshiba_iec_50_60hz_table",
+ "kind": "motor-iec",
+ "lang": "en",
+ "ocrDamage": [],
+ "fields": {
+  "manufacturer": {
+   "value": "Toshiba",
+   "unit": "",
+   "line": 0
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 0
+  },
+  "type": {
+   "value": "IKH3-FBKW21E",
+   "unit": "",
+   "line": 1
+  },
+  "frame": {
+   "value": "160M",
+   "unit": "",
+   "line": 1
+  },
+  "frequencyHz": {
+   "value": [
+    50,
+    60
+   ],
+   "unit": "Hz",
+   "line": [
+    3,
+    4
+   ]
+  },
+  "voltage": {
+   "value": [
+    400,
+    460
+   ],
+   "unit": "V",
+   "line": [
+    3,
+    4
+   ]
+  },
+  "ratedPowerKw": {
+   "value": [
+    11,
+    12.7
+   ],
+   "unit": "kW",
+   "line": [
+    3,
+    4
+   ]
+  },
+  "current": {
+   "value": [
+    20.6,
+    20.4
+   ],
+   "unit": "A",
+   "line": [
+    3,
+    4
+   ]
+  },
+  "speedRpm": {
+   "value": [
+    1465,
+    1770
+   ],
+   "unit": "rpm",
+   "line": [
+    3,
+    4
+   ]
+  },
+  "cosPhi": {
+   "value": [
+    0.85,
+    0.84
+   ],
+   "unit": "",
+   "line": [
+    3,
+    4
+   ]
+  },
+  "efficiencyPct": {
+   "value": [
+    91.4,
+    91.7
+   ],
+   "unit": "%",
+   "line": [
+    3,
+    4
+   ]
+  },
+  "efficiencyClass": {
+   "value": "IE3",
+   "unit": "",
+   "line": 5
+  },
+  "ipRating": {
+   "value": "IP55",
+   "unit": "",
+   "line": 5
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 5
+  },
+  "duty": {
+   "value": "CONT",
+   "unit": "",
+   "line": 5
+  },
+  "ambientC": {
+   "value": 40,
+   "unit": "°C",
+   "line": 5
+  },
+  "serial": {
+   "value": "18K4471-02",
+   "unit": "",
+   "line": 6
+  },
+  "weightKg": {
+   "value": 112,
+   "unit": "kg",
+   "line": 6
+  }
+ },
+ "absent": [
+  "ratedPowerHp",
+  "connection"
+ ],
+ "checks": [
+  {
+   "kind": "3ph",
+   "P_kW": 11,
+   "U": 400,
+   "I": 20.6,
+   "cosPhi": 0.85,
+   "eta": 0.914,
+   "assumed": []
+  },
+  {
+   "kind": "3ph",
+   "P_kW": 12.7,
+   "U": 460,
+   "I": 20.4,
+   "cosPhi": 0.84,
+   "eta": 0.917,
+   "assumed": []
+  }
+ ],
+ "notes": "Pure column table: labels only in the header row, values in a 50 Hz row and a 60 Hz row (60 Hz row has more kW at 460 V). 'PF' and 'EFF %' columns. Frequency is the FIRST column. 'MASS' means weight."
+}

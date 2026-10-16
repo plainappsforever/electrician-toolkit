@@ -1,0 +1,98 @@
+{
+  "fixture": "danfoss_fc51_1ph_in_3ph_out",
+  "kind": "motor-fc",
+  "lang": "en",
+  "ocrDamage": [
+    "glued-unit",
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "Danfoss",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "FC-051PK75S2E20H3XXCXXXSXXX",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "123456G789",
+      "unit": "",
+      "line": 2
+    },
+    "ratedPowerKw": {
+      "value": 0.75,
+      "unit": "kW",
+      "line": 3
+    },
+    "ratedPowerHp": {
+      "value": 1,
+      "unit": "hp",
+      "line": 3
+    },
+    "voltage": {
+      "value": [
+        200,
+        240
+      ],
+      "unit": "V",
+      "line": [
+        4,
+        4
+      ]
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 5
+    },
+    "frequencyHz": {
+      "value": [
+        0,
+        200
+      ],
+      "unit": "Hz",
+      "line": [
+        5,
+        5
+      ]
+    },
+    "current": {
+      "value": 4.2,
+      "unit": "A",
+      "line": 5
+    },
+    "ipRating": {
+      "value": "IP20",
+      "unit": "",
+      "line": 6
+    }
+  },
+  "absent": [
+    "cosPhi",
+    "speedRpm",
+    "efficiencyClass",
+    "efficiencyPct",
+    "insulationClass",
+    "duty",
+    "connection",
+    "weightKg"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 0.75,
+      "U": 200,
+      "I": 4.2,
+      "cosPhi": 0.72,
+      "eta": 0.76,
+      "assumed": [
+        "cosPhi",
+        "eta"
+      ]
+    }
+  ],
+  "notes": "Converter: the motor side is OUT: 3 phases (IN is 1x!), 4,2 A (9,9 A is the single-phase input current), 0-200 Hz. Output voltage '0-Vin' follows the input, so voltage = IN 200-240 V. P/N is the part number. 'PK75' in the type code = 0.75 kW."
+}

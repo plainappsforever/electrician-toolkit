@@ -1,0 +1,8 @@
+PERSKE
+Hochfrequenz-Spindelmotor   3~
+Typ VS 31.10-2   Nr. 23-0456   2023
+330 V Δ   200 Hz
+S1   3,0 kW   7,6 A   cos φ 0,82
+S6-60%   3,6 kW   9,0 A
+11 400 min-1
+IP54   Isol.-Kl. F   18 kg

@@ -1,0 +1,54 @@
+appId: ${APP_ID}
+name: Backup and restore of the big database - A13, D57, 10 000 calculations in a 57.9 MB file, back up, restore over the same data with the safety copy, read the time
+tags:
+  - core
+---
+- runFlow:
+    file: subflows/seed.yaml
+    env:
+      SEED: many
+- runFlow:
+    file: subflows/flags.yaml
+    env:
+      QUERY: share=off&pick=none
+- tapOn:
+    id: tab-more
+- tapOn:
+    id: open-backup
+- tapOn:
+    id: backup-export
+- extendedWaitUntil:
+    visible:
+      id: backup-done
+    timeout: 120000
+- assertVisible:
+    id: backup-done
+    text: ".*5[0-9]\\.[0-9] MB; 200 projects, 2000 circuits, 10000 saved calculations.*"
+- tapOn:
+    id: nav-back
+- runFlow:
+    file: subflows/link.yaml
+    env:
+      URL: ${APP_SCHEME}://debug/restore?fixture=last
+- extendedWaitUntil:
+    visible:
+      id: backup-screen
+    timeout: 20000
+- tapOn:
+    id: backup-restore
+- extendedWaitUntil:
+    visible:
+      id: restore-preview
+    timeout: 120000
+- tapOn:
+    id: restore-confirm
+- extendedWaitUntil:
+    visible:
+      id: restore-done
+    timeout: 300000
+- assertVisible:
+    id: restore-done
+    text: "Restored: 200 projects, 2000 circuits, 10000 saved calculations.*It took .* s.*Undo last restore.*"
+- assertVisible:
+    id: backup-counts
+    text: ".*200 projects, 2000 circuits, 10000 saved calculations, 0 tables.*"

@@ -1,0 +1,80 @@
+{
+ "fixture": "missing_brook_crompton_painted_over",
+ "kind": "motor-iec",
+ "lang": "en",
+ "ocrDamage": [],
+ "fields": {
+  "manufacturer": {
+   "value": "Brook Crompton",
+   "unit": "",
+   "line": 0
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 1
+  },
+  "type": {
+   "value": "W-DF90LB",
+   "unit": "",
+   "line": 1
+  },
+  "serial": {
+   "value": "M6649102/01",
+   "unit": "",
+   "line": 1
+  },
+  "ratedPowerKw": {
+   "value": 2.2,
+   "unit": "kW",
+   "line": 2
+  },
+  "voltage": {
+   "value": [
+    400,
+    690
+   ],
+   "unit": "V",
+   "line": [
+    2,
+    2
+   ]
+  },
+  "connection": {
+   "value": "Δ/Y",
+   "unit": "",
+   "line": 2
+  },
+  "frequencyHz": {
+   "value": 50,
+   "unit": "Hz",
+   "line": 2
+  },
+  "efficiencyClass": {
+   "value": "IE3",
+   "unit": "",
+   "line": 3
+  },
+  "ipRating": {
+   "value": "IP55",
+   "unit": "",
+   "line": 3
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 3
+  }
+ },
+ "absent": [
+  "ratedPowerHp",
+  "current",
+  "cosPhi",
+  "speedRpm",
+  "efficiencyPct",
+  "duty",
+  "weightKg"
+ ],
+ "checks": [],
+ "notes": "Lower half painted over (OCR returns slashes): current, speed, cos φ, efficiency %, duty and weight are not on the plate any more. A parser must not compute a current from 2.2 kW."
+}

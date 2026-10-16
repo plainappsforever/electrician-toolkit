@@ -1,0 +1,174 @@
+{
+  "fixture": "nord_87hz_row_ocr",
+  "kind": "motor-iec",
+  "lang": "en",
+  "ocrDamage": [
+    "0/O",
+    "1/l/I",
+    "8/B",
+    "Δ->A",
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "NORD",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "SK 80LP/4 TF",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "202204567891",
+      "unit": "",
+      "line": 1
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 2
+    },
+    "efficiencyClass": {
+      "value": "IE3",
+      "unit": "",
+      "line": 2
+    },
+    "frequencyHz": {
+      "value": [
+        50,
+        87
+      ],
+      "unit": "Hz",
+      "line": [
+        3,
+        5
+      ]
+    },
+    "voltage": {
+      "value": [
+        230,
+        400,
+        400
+      ],
+      "unit": "V",
+      "line": [
+        3,
+        3,
+        5
+      ]
+    },
+    "connection": {
+      "value": [
+        "Δ/Y",
+        "Δ"
+      ],
+      "unit": "",
+      "line": [
+        3,
+        5
+      ]
+    },
+    "current": {
+      "value": [
+        3.2,
+        1.85,
+        3.2
+      ],
+      "unit": "A",
+      "line": [
+        3,
+        3,
+        5
+      ]
+    },
+    "ratedPowerKw": {
+      "value": [
+        0.75,
+        1.3
+      ],
+      "unit": "kW",
+      "line": [
+        4,
+        6
+      ]
+    },
+    "cosPhi": {
+      "value": [
+        0.72,
+        0.72
+      ],
+      "unit": "",
+      "line": [
+        4,
+        6
+      ]
+    },
+    "speedRpm": {
+      "value": [
+        1410,
+        2500
+      ],
+      "unit": "rpm",
+      "line": [
+        4,
+        6
+      ]
+    },
+    "efficiencyPct": {
+      "value": 82.5,
+      "unit": "%",
+      "line": 7
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 7
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 7
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 7
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "weightKg"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 0.75,
+      "U": 400,
+      "I": 1.85,
+      "cosPhi": 0.72,
+      "eta": 0.825,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 0.75,
+      "U": 230,
+      "I": 3.2,
+      "cosPhi": 0.72,
+      "eta": 0.825,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 1.3,
+      "U": 400,
+      "I": 3.2,
+      "cosPhi": 0.72,
+      "eta": 0.825,
+      "assumed": []
+    }
+  ],
+  "notes": "'4OO V A   3,2 A' = 400 V Δ, 3.2 A: the first 'A' is the delta sign, NOT a current unit. 'B7 Hz' = 87 Hz. 'A/Y' = Δ/Y. 'min-l' = min-1. The 87 Hz row is a second rating row (inverter operation)."
+}

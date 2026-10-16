@@ -1,0 +1,133 @@
+{
+  "fixture": "aeg_longform_split_labels_de",
+  "kind": "motor-iec",
+  "lang": "de",
+  "ocrDamage": [
+    "decimal-comma",
+    "split-lines"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "AEG",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "AM 160 MZ 4",
+      "unit": "",
+      "line": 2
+    },
+    "serial": {
+      "value": "7 384 552",
+      "unit": "",
+      "line": 3
+    },
+    "ratedPowerKw": {
+      "value": 11,
+      "unit": "kW",
+      "line": 5
+    },
+    "voltage": {
+      "value": [
+        400,
+        690
+      ],
+      "unit": "V",
+      "line": [
+        7,
+        7
+      ]
+    },
+    "connection": {
+      "value": "Δ/Y",
+      "unit": "",
+      "line": 7
+    },
+    "current": {
+      "value": [
+        21.5,
+        12.4
+      ],
+      "unit": "A",
+      "line": [
+        9,
+        9
+      ]
+    },
+    "cosPhi": {
+      "value": 0.85,
+      "unit": "",
+      "line": 11
+    },
+    "speedRpm": {
+      "value": 1455,
+      "unit": "rpm",
+      "line": 12
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 12
+    },
+    "ipRating": {
+      "value": "IP54",
+      "unit": "",
+      "line": 13
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 13
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 13
+    },
+    "weightKg": {
+      "value": 96,
+      "unit": "kg",
+      "line": 14
+    },
+    "year": {
+      "value": 1994,
+      "unit": "",
+      "line": 14
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "efficiencyClass",
+    "efficiencyPct"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 11,
+      "U": 400,
+      "I": 21.5,
+      "cosPhi": 0.85,
+      "eta": 0.885,
+      "assumed": [
+        "eta"
+      ]
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 11,
+      "U": 690,
+      "I": 12.4,
+      "cosPhi": 0.85,
+      "eta": 0.885,
+      "assumed": [
+        "eta"
+      ]
+    }
+  ],
+  "notes": "Serial '7 384 552' has spaces and must not be read as numbers."
+}

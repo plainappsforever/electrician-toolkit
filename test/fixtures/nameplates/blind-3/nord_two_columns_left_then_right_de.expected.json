@@ -1,0 +1,146 @@
+{
+  "fixture": "nord_two_columns_left_then_right_de",
+  "kind": "gearmotor",
+  "lang": "de",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "NORD",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "SK 33100AZBH-100LP/4 TF/BRE20",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "202312345678",
+      "unit": "",
+      "line": 1
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 2
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 3
+    },
+    "voltage": {
+      "value": [
+        230,
+        400
+      ],
+      "unit": "V",
+      "line": [
+        4,
+        4
+      ]
+    },
+    "connection": {
+      "value": "Δ/Y",
+      "unit": "",
+      "line": 4
+    },
+    "current": {
+      "value": [
+        10.4,
+        6.0
+      ],
+      "unit": "A",
+      "line": [
+        5,
+        5
+      ]
+    },
+    "ratedPowerKw": {
+      "value": 3.0,
+      "unit": "kW",
+      "line": 6
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 6
+    },
+    "cosPhi": {
+      "value": 0.81,
+      "unit": "",
+      "line": 7
+    },
+    "speedRpm": {
+      "value": 1440,
+      "unit": "rpm",
+      "line": 8
+    },
+    "efficiencyClass": {
+      "value": "IE3",
+      "unit": "",
+      "line": 9
+    },
+    "efficiencyPct": {
+      "value": 87.7,
+      "unit": "%",
+      "line": 9
+    },
+    "gearRatio": {
+      "value": 36.92,
+      "unit": "",
+      "line": 10
+    },
+    "outputSpeedRpm": {
+      "value": 39,
+      "unit": "rpm",
+      "line": 11
+    },
+    "brakeVoltage": {
+      "value": 205,
+      "unit": "V",
+      "line": 15
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 16
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 16
+    },
+    "weightKg": {
+      "value": 58,
+      "unit": "kg",
+      "line": 17
+    }
+  },
+  "absent": [
+    "ratedPowerHp"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 3.0,
+      "U": 400,
+      "I": 6.0,
+      "cosPhi": 0.81,
+      "eta": 0.877,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 3.0,
+      "U": 230,
+      "I": 10.4,
+      "cosPhi": 0.81,
+      "eta": 0.877,
+      "assumed": []
+    }
+  ],
+  "notes": "On the plate each motor row has a gear value beside it (50 Hz | i = 36,92, 230/400 V | n2 = 39 min-1 ...); OCR read the left column top to bottom, then the right one. 'n2 = 39 min-1' is the output speed, not the motor speed. Brake 205 V DC is a trap. 1,0 l is the oil volume."
+}

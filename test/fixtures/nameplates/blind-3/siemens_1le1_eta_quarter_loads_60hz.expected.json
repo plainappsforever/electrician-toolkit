@@ -1,0 +1,195 @@
+{
+  "fixture": "siemens_1le1_eta_quarter_loads_60hz",
+  "kind": "motor-iec",
+  "lang": "en",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "SIEMENS",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "1LE1003-1DB23-4AA4",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "E2309/1234567 01 001",
+      "unit": "",
+      "line": 2
+    },
+    "year": {
+      "value": 2023,
+      "unit": "",
+      "line": 2
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 3
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 3
+    },
+    "weightKg": {
+      "value": 65,
+      "unit": "kg",
+      "line": 3
+    },
+    "voltage": {
+      "value": [
+        400,
+        690,
+        460
+      ],
+      "unit": "V",
+      "line": [
+        6,
+        7,
+        8
+      ]
+    },
+    "connection": {
+      "value": [
+        "Δ",
+        "Y",
+        "Δ"
+      ],
+      "unit": "",
+      "line": [
+        6,
+        7,
+        8
+      ]
+    },
+    "frequencyHz": {
+      "value": [
+        50,
+        50,
+        60
+      ],
+      "unit": "Hz",
+      "line": [
+        6,
+        7,
+        8
+      ]
+    },
+    "current": {
+      "value": [
+        20.5,
+        11.9,
+        20.1
+      ],
+      "unit": "A",
+      "line": [
+        6,
+        7,
+        8
+      ]
+    },
+    "ratedPowerKw": {
+      "value": [
+        11,
+        11,
+        12.6
+      ],
+      "unit": "kW",
+      "line": [
+        6,
+        7,
+        8
+      ]
+    },
+    "cosPhi": {
+      "value": [
+        0.84,
+        0.84,
+        0.85
+      ],
+      "unit": "",
+      "line": [
+        6,
+        7,
+        8
+      ]
+    },
+    "speedRpm": {
+      "value": [
+        1465,
+        1465,
+        1770
+      ],
+      "unit": "rpm",
+      "line": [
+        6,
+        7,
+        8
+      ]
+    },
+    "efficiencyClass": {
+      "value": "IE3",
+      "unit": "",
+      "line": 9
+    },
+    "efficiencyPct": {
+      "value": [
+        91.4,
+        91.9,
+        91.3
+      ],
+      "unit": "%",
+      "line": [
+        9,
+        9,
+        9
+      ]
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "duty"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 11,
+      "U": 400,
+      "I": 20.5,
+      "cosPhi": 0.84,
+      "eta": 0.914,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 11,
+      "U": 690,
+      "I": 11.9,
+      "cosPhi": 0.84,
+      "eta": 0.914,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 12.6,
+      "U": 460,
+      "I": 20.1,
+      "cosPhi": 0.85,
+      "eta": 0.92,
+      "assumed": [
+        "eta"
+      ]
+    }
+  ],
+  "notes": "Load points printed as 4/4, 3/4, 2/4 (= 100/75/50 %); efficiencyLoadPct is not annotated because the checker needs literal numbers. 60 Hz row has a higher power (12.6 kW) and nearly the same current. Bearing numbers 6309/6209 and -20/+40 °C are not ratings."
+}

@@ -1,0 +1,151 @@
+{
+ "fixture": "danfoss_bauer_brake_gearmotor_de",
+ "kind": "gearmotor",
+ "lang": "de",
+ "ocrDamage": [
+  "decimal-comma"
+ ],
+ "fields": {
+  "manufacturer": {
+   "value": "Danfoss Bauer",
+   "unit": "",
+   "line": 0
+  },
+  "type": {
+   "value": "BG20-11/D09LA4-TF-S/E003B9",
+   "unit": "",
+   "line": 1
+  },
+  "serial": {
+   "value": "1837452-1",
+   "unit": "",
+   "line": 2
+  },
+  "year": {
+   "value": 2023,
+   "unit": "",
+   "line": 2
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 3
+  },
+  "frequencyHz": {
+   "value": 50,
+   "unit": "Hz",
+   "line": 3
+  },
+  "ipRating": {
+   "value": "IP65",
+   "unit": "",
+   "line": 3
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 3
+  },
+  "duty": {
+   "value": "S1",
+   "unit": "",
+   "line": 3
+  },
+  "ratedPowerKw": {
+   "value": 0.75,
+   "unit": "kW",
+   "line": 4
+  },
+  "speedRpm": {
+   "value": 1385,
+   "unit": "rpm",
+   "line": 4
+  },
+  "cosPhi": {
+   "value": 0.74,
+   "unit": "",
+   "line": 4
+  },
+  "efficiencyClass": {
+   "value": "IE3",
+   "unit": "",
+   "line": 4
+  },
+  "connection": {
+   "value": "Δ/Y",
+   "unit": "",
+   "line": 5
+  },
+  "voltage": {
+   "value": [
+    230,
+    400
+   ],
+   "unit": "V",
+   "line": [
+    5,
+    5
+   ]
+  },
+  "current": {
+   "value": [
+    3.35,
+    1.93
+   ],
+   "unit": "A",
+   "line": [
+    5,
+    5
+   ]
+  },
+  "gearRatio": {
+   "value": 27.92,
+   "unit": "",
+   "line": 6
+  },
+  "outputSpeedRpm": {
+   "value": 50,
+   "unit": "rpm",
+   "line": 6
+  },
+  "brakeVoltage": {
+   "value": 205,
+   "unit": "V",
+   "line": 7
+  },
+  "weightKg": {
+   "value": 24,
+   "unit": "kg",
+   "line": 7
+  }
+ },
+ "absent": [
+  "ratedPowerHp",
+  "efficiencyPct"
+ ],
+ "checks": [
+  {
+   "kind": "3ph",
+   "P_kW": 0.75,
+   "U": 230,
+   "I": 3.35,
+   "cosPhi": 0.74,
+   "eta": 0.8,
+   "assumed": [
+    "eta"
+   ]
+  },
+  {
+   "kind": "3ph",
+   "P_kW": 0.75,
+   "U": 400,
+   "I": 1.93,
+   "cosPhi": 0.74,
+   "eta": 0.8,
+   "assumed": [
+    "eta"
+   ]
+  }
+ ],
+ "notes": "Brake coil 205 V DC ('V=') is brakeVoltage, not motor voltage. Postcode D-73734 is not a delta mark. n2 50 1/min is output speed and must not be read as 50 Hz. Gearbox ratio has a decimal comma (27,92)."
+}

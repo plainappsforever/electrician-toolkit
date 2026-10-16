@@ -1,0 +1,108 @@
+{
+  "fixture": "pump_grundfos_cr_en",
+  "kind": "pump",
+  "lang": "en",
+  "ocrDamage": [],
+  "fields": {
+    "manufacturer": {
+      "value": "GRUNDFOS",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "CR 10-4 A-FJ-A-E-HQQE",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "A 96501234 P2 1924 0001",
+      "unit": "",
+      "line": 2
+    },
+    "flowM3h": {
+      "value": 10,
+      "unit": "m3/h",
+      "line": 3
+    },
+    "headM": {
+      "value": 38.4,
+      "unit": "m",
+      "line": 3
+    },
+    "speedRpm": {
+      "value": 2900,
+      "unit": "rpm",
+      "line": 3
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 4
+    },
+    "voltage": {
+      "value": 400,
+      "unit": "V",
+      "line": 4
+    },
+    "current": {
+      "value": 4.6,
+      "unit": "A",
+      "line": 4
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 4
+    },
+    "ratedPowerKw": {
+      "value": 2.2,
+      "unit": "kW",
+      "line": 4
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 6
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 6
+    },
+    "efficiencyClass": {
+      "value": "IE3",
+      "unit": "",
+      "line": 6
+    },
+    "efficiencyPct": {
+      "value": 86.7,
+      "unit": "%",
+      "line": 6
+    },
+    "weightKg": {
+      "value": 38,
+      "unit": "kg",
+      "line": 7
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "cosPhi",
+    "duty",
+    "connection"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 2.2,
+      "U": 400,
+      "I": 4.6,
+      "cosPhi": 0.85,
+      "eta": 0.867,
+      "assumed": [
+        "cosPhi"
+      ]
+    }
+  ],
+  "notes": "'P2 1924' in the model line is a production code; MEI is a pump index, not efficiency."
+}

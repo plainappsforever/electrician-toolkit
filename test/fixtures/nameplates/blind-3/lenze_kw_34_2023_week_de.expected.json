@@ -1,0 +1,136 @@
+{
+  "fixture": "lenze_kw_34_2023_week_de",
+  "kind": "motor-iec",
+  "lang": "de",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "Lenze",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "MDERAXX080-32",
+      "unit": "",
+      "line": 2
+    },
+    "serial": {
+      "value": "13456789",
+      "unit": "",
+      "line": 3
+    },
+    "year": {
+      "value": 2023,
+      "unit": "",
+      "line": 4
+    },
+    "efficiencyClass": {
+      "value": "IE3",
+      "unit": "",
+      "line": 5
+    },
+    "voltage": {
+      "value": [
+        230,
+        400
+      ],
+      "unit": "V",
+      "line": [
+        6,
+        6
+      ]
+    },
+    "connection": {
+      "value": "Δ/Y",
+      "unit": "",
+      "line": 6
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 6
+    },
+    "current": {
+      "value": [
+        4.4,
+        2.55
+      ],
+      "unit": "A",
+      "line": [
+        7,
+        7
+      ]
+    },
+    "ratedPowerKw": {
+      "value": 1.1,
+      "unit": "kW",
+      "line": 7
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 7
+    },
+    "cosPhi": {
+      "value": 0.75,
+      "unit": "",
+      "line": 8
+    },
+    "speedRpm": {
+      "value": 1435,
+      "unit": "rpm",
+      "line": 8
+    },
+    "efficiencyPct": {
+      "value": 84.1,
+      "unit": "%",
+      "line": 9
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 9
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 9
+    },
+    "weightKg": {
+      "value": 13,
+      "unit": "kg",
+      "line": 10
+    }
+  },
+  "absent": [
+    "ratedPowerHp"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 1.1,
+      "U": 400,
+      "I": 2.55,
+      "cosPhi": 0.75,
+      "eta": 0.841,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 1.1,
+      "U": 230,
+      "I": 4.4,
+      "cosPhi": 0.75,
+      "eta": 0.841,
+      "assumed": []
+    }
+  ],
+  "notes": "'KW 34/2023' = calendar week 34 of 2023 (year 2023); it is NOT 34 kW. The rated power is 1,1 kW."
+}

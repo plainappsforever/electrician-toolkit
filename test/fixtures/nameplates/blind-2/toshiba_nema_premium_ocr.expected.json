@@ -1,0 +1,161 @@
+{
+ "fixture": "toshiba_nema_premium_ocr",
+ "kind": "motor-nema",
+ "lang": "en",
+ "ocrDamage": [
+  "0/O",
+  "1/l/I"
+ ],
+ "fields": {
+  "manufacturer": {
+   "value": "Toshiba",
+   "unit": "",
+   "line": 0
+  },
+  "efficiencyClass": {
+   "value": "NEMA Premium",
+   "unit": "",
+   "line": 0
+  },
+  "type": {
+   "value": "B0074FLF2UMH",
+   "unit": "",
+   "line": 1
+  },
+  "serial": {
+   "value": "170482213",
+   "unit": "",
+   "line": 1
+  },
+  "ratedPowerHp": {
+   "value": 7.5,
+   "unit": "hp",
+   "line": 2
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 2
+  },
+  "frequencyHz": {
+   "value": 60,
+   "unit": "Hz",
+   "line": 2
+  },
+  "speedRpm": {
+   "value": 1770,
+   "unit": "rpm",
+   "line": 2
+  },
+  "frame": {
+   "value": "213T",
+   "unit": "",
+   "line": 2
+  },
+  "voltage": {
+   "value": [
+    230,
+    460
+   ],
+   "unit": "V",
+   "line": [
+    3,
+    3
+   ]
+  },
+  "current": {
+   "value": [
+    18.6,
+    9.3
+   ],
+   "unit": "A",
+   "line": [
+    3,
+    3
+   ]
+  },
+  "serviceFactor": {
+   "value": 1.15,
+   "unit": "",
+   "line": 4
+  },
+  "serviceFactorCurrent": {
+   "value": [
+    21.4,
+    10.7
+   ],
+   "unit": "A",
+   "line": [
+    4,
+    4
+   ]
+  },
+  "nemaDesign": {
+   "value": "B",
+   "unit": "",
+   "line": 4
+  },
+  "codeLetter": {
+   "value": "H",
+   "unit": "",
+   "line": 4
+  },
+  "efficiencyPct": {
+   "value": 91.7,
+   "unit": "%",
+   "line": 5
+  },
+  "cosPhi": {
+   "value": 0.83,
+   "unit": "",
+   "line": 5
+  },
+  "enclosure": {
+   "value": "TEFC",
+   "unit": "",
+   "line": 5
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 6
+  },
+  "ambientC": {
+   "value": 40,
+   "unit": "°C",
+   "line": 6
+  },
+  "duty": {
+   "value": "CONT",
+   "unit": "",
+   "line": 6
+  }
+ },
+ "absent": [
+  "ratedPowerKw",
+  "ipRating",
+  "connection",
+  "weightKg"
+ ],
+ "checks": [
+  {
+   "kind": "3ph",
+   "P_hp": 7.5,
+   "U": 230,
+   "I": 18.6,
+   "cosPhi": 0.83,
+   "eta": 0.917,
+   "assumed": []
+  },
+  {
+   "kind": "3ph",
+   "P_hp": 7.5,
+   "U": 460,
+   "I": 9.3,
+   "cosPhi": 0.83,
+   "eta": 0.917,
+   "assumed": []
+  }
+ ],
+ "notes": "HP '7 l/2' is 7 1/2 with the 1 read as l. Weight 128 LBS is pounds, not kg (weightKg absent). SF AMPS are not FLA. Many l/1 and O/0 confusions in serial and model. 60 Hz only, no kW."
+}

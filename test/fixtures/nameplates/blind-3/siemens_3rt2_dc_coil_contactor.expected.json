@@ -1,0 +1,40 @@
+{
+  "fixture": "siemens_3rt2_dc_coil_contactor",
+  "kind": "motor-iec",
+  "lang": "en",
+  "ocrDamage": [
+    "dropped-spaces"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "SIEMENS",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "3RT2026-1BB40",
+      "unit": "",
+      "line": 2
+    }
+  },
+  "absent": [
+    "ratedPowerKw",
+    "ratedPowerHp",
+    "voltage",
+    "current",
+    "frequencyHz",
+    "cosPhi",
+    "speedRpm",
+    "efficiencyClass",
+    "efficiencyPct",
+    "ipRating",
+    "insulationClass",
+    "duty",
+    "serial",
+    "phases",
+    "connection",
+    "weightKg"
+  ],
+  "checks": [],
+  "notes": "Contactor, not a motor. 'Us:24VDC' is the coil voltage and must not become a motor voltage. '2026' inside the order number is not a year. Terminal numbers (1/L1, 13 NO) are not values."
+}

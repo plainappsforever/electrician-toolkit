@@ -1,0 +1,162 @@
+{
+ "fixture": "vem_dahlander_two_rows_de",
+ "kind": "motor-iec",
+ "lang": "de",
+ "ocrDamage": [
+  "decimal-comma"
+ ],
+ "fields": {
+  "manufacturer": {
+   "value": "VEM",
+   "unit": "",
+   "line": 0
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 1
+  },
+  "type": {
+   "value": "K21R 100 L 4/2",
+   "unit": "",
+   "line": 1
+  },
+  "serial": {
+   "value": "4401235/0012",
+   "unit": "",
+   "line": 1
+  },
+  "year": {
+   "value": 2022,
+   "unit": "",
+   "line": 1
+  },
+  "ipRating": {
+   "value": "IP55",
+   "unit": "",
+   "line": 2
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 2
+  },
+  "duty": {
+   "value": "S1",
+   "unit": "",
+   "line": 2
+  },
+  "voltage": {
+   "value": [
+    400,
+    400
+   ],
+   "unit": "V",
+   "line": [
+    3,
+    4
+   ]
+  },
+  "connection": {
+   "value": [
+    "Δ",
+    "YY"
+   ],
+   "unit": "",
+   "line": [
+    3,
+    4
+   ]
+  },
+  "frequencyHz": {
+   "value": [
+    50,
+    50
+   ],
+   "unit": "Hz",
+   "line": [
+    3,
+    4
+   ]
+  },
+  "ratedPowerKw": {
+   "value": [
+    1.5,
+    1.9
+   ],
+   "unit": "kW",
+   "line": [
+    3,
+    4
+   ]
+  },
+  "current": {
+   "value": [
+    3.5,
+    3.9
+   ],
+   "unit": "A",
+   "line": [
+    3,
+    4
+   ]
+  },
+  "speedRpm": {
+   "value": [
+    1410,
+    2850
+   ],
+   "unit": "rpm",
+   "line": [
+    3,
+    4
+   ]
+  },
+  "cosPhi": {
+   "value": [
+    0.8,
+    0.88
+   ],
+   "unit": "",
+   "line": [
+    3,
+    4
+   ]
+  },
+  "weightKg": {
+   "value": 27,
+   "unit": "kg",
+   "line": 5
+  }
+ },
+ "absent": [
+  "ratedPowerHp",
+  "efficiencyClass",
+  "efficiencyPct"
+ ],
+ "checks": [
+  {
+   "kind": "3ph",
+   "P_kW": 1.5,
+   "U": 400,
+   "I": 3.5,
+   "cosPhi": 0.8,
+   "eta": 0.78,
+   "assumed": [
+    "eta"
+   ]
+  },
+  {
+   "kind": "3ph",
+   "P_kW": 1.9,
+   "U": 400,
+   "I": 3.9,
+   "cosPhi": 0.88,
+   "eta": 0.8,
+   "assumed": [
+    "eta"
+   ]
+  }
+ ],
+ "notes": "Two-speed Dahlander: one row per speed, low speed Δ, high speed YY. Every per-row value is repeated. '4/2' in the type is the pole count. Pole-changing motors carry no IE class."
+}

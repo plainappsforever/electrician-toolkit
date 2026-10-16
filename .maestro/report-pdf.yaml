@@ -1,0 +1,138 @@
+appId: ${APP_ID}
+name: Report PDF - U3, A7, A13, a calculation and a whole project become PDFs (English and German), the project CSV and the all-projects CSV are written
+tags:
+  - core
+---
+- runFlow:
+    file: subflows/seed.yaml
+    env:
+      SEED: e1
+- runFlow:
+    file: subflows/flags.yaml
+    env:
+      QUERY: share=off&pick=none
+# a saved calculation
+- tapOn:
+    id: tab-projects
+- tapOn: ".*Müller, Küche.*"
+- scrollUntilVisible:
+    element: ".*F3 Steckdosen.*"
+- tapOn: ".*F3 Steckdosen.*"
+- tapOn: ".*Spannungsfall F3.*"
+- scrollUntilVisible:
+    element:
+      id: saved-pdf
+- tapOn:
+    id: saved-pdf
+- scrollUntilVisible:
+    element:
+      id: pdf-done
+    timeout: 60000
+- assertVisible:
+    id: pdf-done
+    text: "PDF created: Spannungsfall-F3-.*\\.pdf \\(.*, pages: [1-9][0-9]*\\)\\..*"
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: nav-back
+# the project report and the project CSV
+- scrollUntilVisible:
+    element:
+      id: project-report
+- tapOn:
+    id: project-report
+- scrollUntilVisible:
+    element:
+      id: pdf-done
+    timeout: 60000
+- assertVisible:
+    id: pdf-done
+    text: "PDF created: M.ller-K.che-.*\\.pdf \\(.*, pages: [1-9][0-9]*\\)\\..*3 calculations.*"
+- tapOn:
+    id: project-csv
+- scrollUntilVisible:
+    element:
+      id: csv-done
+    timeout: 60000
+- assertVisible:
+    id: csv-done
+    text: "CSV created: electrician-toolkit-calculations-.*\\.csv.*"
+# the calculator screen: the live result as a PDF (not saved to a project)
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: tab-calculators
+- tapOn:
+    id: calc-open-vdrop
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-current
+      TEXT: "16"
+- runFlow:
+    file: subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "18"
+- scrollUntilVisible:
+    element:
+      id: size-chip-1.5
+- tapOn:
+    id: size-chip-1.5
+- scrollUntilVisible:
+    element:
+      id: pdf-button
+- tapOn:
+    id: pdf-button
+- scrollUntilVisible:
+    element:
+      id: pdf-done
+    timeout: 60000
+- assertVisible:
+    id: pdf-done
+    text: "PDF created: vdrop-.*\\.pdf.*"
+# German: the same project report in German
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: tab-more
+- tapOn:
+    id: open-settings
+- tapOn:
+    id: language-de
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: tab-projects
+- tapOn: ".*Müller, Küche.*"
+- scrollUntilVisible:
+    element:
+      id: project-report
+- tapOn:
+    id: project-report
+- scrollUntilVisible:
+    element:
+      id: pdf-done
+    timeout: 60000
+- assertVisible:
+    id: pdf-done
+    text: "PDF erstellt: M.ller-K.che-.*\\.pdf \\(.*, Seiten: [1-9][0-9]*\\)\\..*"
+# the all-projects CSV from the Backup screen
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: tab-more
+- tapOn:
+    id: open-backup
+- scrollUntilVisible:
+    element:
+      id: export-csv-all
+- tapOn:
+    id: export-csv-all
+- scrollUntilVisible:
+    element:
+      id: csv-done
+    timeout: 60000
+- assertVisible:
+    id: csv-done
+    text: "CSV erstellt: electrician-toolkit-calculations-.*\\.csv.*"

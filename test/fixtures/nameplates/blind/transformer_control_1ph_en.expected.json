@@ -1,0 +1,105 @@
+{
+  "fixture": "transformer_control_1ph_en",
+  "kind": "transformer",
+  "lang": "en",
+  "ocrDamage": [],
+  "fields": {
+    "manufacturer": {
+      "value": "BLOCK",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 1,
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "STE 1000/23",
+      "unit": "",
+      "line": 1
+    },
+    "primaryVoltage": {
+      "value": 400,
+      "unit": "V",
+      "line": 2
+    },
+    "secondaryVoltage": {
+      "value": 230,
+      "unit": "V",
+      "line": 2
+    },
+    "ratedPowerKva": {
+      "value": 1000,
+      "unit": "VA",
+      "line": 2
+    },
+    "frequencyHz": {
+      "value": [
+        50,
+        60
+      ],
+      "unit": "Hz",
+      "line": [
+        2,
+        2
+      ]
+    },
+    "primaryCurrent": {
+      "value": 2.5,
+      "unit": "A",
+      "line": 3
+    },
+    "secondaryCurrent": {
+      "value": 4.35,
+      "unit": "A",
+      "line": 3
+    },
+    "ukPct": {
+      "value": 4.5,
+      "unit": "%",
+      "line": 3
+    },
+    "insulationClass": {
+      "value": "B",
+      "unit": "",
+      "line": 4
+    },
+    "ipRating": {
+      "value": "IP00",
+      "unit": "",
+      "line": 4
+    },
+    "serial": {
+      "value": "22-104577",
+      "unit": "",
+      "line": 5
+    },
+    "weightKg": {
+      "value": 9.6,
+      "unit": "kg",
+      "line": 5
+    }
+  },
+  "absent": [
+    "vectorGroup",
+    "cooling"
+  ],
+  "checks": [
+    {
+      "kind": "transformer1",
+      "S_kVA": 1.0,
+      "U": 400,
+      "I": 2.5,
+      "assumed": []
+    },
+    {
+      "kind": "transformer1",
+      "S_kVA": 1.0,
+      "U": 230,
+      "I": 4.35,
+      "assumed": []
+    }
+  ],
+  "notes": "1000 VA = 1 kVA."
+}

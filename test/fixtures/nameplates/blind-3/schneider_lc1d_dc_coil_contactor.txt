@@ -1,0 +1,8 @@
+Schneider Electric
+TeSys
+LC1D09BD
+A1      A2
+24VDC
+1/L1   3/L2   5/L3   13NO
+2/T1   4/T2   6/T3   14NO
+IEC/EN 60947-4-1

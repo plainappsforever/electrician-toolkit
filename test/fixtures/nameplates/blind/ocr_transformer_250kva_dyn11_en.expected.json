@@ -1,0 +1,116 @@
+{
+  "fixture": "ocr_transformer_250kva_dyn11_en",
+  "kind": "transformer",
+  "lang": "en",
+  "ocrDamage": [
+    "0/O",
+    "1/l/I",
+    "5/S",
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "ELTRAFO",
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "GTR 250/10",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "TR-21-08817",
+      "unit": "",
+      "line": 2
+    },
+    "year": {
+      "value": 2021,
+      "unit": "",
+      "line": 2
+    },
+    "ratedPowerKva": {
+      "value": 250,
+      "unit": "kVA",
+      "line": 3
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 3
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 3
+    },
+    "vectorGroup": {
+      "value": "Dyn11",
+      "unit": "",
+      "line": 4
+    },
+    "ukPct": {
+      "value": 6.0,
+      "unit": "%",
+      "line": 5
+    },
+    "primaryVoltage": {
+      "value": 10000,
+      "unit": "V",
+      "line": 6
+    },
+    "primaryCurrent": {
+      "value": 14.4,
+      "unit": "A",
+      "line": 6
+    },
+    "secondaryVoltage": {
+      "value": 400,
+      "unit": "V",
+      "line": 7
+    },
+    "secondaryCurrent": {
+      "value": 360.8,
+      "unit": "A",
+      "line": 7
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 8
+    },
+    "cooling": {
+      "value": "AN",
+      "unit": "",
+      "line": 8
+    },
+    "ipRating": {
+      "value": "IP00",
+      "unit": "",
+      "line": 8
+    },
+    "weightKg": {
+      "value": 1180,
+      "unit": "kg",
+      "line": 9
+    }
+  },
+  "absent": [],
+  "checks": [
+    {
+      "kind": "transformer3",
+      "S_kVA": 250,
+      "U": 10000,
+      "I": 14.4,
+      "assumed": []
+    },
+    {
+      "kind": "transformer3",
+      "S_kVA": 250,
+      "U": 400,
+      "I": 360.8,
+      "assumed": []
+    }
+  ],
+  "notes": "'Temp. rise 100 K' is not a voltage or current."
+}

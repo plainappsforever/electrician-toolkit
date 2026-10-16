@@ -1,0 +1,55 @@
+appId: ${APP_ID}
+name: "Backup and restore of the largest database the cap allows - D57, 16 500 calculations in a file of about 95.5 MiB (under the 100 MiB cap), back up, restore, read the time (the Android memory question of P6)"
+tags:
+  - perf
+---
+# scripts/e2e.sh <platform> development .maestro/extra/backup-huge.yaml (dev build + Metro). The `huge` seed is development-only.
+- runFlow:
+    file: ../subflows/seed.yaml
+    env:
+      SEED: huge
+- runFlow:
+    file: ../subflows/flags.yaml
+    env:
+      QUERY: share=off&pick=none
+- tapOn:
+    id: tab-more
+- tapOn:
+    id: open-backup
+- tapOn:
+    id: backup-export
+- extendedWaitUntil:
+    visible:
+      id: backup-done
+    timeout: 300000
+- assertVisible:
+    id: backup-done
+    text: ".*[0-9.]+ MB; 330 projects, 3300 circuits, 16500 saved calculations.*"
+- takeScreenshot: huge-1-backup-done
+- tapOn:
+    id: nav-back
+- runFlow:
+    file: ../subflows/link.yaml
+    env:
+      URL: ${APP_SCHEME}://debug/restore?fixture=last
+- extendedWaitUntil:
+    visible:
+      id: backup-screen
+    timeout: 20000
+- tapOn:
+    id: backup-restore
+- extendedWaitUntil:
+    visible:
+      id: restore-preview
+    timeout: 300000
+- takeScreenshot: huge-2-preview
+- tapOn:
+    id: restore-confirm
+- extendedWaitUntil:
+    visible:
+      id: restore-done
+    timeout: 600000
+- assertVisible:
+    id: restore-done
+    text: "Restored: 330 projects, 3300 circuits, 16500 saved calculations.*It took .* s.*"
+- takeScreenshot: huge-3-restored

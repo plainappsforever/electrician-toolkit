@@ -1,0 +1,7 @@
+VVEG   W21   Made in Brazil
+MOD: W21 100L-04 BRAKE   3~   No. 1027345621   2018
+3.0 kW (4.0 HP)   50 Hz   1440 rpm   S1
+400/690 V   A/Y   6.40/3.70 A
+cos φ 0.80   IE2   85.7 %
+IP55   INS.CL. F   ΔT 80 K   AMB 40 °C   SF 1.00
+BRAKE 180 V DC   20 Nm   ALT 1000 m   29 kg

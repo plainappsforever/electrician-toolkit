@@ -1,0 +1,108 @@
+{
+ "fixture": "ziehl_abegg_fan_p1_watts_de",
+ "kind": "fan",
+ "lang": "de",
+ "ocrDamage": [
+  "8/B",
+  "1/l/I",
+  "decimal-comma"
+ ],
+ "fields": {
+  "manufacturer": {
+   "value": "Ziehl-Abegg",
+   "unit": "",
+   "line": 0
+  },
+  "type": {
+   "value": "FN050-4DK.4F.V7P1",
+   "unit": "",
+   "line": 1
+  },
+  "serial": {
+   "value": "24051234/0002",
+   "unit": "",
+   "line": 2
+  },
+  "year": {
+   "value": 2024,
+   "unit": "",
+   "line": 2
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 3
+  },
+  "voltage": {
+   "value": 400,
+   "unit": "V",
+   "line": 3
+  },
+  "connection": {
+   "value": "Y",
+   "unit": "",
+   "line": 3
+  },
+  "frequencyHz": {
+   "value": 50,
+   "unit": "Hz",
+   "line": 3
+  },
+  "inputPowerKw": {
+   "value": 700,
+   "unit": "W",
+   "line": 3
+  },
+  "current": {
+   "value": 1.35,
+   "unit": "A",
+   "line": 3
+  },
+  "speedRpm": {
+   "value": 1350,
+   "unit": "rpm",
+   "line": 3
+  },
+  "ipRating": {
+   "value": "IP54",
+   "unit": "",
+   "line": 4
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 4
+  },
+  "ambientC": {
+   "value": 60,
+   "unit": "°C",
+   "line": 4
+  },
+  "weightKg": {
+   "value": 11.5,
+   "unit": "kg",
+   "line": 5
+  }
+ },
+ "absent": [
+  "ratedPowerKw",
+  "ratedPowerHp",
+  "cosPhi",
+  "efficiencyClass",
+  "efficiencyPct",
+  "duty"
+ ],
+ "checks": [
+  {
+   "kind": "3ph-input",
+   "P_kW": 0.7,
+   "U": 400,
+   "I": 1.35,
+   "cosPhi": 0.75,
+   "assumed": [
+    "cosPhi"
+   ]
+  }
+ ],
+ "notes": "Fan plate: P1 700 W is INPUT power in watts (inputPowerKw, W); no output kW. 'Art.-Nr.' is an article number, the serial is the 'Nr.' line. tR 60 °C = max. air-stream temperature (ambientC). '4DK' in the type is not a delta connection. B read as 8 in the maker name."
+}

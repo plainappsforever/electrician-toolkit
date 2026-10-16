@@ -1,0 +1,40 @@
+{
+  "fixture": "schneider_lc1d_dc_coil_contactor",
+  "kind": "motor-iec",
+  "lang": "en",
+  "ocrDamage": [
+    "dropped-spaces"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "Schneider Electric",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "LC1D09BD",
+      "unit": "",
+      "line": 2
+    }
+  },
+  "absent": [
+    "ratedPowerKw",
+    "ratedPowerHp",
+    "voltage",
+    "current",
+    "frequencyHz",
+    "cosPhi",
+    "speedRpm",
+    "efficiencyClass",
+    "efficiencyPct",
+    "ipRating",
+    "insulationClass",
+    "duty",
+    "serial",
+    "phases",
+    "connection",
+    "weightKg"
+  ],
+  "checks": [],
+  "notes": "Contactor, not a motor: '24VDC' is the coil voltage (BD coil code), 'D09' is the 9 A frame size code. No motor field may be filled."
+}

@@ -1,0 +1,166 @@
+{
+  "fixture": "ocr_ie4_90kw_de",
+  "kind": "motor-iec",
+  "lang": "de",
+  "ocrDamage": [
+    "0/O",
+    "1/l/I",
+    "5/S",
+    "8/B",
+    "rn/m",
+    "φ->phi",
+    "Δ->D",
+    "decimal-comma",
+    "glued-unit"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "SIEMENS",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "1LE1504-2DB23-4AA4",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "E2311/7712345 01 003",
+      "unit": "",
+      "line": 2
+    },
+    "weightKg": {
+      "value": 625,
+      "unit": "kg",
+      "line": 3
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 3
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 3
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 3
+    },
+    "voltage": {
+      "value": [
+        400,
+        690
+      ],
+      "unit": "V",
+      "line": [
+        4,
+        4
+      ]
+    },
+    "connection": {
+      "value": [
+        "Δ",
+        "Y"
+      ],
+      "unit": "",
+      "line": [
+        4,
+        4
+      ]
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 4
+    },
+    "current": {
+      "value": [
+        157,
+        91.0
+      ],
+      "unit": "A",
+      "line": [
+        4,
+        4
+      ]
+    },
+    "ratedPowerKw": {
+      "value": 90,
+      "unit": "kW",
+      "line": 5
+    },
+    "cosPhi": {
+      "value": 0.86,
+      "unit": "",
+      "line": 5
+    },
+    "speedRpm": {
+      "value": 1488,
+      "unit": "rpm",
+      "line": 5
+    },
+    "efficiencyClass": {
+      "value": "IE4",
+      "unit": "",
+      "line": 6
+    },
+    "efficiencyPct": {
+      "value": [
+        96.1,
+        96.2,
+        95.6
+      ],
+      "unit": "%",
+      "line": [
+        6,
+        6,
+        6
+      ]
+    },
+    "efficiencyLoadPct": {
+      "value": [
+        100,
+        75,
+        50
+      ],
+      "unit": "%",
+      "line": [
+        6,
+        6,
+        6
+      ]
+    }
+  },
+  "absent": [
+    "ratedPowerHp"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 90,
+      "U": 400,
+      "I": 157,
+      "cosPhi": 0.86,
+      "eta": 0.961,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 90,
+      "U": 690,
+      "I": 91.0,
+      "cosPhi": 0.86,
+      "eta": 0.961,
+      "assumed": []
+    }
+  ],
+  "notes": "'(S0%)' is the 50 % load point, not a frequency."
+}

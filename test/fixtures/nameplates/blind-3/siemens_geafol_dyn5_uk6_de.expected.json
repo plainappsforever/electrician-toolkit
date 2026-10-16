@@ -1,0 +1,113 @@
+{
+  "fixture": "siemens_geafol_dyn5_uk6_de",
+  "kind": "transformer",
+  "lang": "de",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "SIEMENS",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "4GB5444-3CA",
+      "unit": "",
+      "line": 2
+    },
+    "serial": {
+      "value": "2312345",
+      "unit": "",
+      "line": 3
+    },
+    "year": {
+      "value": 2023,
+      "unit": "",
+      "line": 3
+    },
+    "ratedPowerKva": {
+      "value": 400,
+      "unit": "kVA",
+      "line": 4
+    },
+    "cooling": {
+      "value": "AN",
+      "unit": "",
+      "line": 4
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 5
+    },
+    "primaryVoltage": {
+      "value": 10,
+      "unit": "kV",
+      "line": 6
+    },
+    "primaryCurrent": {
+      "value": 23.1,
+      "unit": "A",
+      "line": 6
+    },
+    "secondaryVoltage": {
+      "value": 0.4,
+      "unit": "kV",
+      "line": 7
+    },
+    "secondaryCurrent": {
+      "value": 577,
+      "unit": "A",
+      "line": 7
+    },
+    "vectorGroup": {
+      "value": "Dyn5",
+      "unit": "",
+      "line": 8
+    },
+    "ukPct": {
+      "value": 6,
+      "unit": "%",
+      "line": 9
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 11
+    },
+    "ipRating": {
+      "value": "IP00",
+      "unit": "",
+      "line": 12
+    },
+    "weightKg": {
+      "value": 1350,
+      "unit": "kg",
+      "line": 12
+    }
+  },
+  "absent": [],
+  "checks": [
+    {
+      "kind": "transformer3",
+      "S_kVA": 400,
+      "U": 10000,
+      "I": 23.1,
+      "assumed": []
+    },
+    {
+      "kind": "transformer3",
+      "S_kVA": 400,
+      "U": 400,
+      "I": 577,
+      "assumed": []
+    }
+  ],
+  "notes": "'± 2 x 2,5 %' is the tap range, not uk. LI 75 / AC 28 kV / AC 3 kV are test voltages, not the rated voltages. 'F1' (fire class) is not the insulation class; 'Wärmeklasse F' is. Secondary printed as 0,4 kV."
+}

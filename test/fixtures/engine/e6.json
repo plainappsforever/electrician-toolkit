@@ -1,0 +1,15 @@
+{
+  "id": "E6",
+  "spec": "SPEC §8 E6 — AWG, kcmil, feet",
+  "cases": [
+    { "name": "AWG 12", "kind": "convert", "input": { "from": "awg", "value": 12 }, "expected": { "values.diameterMm": { "printed": "2.0525253885" }, "values.mm2": { "printed": "3.3087728761" } } },
+    { "name": "AWG 4/0 (n = −3)", "kind": "convert", "input": { "from": "awg", "value": -3 }, "expected": { "values.diameterMm": 11.684, "values.mm2": { "printed": "107.2193025770" } } },
+    { "name": "250 kcmil", "kind": "convert", "input": { "from": "kcmil", "value": 250 }, "expected": { "values.mm2": { "printed": "126.6768697744" } } },
+    {
+      "name": "1~ 120 V, 16 A, 50 ft, AWG 12 Cu, M2 θ 75 °C (cos φ 1; limit not in SPEC: 3 %)",
+      "kind": "vdrop",
+      "input": { "system": "ac1", "voltage": 120, "current": 16, "length": { "value": 50, "unit": "ft" }, "material": "cu", "size": { "value": 12, "unit": "awg" }, "cosPhi": 1, "method": "M2", "conductorTempC": 75, "limitPercent": 3 },
+      "expected": { "values.u": { "printed": "3.0904885504" }, "values.deltaUPercent": { "printed": "2.5754071254" } }
+    }
+  ]
+}

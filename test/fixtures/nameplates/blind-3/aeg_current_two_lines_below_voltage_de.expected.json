@@ -1,0 +1,132 @@
+{
+  "fixture": "aeg_current_two_lines_below_voltage_de",
+  "kind": "motor-iec",
+  "lang": "de",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "AEG",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "AM 112MZ 4",
+      "unit": "",
+      "line": 2
+    },
+    "serial": {
+      "value": "8812345",
+      "unit": "",
+      "line": 3
+    },
+    "year": {
+      "value": 1994,
+      "unit": "",
+      "line": 3
+    },
+    "voltage": {
+      "value": [
+        230,
+        400
+      ],
+      "unit": "V",
+      "line": [
+        4,
+        4
+      ]
+    },
+    "connection": {
+      "value": "Δ/Y",
+      "unit": "",
+      "line": 5
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 5
+    },
+    "current": {
+      "value": [
+        13.3,
+        7.7
+      ],
+      "unit": "A",
+      "line": [
+        6,
+        6
+      ]
+    },
+    "ratedPowerKw": {
+      "value": 4,
+      "unit": "kW",
+      "line": 7
+    },
+    "cosPhi": {
+      "value": 0.84,
+      "unit": "",
+      "line": 7
+    },
+    "speedRpm": {
+      "value": 1440,
+      "unit": "rpm",
+      "line": 7
+    },
+    "ipRating": {
+      "value": "IP54",
+      "unit": "",
+      "line": 8
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 8
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 8
+    },
+    "weightKg": {
+      "value": 40,
+      "unit": "kg",
+      "line": 9
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "efficiencyClass",
+    "efficiencyPct"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 4,
+      "U": 400,
+      "I": 7.7,
+      "cosPhi": 0.84,
+      "eta": 0.855,
+      "assumed": [
+        "eta"
+      ]
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 4,
+      "U": 230,
+      "I": 13.3,
+      "cosPhi": 0.84,
+      "eta": 0.855,
+      "assumed": [
+        "eta"
+      ]
+    }
+  ],
+  "notes": "13,3 A belongs to 230 V (Δ), 7,7 A to 400 V (Y); the pairing spans two lines. 'VDE 0530' is a standard, not a voltage. 'U/min' = rpm."
+}

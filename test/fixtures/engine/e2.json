@@ -1,0 +1,42 @@
+{
+  "id": "E2",
+  "spec": "SPEC §8 E2, E2b, E2c",
+  "cases": [
+    {
+      "name": "E2 3~ 400 V, 22 kW, cos φ 1, η 1, 30 m, Cu 6 mm², M1, limit 3 %",
+      "kind": "vdrop",
+      "input": { "system": "ac3", "voltage": 400, "power": 22000, "cosPhi": 1, "efficiency": 1, "length": { "value": 30, "unit": "m" }, "material": "cu", "size": { "value": 6, "unit": "mm2" }, "method": "M1", "limitPercent": 3 },
+      "expected": {
+        "values.current": { "printed": "31.7542648054" },
+        "values.u0": { "printed": "230.9401076759" },
+        "values.u": { "printed": "3.5723547906" },
+        "values.deltaUPercent": 1.546875,
+        "values.deltaULL": 6.1875,
+        "values.uEnd": 393.8125,
+        "values.powerLoss": 340.3125,
+        "values.lMax": { "printed": "58.1818181818" },
+        "texts.verdict": "within"
+      }
+    },
+    {
+      "name": "E2b 1~ 230 V, 16 A, 25 m, Cu 2.5 mm², cos φ 0.9, M1 (limit not in SPEC: 3 %)",
+      "kind": "vdrop",
+      "input": { "system": "ac1", "voltage": 230, "current": 16, "length": { "value": 25, "unit": "m" }, "material": "cu", "size": { "value": 2.5, "unit": "mm2" }, "cosPhi": 0.9, "method": "M1", "limitPercent": 3 },
+      "expected": {
+        "values.sinPhi": { "printed": "0.4358898944" },
+        "values.u": { "printed": "6.5078969532" },
+        "values.deltaUPercent": { "printed": "2.8295204145" }
+      }
+    },
+    {
+      "name": "E2c DC 24 V, 20 A, 10 m, Cu 6 mm², M1 (limit not in SPEC: 3 %)",
+      "kind": "vdrop",
+      "input": { "system": "dc", "voltage": 24, "current": 20, "length": { "value": 10, "unit": "m" }, "material": "cu", "size": { "value": 6, "unit": "mm2" }, "method": "M1", "limitPercent": 3 },
+      "expected": {
+        "values.u": 1.5,
+        "values.deltaUPercent": 6.25,
+        "texts.verdict": "exceeds"
+      }
+    }
+  ]
+}

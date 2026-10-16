@@ -1,0 +1,72 @@
+{
+  "fixture": "missing_power_blower_de",
+  "kind": "fan",
+  "lang": "de",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "Elektror",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "RD 22",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "11873456",
+      "unit": "",
+      "line": 1
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 2
+    },
+    "voltage": {
+      "value": 400,
+      "unit": "V",
+      "line": 2
+    },
+    "connection": {
+      "value": "Y",
+      "unit": "",
+      "line": 2
+    },
+    "current": {
+      "value": 0.62,
+      "unit": "A",
+      "line": 2
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 2
+    },
+    "speedRpm": {
+      "value": 2780,
+      "unit": "rpm",
+      "line": 3
+    },
+    "ipRating": {
+      "value": "IP54",
+      "unit": "",
+      "line": 3
+    }
+  },
+  "absent": [
+    "ratedPowerKw",
+    "ratedPowerHp",
+    "cosPhi",
+    "efficiencyClass",
+    "efficiencyPct",
+    "insulationClass",
+    "duty",
+    "weightKg"
+  ],
+  "checks": [],
+  "notes": "Power is genuinely absent; do not derive it."
+}

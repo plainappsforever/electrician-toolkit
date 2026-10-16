@@ -1,0 +1,15 @@
+AEG
+Drehstrom-Asynchronmotor
+Typ AM 160 MZ 4
+Fabrik-Nr. 7 384 552
+Bemessungsleistung
+11 kW
+Bemessungsspannung
+400 / 690 V   Δ / Y
+Bemessungsstrom
+21,5 / 12,4 A
+Leistungsfaktor
+cos φ 0,85
+Drehzahl  1455 min⁻¹   50 Hz
+Schutzart IP 54   Isolierstoffklasse F   Betriebsart S1
+Gewicht 96 kg   Baujahr 1994

@@ -1,0 +1,117 @@
+{
+ "fixture": "riedel_control_transformer_1ph_de",
+ "kind": "transformer",
+ "lang": "de",
+ "ocrDamage": [
+  "decimal-comma"
+ ],
+ "fields": {
+  "manufacturer": {
+   "value": "Michael Riedel",
+   "unit": "",
+   "line": 0
+  },
+  "phases": {
+   "value": 1,
+   "unit": "",
+   "line": 1
+  },
+  "type": {
+   "value": "RSTN 250",
+   "unit": "",
+   "line": 1
+  },
+  "primaryVoltage": {
+   "value": 400,
+   "unit": "V",
+   "line": 2
+  },
+  "secondaryVoltage": {
+   "value": 230,
+   "unit": "V",
+   "line": 2
+  },
+  "ratedPowerKva": {
+   "value": 250,
+   "unit": "VA",
+   "line": 2
+  },
+  "frequencyHz": {
+   "value": [
+    50,
+    60
+   ],
+   "unit": "Hz",
+   "line": [
+    2,
+    2
+   ]
+  },
+  "primaryCurrent": {
+   "value": 0.63,
+   "unit": "A",
+   "line": 3
+  },
+  "secondaryCurrent": {
+   "value": 1.09,
+   "unit": "A",
+   "line": 3
+  },
+  "ambientC": {
+   "value": 40,
+   "unit": "°C",
+   "line": 3
+  },
+  "insulationClass": {
+   "value": "B",
+   "unit": "",
+   "line": 3
+  },
+  "ukPct": {
+   "value": 6,
+   "unit": "%",
+   "line": 4
+  },
+  "ipRating": {
+   "value": "IP00",
+   "unit": "",
+   "line": 4
+  },
+  "weightKg": {
+   "value": 3.4,
+   "unit": "kg",
+   "line": 4
+  },
+  "serial": {
+   "value": "2304-118764",
+   "unit": "",
+   "line": 5
+  },
+  "year": {
+   "value": 2023,
+   "unit": "",
+   "line": 5
+  }
+ },
+ "absent": [
+  "vectorGroup",
+  "cooling"
+ ],
+ "checks": [
+  {
+   "kind": "transformer1",
+   "S_kVA": 0.25,
+   "U": 400,
+   "I": 0.63,
+   "assumed": []
+  },
+  {
+   "kind": "transformer1",
+   "S_kVA": 0.25,
+   "U": 230,
+   "I": 1.09,
+   "assumed": []
+  }
+ ],
+ "notes": "Single-phase control transformer, power in VA (250 VA = 0.25 kVA). Pri/Sek labels. No vector group, no cooling class. '250' also appears in the type. EN 61558-2-2 is a standard."
+}

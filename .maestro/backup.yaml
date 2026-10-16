@@ -1,0 +1,184 @@
+appId: ${APP_ID}
+name: Backup and restore - U6, A6, back up, wipe, restore through the same screens; safety copy and Undo last restore; foreign, newer and broken files are refused
+tags:
+  - core
+---
+- runFlow:
+    file: subflows/seed.yaml
+    env:
+      SEED: e1
+- runFlow:
+    file: subflows/flags.yaml
+    env:
+      QUERY: share=off&pick=none
+# back up (the share sheet is skipped in dev builds; the app still writes the file and says so)
+- tapOn:
+    id: tab-more
+- tapOn:
+    id: open-backup
+# v1.1 F10: Android says its own phone backup/transfer does not carry this app's data
+- runFlow:
+    when:
+      platform: Android
+    commands:
+      - assertVisible:
+          id: backup-android-note
+          text: ".*phone-to-phone transfer do not include this app.*"
+- tapOn:
+    id: backup-export
+- extendedWaitUntil:
+    visible:
+      id: backup-done
+    timeout: 20000
+- assertVisible:
+    id: backup-done
+    text: "Backup created: electrician-toolkit-backup-.*\\.json.*1 projects, 1 circuits, 3 saved calculations, 0 history entries, 0 tables.*"
+# wipe: the empty seed, then restore the file the backup just wrote
+- runFlow:
+    file: subflows/seed.yaml
+    env:
+      SEED: empty
+- runFlow:
+    file: subflows/link.yaml
+    env:
+      URL: ${APP_SCHEME}://debug/restore?fixture=last
+- extendedWaitUntil:
+    visible:
+      id: backup-screen
+    timeout: 20000
+- assertVisible:
+    id: backup-counts
+    text: ".*0 projects, 0 circuits, 0 saved calculations, 0 tables.*"
+- tapOn:
+    id: backup-restore
+- extendedWaitUntil:
+    visible:
+      id: restore-preview
+    timeout: 20000
+- assertVisible:
+    id: restore-summary
+    text: ".*1 projects, 1 circuits, 3 saved calculations, 0 history entries, 0 tables.*"
+- tapOn:
+    id: restore-confirm
+- extendedWaitUntil:
+    visible:
+      id: restore-done
+    timeout: 60000
+- assertVisible:
+    id: restore-done
+    text: "Restored: 1 projects.*It took .* s.*"
+- assertVisible:
+    id: backup-counts
+    text: ".*1 projects, 1 circuits, 3 saved calculations, 0 tables.*"
+# the data is really back
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: tab-projects
+- assertVisible: ".*Müller, Küche.*"
+# restore again over other data: a safety copy is kept and Undo brings it back
+- runFlow:
+    file: subflows/seed.yaml
+    env:
+      SEED: table
+- runFlow:
+    file: subflows/link.yaml
+    env:
+      URL: ${APP_SCHEME}://debug/restore?fixture=last
+- extendedWaitUntil:
+    visible:
+      id: backup-screen
+    timeout: 20000
+- tapOn:
+    id: backup-restore
+- extendedWaitUntil:
+    visible:
+      id: restore-preview
+    timeout: 20000
+- tapOn:
+    id: restore-confirm
+- extendedWaitUntil:
+    visible:
+      id: restore-done
+    timeout: 60000
+- assertVisible:
+    id: restore-done
+    text: ".*Undo last restore.*"
+- assertVisible:
+    id: backup-counts
+    text: ".*1 projects, 1 circuits, 3 saved calculations, 0 tables.*"
+- tapOn:
+    id: restore-undo
+- extendedWaitUntil:
+    visible:
+      id: restore-preview
+    timeout: 20000
+- assertVisible:
+    id: restore-summary
+    text: ".*0 projects, 0 circuits, 0 saved calculations, 0 history entries, 1 tables.*"
+- tapOn:
+    id: restore-confirm
+- extendedWaitUntil:
+    visible:
+      id: restore-done
+    timeout: 60000
+- assertVisible:
+    id: backup-counts
+    text: ".*0 projects, 0 circuits, 0 saved calculations, 1 tables.*"
+# refused files change nothing
+- runFlow:
+    file: subflows/link.yaml
+    env:
+      URL: ${APP_SCHEME}://debug/restore?fixture=backup-foreign.json
+- extendedWaitUntil:
+    visible:
+      id: backup-screen
+    timeout: 20000
+- tapOn:
+    id: backup-restore
+- extendedWaitUntil:
+    visible:
+      id: restore-error
+    timeout: 20000
+- assertVisible:
+    id: restore-error
+    text: ".*belongs to another app.*Nothing was changed.*"
+- assertNotVisible:
+    id: restore-preview
+- runFlow:
+    file: subflows/link.yaml
+    env:
+      URL: ${APP_SCHEME}://debug/restore?fixture=backup-newer.json
+- extendedWaitUntil:
+    visible:
+      id: backup-screen
+    timeout: 20000
+- tapOn:
+    id: backup-restore
+- extendedWaitUntil:
+    visible:
+      id: restore-error
+    timeout: 20000
+- assertVisible:
+    id: restore-error
+    text: ".*newer version of the app.*Nothing was changed.*"
+- runFlow:
+    file: subflows/link.yaml
+    env:
+      URL: ${APP_SCHEME}://debug/restore?fixture=backup-broken.json
+- extendedWaitUntil:
+    visible:
+      id: backup-screen
+    timeout: 20000
+- tapOn:
+    id: backup-restore
+- extendedWaitUntil:
+    visible:
+      id: restore-error
+    timeout: 20000
+- assertVisible:
+    id: restore-error
+    text: ".*cannot be read as JSON.*Nothing was changed.*"
+- assertVisible:
+    id: backup-counts
+    text: ".*0 projects, 0 circuits, 0 saved calculations, 1 tables.*"

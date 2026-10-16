@@ -1,0 +1,52 @@
+appId: ${APP_ID}
+name: Smoke - four tabs, settings, language and theme persist
+tags:
+  - smoke
+---
+- runFlow: subflows/launch.yaml
+
+# The four tabs exist (D28)
+- tapOn:
+    id: tab-projects
+- assertVisible:
+    id: projects-screen
+- tapOn:
+    id: tab-tables
+- assertVisible:
+    id: tables-screen
+- tapOn:
+    id: tab-more
+- assertVisible:
+    id: more-screen
+
+# Settings: German, then dark theme
+- tapOn:
+    id: open-settings
+- assertVisible:
+    id: settings-screen
+- tapOn:
+    id: language-de
+- assertVisible: Sprache
+- tapOn:
+    id: theme-dark
+- assertVisible:
+    id: theme-dark
+    selected: true
+
+# Restart: both choices persist
+- stopApp
+- runFlow: subflows/launch.yaml
+- assertVisible: Rechner
+- tapOn:
+    id: tab-more
+- tapOn:
+    id: open-settings
+- assertVisible:
+    id: theme-dark
+    selected: true
+
+# Reset to defaults for the next run
+- tapOn:
+    id: language-system
+- tapOn:
+    id: theme-system

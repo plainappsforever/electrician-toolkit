@@ -1,0 +1,121 @@
+appId: ${APP_ID}
+name: "RELEASE store screenshots - calculators, E1 result, working with sources, E4 result, a project with a saved calculation (typed through the screens of the Release build; run with the clean status bar set by the caller)"
+tags:
+  - preview-only
+  - release
+---
+- runFlow: ../subflows/release-start.yaml
+- takeScreenshot: 01-calculators
+# E1 voltage drop
+- tapOn:
+    id: calc-open-vdrop
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-current
+      TEXT: "16"
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "18"
+- scrollUntilVisible:
+    element:
+      id: size-chip-1.5
+- tapOn:
+    id: size-chip-1.5
+- scrollUntilVisible:
+    element:
+      id: result-lMax
+- takeScreenshot: 02-voltage-drop-result
+- tapOn:
+    id: working-toggle
+- scrollUntilVisible:
+    element:
+      id: source-iec60364-5-52-G
+- takeScreenshot: 03-working-and-sources
+# save it
+- scrollUntilVisible:
+    element:
+      id: save-open
+- tapOn:
+    id: save-open
+- tapOn:
+    id: save-title
+- inputText: "Spannungsfall Steckdosen F3"
+- pressKey: Enter
+- tapOn:
+    id: save-new-project
+- tapOn:
+    id: save-project-name
+- inputText: "Müller, Küche"
+- pressKey: Enter
+- scrollUntilVisible:
+    element:
+      id: save-new-circuit
+- tapOn:
+    id: save-new-circuit
+- scrollUntilVisible:
+    element:
+      id: save-circuit-label
+- tapOn:
+    id: save-circuit-label
+- inputText: "F3 Steckdosen"
+- pressKey: Enter
+- scrollUntilVisible:
+    element:
+      id: save-confirm
+- tapOn:
+    id: save-confirm
+- assertVisible:
+    id: saved-banner
+# E4 loop impedance
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: tab-calculators
+- tapOn:
+    id: calc-open-loop
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-ze
+      TEXT: "0.35"
+- scrollUntilVisible:
+    element:
+      id: line-chip-1.5
+- tapOn:
+    id: line-chip-1.5
+- scrollUntilVisible:
+    element:
+      id: pe-chip-1.5
+- tapOn:
+    id: pe-chip-1.5
+- scrollUntilVisible:
+    element:
+      id: input-length
+- runFlow:
+    file: ../subflows/type.yaml
+    env:
+      ID: input-length
+      TEXT: "25"
+- assertVisible:
+    id: strip-main
+    text: "1.038 Ω"
+- scrollUntilVisible:
+    element:
+      id: result-lMax
+- takeScreenshot: 04-loop-impedance-result
+# the project with the saved calculation
+- tapOn:
+    id: nav-back
+- tapOn:
+    id: tab-projects
+- tapOn: ".*Müller, Küche.*"
+- scrollUntilVisible:
+    element: ".*F3 Steckdosen.*"
+- tapOn: ".*F3 Steckdosen.*"
+- extendedWaitUntil:
+    visible: ".*Spannungsfall Steckdosen F3.*"
+    timeout: 10000
+- takeScreenshot: 05-project-with-saved-calculation

@@ -1,0 +1,31 @@
+Spannungsfall, Leitungsquerschnitt, Schutzorgan und Schleifenimpedanz für Elektriker, mit angezeigtem Rechenweg. Jedes Ergebnis zeigt die Formel, die eingesetzten Zahlen, die verwendeten Annahmen und die Quelle jeder Regel. Alles bleibt auf Ihrem Handy: kein Konto, keine Werbung, kein Tracking.
+
+Eigene Kabeltabellen
+Die Strombelastbarkeitstabellen der Normen sind urheberrechtlich geschützt und nicht enthalten. Für die Schutzorgan-Prüfung geben Sie die Werte aus Ihrem Normexemplar oder dem Kabeldatenblatt einmal ein (oder importieren eine CSV-Datei) und notieren, woher sie stammen. Die App rechnet dann mit Ihren Werten und druckt diese Quellenangabe beim Ergebnis mit. Alles andere wird aus öffentlich beschriebenen Formeln berechnet.
+
+Was berechnet wird
+- Spannungsfall und Querschnitt: Gleich-, Wechsel- und Drehstrom, mm² oder AWG. Drei Verfahren nebeneinander (Konstanten aus dem Spannungsfall-Anhang der Installationsnorm, Leitertemperatur, feste Leitfähigkeit), kleinster Querschnitt allein nach Spannungsfall (keine Kabelbemessung), größte Länge für den gewählten Grenzwert und eine Warnung, wenn die Verfahren beim Ergebnis nicht übereinstimmen.
+- Strom und Leistung: Gleich-, Wechsel- und Drehstrom, mit Leistungsfaktor und Wirkungsgrad; Ohmsches Gesetz.
+- Schutzorgan-Abstimmung: Ib, In und Iz für B-, C- und D-Leitungsschutzschalter oder ein selbst beschriebenes Gerät, mit Ihrer eigenen Kabeltabelle, der Umgebungstemperatur und dem von Ihnen eingegebenen Häufungsfaktor; bei nicht erfüllter Prüfung schlägt sie einen Nennstrom vor (nur Überlastschutz).
+- Schleifenimpedanz und Abschaltung im TN-System: aus der Leitung berechnet oder aus Ihrer Messung, größte Leitungslänge, voraussichtlicher Kurzschlussstrom.
+- Leiterwiderstand sowie Umrechnung zwischen mm², AWG, kcmil, Fuß und Meter.
+
+Ergebnisse, die sagen, was sie sind
+Die App vergleicht Zahlen mit dem Grenzwert, den Sie wählen, und sagt „überschreitet“ oder „innerhalb“. Sie sagt nicht, dass eine Anlage erlaubt oder richtig ist. Größte Längen werden abgerundet, mit dem Grenzwert verglichene Werte aufgerundet, damit ein angezeigtes Maximum nie über dem wahren Wert liegt. Konstanten und Regeln stammen aus öffentlichen Quellen, in der App mit Quelle aufgeführt und gekennzeichnet, wenn nicht mit der Norm selbst abgeglichen.
+
+Projekte und Berichte
+Ergebnisse in Projekten und Stromkreisen speichern; ein gespeichertes Ergebnis ändert sich danach nie. PDF-Bericht für eine Berechnung oder ein ganzes Projekt, mit Firmenname, Adresse und Logo, auf Deutsch oder Englisch, in A4 oder Letter. Alle Berechnungen als Tabellendatei (CSV) exportieren; alles in einer Sicherungsdatei sichern und auf einem anderen Handy wiederherstellen. Die Sicherungsdatei ist lesbarer Text und nicht verschlüsselt.
+
+Ihre Daten
+Projekte, Kundennamen, Notizen, Tabellen und Einstellungen liegen nur auf dem Handy. Dateien verlassen das Handy nur, wenn Sie sie teilen; Links zu öffentlichen Quellen öffnen im Browser. Die App hat keine Internetberechtigung. Die automatische App-Sicherung des Handys ist für diese App aus; für ein neues Handy gibt es die Sicherungsdatei.
+
+Sprachen
+Deutsch und Englisch, passend zum Handy. Dezimalkomma und Dezimalpunkt funktionieren in jedem Feld.
+
+In dieser Version nicht enthalten
+- Keine eingebauten Tabellen zu Strombelastbarkeit oder Häufung (siehe „Eigene Kabeltabellen“).
+- Keine Regelsätze für USA oder Großbritannien, keine TT- oder RCD-Prüfung, keine Kurzschluss-Erwärmungsprüfung, keine Rohrbelegung.
+- Keine Prüfprotokolle oder Messprotokolle.
+
+Ihre Verantwortung
+Dies ist eine Rechenhilfe, keine Planungsfreigabe und kein Prüfnachweis. Sie sind dafür verantwortlich, jedes Ergebnis anhand der für Ihre Anlage geltenden Regeln, der Herstellerangaben und der Vorgaben des Netzbetreibers zu prüfen. Die Texte der Normen sind nicht enthalten. Die App ist unabhängig und steht in keiner Verbindung zu IEC, DIN, VDE oder einer anderen Normungsorganisation und von diesen nicht unterstützt.

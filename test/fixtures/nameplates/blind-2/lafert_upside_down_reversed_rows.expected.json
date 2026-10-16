@@ -1,0 +1,155 @@
+{
+ "fixture": "lafert_upside_down_reversed_rows",
+ "kind": "motor-iec",
+ "lang": "en",
+ "ocrDamage": [],
+ "fields": {
+  "manufacturer": {
+   "value": "Lafert",
+   "unit": "",
+   "line": 6
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 5
+  },
+  "type": {
+   "value": "AMHE 112MA4",
+   "unit": "",
+   "line": 5
+  },
+  "serial": {
+   "value": "2311045871",
+   "unit": "",
+   "line": 5
+  },
+  "efficiencyClass": {
+   "value": "IE3",
+   "unit": "",
+   "line": 4
+  },
+  "ipRating": {
+   "value": "IP55",
+   "unit": "",
+   "line": 4
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 4
+  },
+  "duty": {
+   "value": "S1",
+   "unit": "",
+   "line": 4
+  },
+  "year": {
+   "value": 2023,
+   "unit": "",
+   "line": 4
+  },
+  "ratedPowerKw": {
+   "value": 4,
+   "unit": "kW",
+   "line": 3
+  },
+  "frequencyHz": {
+   "value": 50,
+   "unit": "Hz",
+   "line": 3
+  },
+  "speedRpm": {
+   "value": 1450,
+   "unit": "rpm",
+   "line": 3
+  },
+  "voltage": {
+   "value": [
+    400,
+    690
+   ],
+   "unit": "V",
+   "line": [
+    2,
+    2
+   ]
+  },
+  "connection": {
+   "value": "Δ/Y",
+   "unit": "",
+   "line": 2
+  },
+  "current": {
+   "value": [
+    8.1,
+    4.7
+   ],
+   "unit": "A",
+   "line": [
+    2,
+    2
+   ]
+  },
+  "cosPhi": {
+   "value": 0.81,
+   "unit": "",
+   "line": 1
+  },
+  "efficiencyPct": {
+   "value": [
+    88.6,
+    89.0,
+    87.9
+   ],
+   "unit": "%",
+   "line": [
+    1,
+    1,
+    1
+   ]
+  },
+  "efficiencyLoadPct": {
+   "value": [
+    100,
+    75,
+    50
+   ],
+   "unit": "%",
+   "line": [
+    1,
+    1,
+    1
+   ]
+  },
+  "weightKg": {
+   "value": 31,
+   "unit": "kg",
+   "line": 0
+  }
+ },
+ "absent": [
+  "ratedPowerHp"
+ ],
+ "checks": [
+  {
+   "kind": "3ph",
+   "P_kW": 4,
+   "U": 400,
+   "I": 8.1,
+   "cosPhi": 0.81,
+   "eta": 0.886,
+   "assumed": []
+  },
+  {
+   "kind": "3ph",
+   "P_kW": 4,
+   "U": 690,
+   "I": 4.7,
+   "cosPhi": 0.81,
+   "eta": 0.886,
+   "assumed": []
+  }
+ ],
+ "notes": "Photo was taken upside down and rotated back by the OCR engine with the row order still reversed: the maker is the LAST line and the weight the first. A parser must not depend on the maker or type being on top."
+}

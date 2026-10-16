@@ -1,0 +1,94 @@
+{
+  "fixture": "missing_grundfos_mg_faded",
+  "kind": "motor-iec",
+  "lang": "en",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "GRUNDFOS",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "MG 100LC2-28FT130-C",
+      "unit": "",
+      "line": 1
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 2
+    },
+    "ratedPowerKw": {
+      "value": 3.0,
+      "unit": "kW",
+      "line": 3
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 3
+    },
+    "voltage": {
+      "value": [
+        380,
+        415,
+        660,
+        690
+      ],
+      "unit": "V",
+      "line": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    "connection": {
+      "value": "Δ/Y",
+      "unit": "",
+      "line": 4
+    },
+    "speedRpm": {
+      "value": 2890,
+      "unit": "rpm",
+      "line": 6
+    },
+    "cosPhi": {
+      "value": 0.88,
+      "unit": "",
+      "line": 6
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 7
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 7
+    },
+    "efficiencyClass": {
+      "value": "IE3",
+      "unit": "",
+      "line": 7
+    },
+    "efficiencyPct": {
+      "value": 87.1,
+      "unit": "%",
+      "line": 7
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "current",
+    "duty",
+    "serial",
+    "weightKg"
+  ],
+  "checks": [],
+  "notes": "Current faded: 'I  . . . / . . .' carries no value. 'P.c. 2309' is the production code (2023 week 09), neither serial nor a number to use. Grundfos prints D for Δ (not damage)."
+}

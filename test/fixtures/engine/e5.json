@@ -1,0 +1,23 @@
+{
+  "id": "E5",
+  "spec": "SPEC §8 E5 — conductor resistance",
+  "cases": [
+    {
+      "name": "Cu 2.5 mm², 50 m, θ 70 °C",
+      "kind": "resistance",
+      "input": { "material": "cu", "size": { "value": 2.5, "unit": "mm2" }, "length": { "value": 50, "unit": "m" }, "temperatureC": 70 },
+      "expected": {
+        "values.r20": { "printed": "0.3448275862" },
+        "values.r": { "printed": "0.4125862069" }
+      }
+    },
+    {
+      "name": "Al 16 mm², 100 m",
+      "kind": "resistance",
+      "input": { "material": "al", "size": { "value": 16, "unit": "mm2" }, "length": { "value": 100, "unit": "m" }, "temperatureC": 20 },
+      "expected": {
+        "values.r20": { "printed": "0.1766534765" }
+      }
+    }
+  ]
+}

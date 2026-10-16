@@ -1,0 +1,8 @@
+WILO SE   Dortmund
+Typ: IL S0/l70-3/2
+Nr.: 2153412345   Baujahr 2022
+Förderstrom Q 24 rn³/h   Förderhöhe H l8 rn
+P2 3kW   U 3~400V   I 6,lA
+n 2900 l/min   f 50Hz   cos φ O,86
+IPSS   Iso.-Kl. F   PN 16   T max 120°C
+MEI ≥ 0,40   IE3

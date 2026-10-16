@@ -1,0 +1,18 @@
+{
+  "id": "E7",
+  "spec": "SPEC §8 E7 — load current and power",
+  "cases": [
+    {
+      "name": "3~ 400 V, 7.5 kW output, cos φ 0.85, η 0.9",
+      "kind": "current",
+      "input": { "system": "ac3", "voltage": 400, "power": 7500, "cosPhi": 0.85, "efficiency": 0.9 },
+      "expected": {
+        "values.current": { "printed": "14.1507418919" },
+        "values.apparentPower": { "printed": "9803.9215686" },
+        "values.inputPower": { "printed": "8333.3333333" },
+        "values.reactivePower": { "printed": "5164.5361534" }
+      }
+    },
+    { "name": "1~ 230 V, 3680 W, cos φ 1", "kind": "current", "input": { "system": "ac1", "voltage": 230, "power": 3680, "cosPhi": 1 }, "expected": { "values.current": 16 } }
+  ]
+}

@@ -1,0 +1,10 @@
+DRY TYPE TRANSFORMER   IEC 60076-11
+Manufacturer ELTRAF0   Type GTR 250/10
+Serial No. TR-2l-O8817   Year 202l
+Rated power 250 kV A   3 phase   S0 Hz
+Vector group Dyn1l
+Impedance voltage uk 6,O %
+HV 1OOOO V   ±2x2.5%   l4,4 A
+LV 400 V   36O,8 A
+Insulation class F   Cooling AN   IPOO
+Total weight 1180 kg   Temp. rise 100 K

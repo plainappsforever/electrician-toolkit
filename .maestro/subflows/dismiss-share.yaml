@@ -1,0 +1,22 @@
+appId: ${APP_ID}
+---
+# Closes the system share sheet that a Release build really opens (dev builds skip it with share=off).
+# iOS 26: a half-height sheet without a Close button (Copy, Markup, Print, Save to Files): a tap above it closes it.
+# Android: the chooser closes with Back.
+- runFlow:
+    when:
+      platform: iOS
+    commands:
+      - extendedWaitUntil:
+          visible: "Save to Files"
+          timeout: 20000
+      - tapOn:
+          point: "50%,12%"
+- runFlow:
+    when:
+      platform: Android
+    commands:
+      - extendedWaitUntil:
+          visible: ".*Share.*|.*Quick Share.*|.*Save to Drive.*|.*Print.*"
+          timeout: 20000
+      - pressKey: back

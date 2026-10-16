@@ -1,0 +1,19 @@
+appId: ${APP_ID}
+---
+# iOS document picker: Browse → On My iPhone (unless it already shows the file), then the file by its exact name.
+- extendedWaitUntil:
+    visible: "Browse|Recents|On My iPhone"
+    timeout: 20000
+- runFlow:
+    when:
+      notVisible: "${NAME}\\.json"
+    commands:
+      - tapOn: "Browse"
+      - tapOn: "On My iPhone"
+- extendedWaitUntil:
+    visible: "${NAME}\\.json, .*"
+    timeout: 20000
+# the picker ignores a tap while it is still sliding in (seen in v1.1)
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn: "${NAME}\\.json, .*"

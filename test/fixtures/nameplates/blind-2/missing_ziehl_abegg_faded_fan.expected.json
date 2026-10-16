@@ -1,0 +1,77 @@
+{
+ "fixture": "missing_ziehl_abegg_faded_fan",
+ "kind": "fan",
+ "lang": "en",
+ "ocrDamage": [],
+ "fields": {
+  "manufacturer": {
+   "value": "Ziehl-Abegg",
+   "unit": "",
+   "line": 0
+  },
+  "type": {
+   "value": "RH40M-4EK.4F.1R",
+   "unit": "",
+   "line": 1
+  },
+  "phases": {
+   "value": 1,
+   "unit": "",
+   "line": 2
+  },
+  "voltage": {
+   "value": 230,
+   "unit": "V",
+   "line": 2
+  },
+  "frequencyHz": {
+   "value": 50,
+   "unit": "Hz",
+   "line": 2
+  },
+  "inputPowerKw": {
+   "value": 220,
+   "unit": "W",
+   "line": 2
+  },
+  "speedRpm": {
+   "value": 1310,
+   "unit": "rpm",
+   "line": 3
+  },
+  "capacitorUf": {
+   "value": 4,
+   "unit": "µF",
+   "line": 3
+  },
+  "ipRating": {
+   "value": "IP54",
+   "unit": "",
+   "line": 3
+  },
+  "ambientC": {
+   "value": 50,
+   "unit": "°C",
+   "line": 4
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 4
+  }
+ },
+ "absent": [
+  "ratedPowerKw",
+  "ratedPowerHp",
+  "current",
+  "cosPhi",
+  "efficiencyClass",
+  "efficiencyPct",
+  "duty",
+  "serial",
+  "connection",
+  "weightKg"
+ ],
+ "checks": [],
+ "notes": "Faded fan plate: the current after P1 and the whole serial line are gone. C 4 µF 400 V is the capacitor; 400 V is its rating, not the fan voltage. 'Part 112897' is an article number, not a serial."
+}

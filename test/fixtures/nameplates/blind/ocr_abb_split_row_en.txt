@@ -1,0 +1,10 @@
+ABB  Motors and Generators
+3~ Motor M3BP 160MLB 4
+No. 3GlZl62214
+IEC 60034-1  IP55  Ins.cl. F
+V Hz kW r/min A cos phi
+400 D 50 11 l470 20.7
+0.84
+690 Y 50 11 1470 l2.0 O.84
+IE3-91.4(100%)-91.6(75%)-90.9(50%)
+101 kg

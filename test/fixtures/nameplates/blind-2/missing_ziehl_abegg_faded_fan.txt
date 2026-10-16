@@ -1,0 +1,6 @@
+ZIEHL-ABEGG
+Type RH40M-4EK.4F.1R   Part 112897
+1~   230 V   50 Hz   P1 220 W   .: . .
+n 1310 min-1   C 4 µF 400 V   IP54
+tR 50 °C   Th.Cl. F
+. .:. ..:  .:

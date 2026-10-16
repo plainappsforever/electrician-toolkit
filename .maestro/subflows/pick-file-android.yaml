@@ -1,0 +1,13 @@
+appId: ${APP_ID}
+---
+# Android DocumentsUI: the file in Recent if listed, otherwise the roots menu → Downloads, then the file by its name.
+- extendedWaitUntil:
+    visible: ".*Recent.*|.*Downloads.*|.*Files.*"
+    timeout: 20000
+- runFlow:
+    when:
+      notVisible: "${NAME}\\.json"
+    commands:
+      - tapOn: "Show roots"
+      - tapOn: "Downloads"
+- tapOn: "${NAME}\\.json"

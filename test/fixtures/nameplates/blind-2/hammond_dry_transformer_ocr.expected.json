@@ -1,0 +1,96 @@
+{
+ "fixture": "hammond_dry_transformer_ocr",
+ "kind": "transformer",
+ "lang": "en",
+ "ocrDamage": [
+  "0/O",
+  "1/l/I"
+ ],
+ "fields": {
+  "manufacturer": {
+   "value": "Hammond Power Solutions",
+   "unit": "",
+   "line": 0
+  },
+  "type": {
+   "value": "NMK045KB",
+   "unit": "",
+   "line": 1
+  },
+  "serial": {
+   "value": "2019340771",
+   "unit": "",
+   "line": 2
+  },
+  "ratedPowerKva": {
+   "value": 45,
+   "unit": "kVA",
+   "line": 3
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 3
+  },
+  "frequencyHz": {
+   "value": 60,
+   "unit": "Hz",
+   "line": 3
+  },
+  "primaryVoltage": {
+   "value": 480,
+   "unit": "V",
+   "line": 4
+  },
+  "primaryCurrent": {
+   "value": 54.1,
+   "unit": "A",
+   "line": 4
+  },
+  "secondaryVoltage": {
+   "value": [
+    208,
+    120
+   ],
+   "unit": "V",
+   "line": [
+    5,
+    5
+   ]
+  },
+  "secondaryCurrent": {
+   "value": 125,
+   "unit": "A",
+   "line": 5
+  },
+  "ukPct": {
+   "value": 4.6,
+   "unit": "%",
+   "line": 6
+  }
+ },
+ "absent": [
+  "vectorGroup",
+  "weightKg",
+  "cooling",
+  "insulationClass",
+  "ipRating"
+ ],
+ "checks": [
+  {
+   "kind": "transformer3",
+   "S_kVA": 45,
+   "U": 480,
+   "I": 54.1,
+   "assumed": []
+  },
+  {
+   "kind": "transformer3",
+   "S_kVA": 45,
+   "U": 208,
+   "I": 125,
+   "assumed": []
+  }
+ ],
+ "notes": "US dry-type: HV 480 V delta, LV 208Y/120 V (line and phase voltage, two entries). '220 C' insulation system and '150 C' rise are temperatures, not a class letter (insulationClass absent). Weight 490 LBS is pounds (weightKg absent). No vector-group code, no cooling class, NEMA 2 is an enclosure not IP."
+}

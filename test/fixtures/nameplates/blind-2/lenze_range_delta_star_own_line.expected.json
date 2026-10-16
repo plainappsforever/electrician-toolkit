@@ -1,0 +1,133 @@
+{
+ "fixture": "lenze_range_delta_star_own_line",
+ "kind": "motor-iec",
+ "lang": "en",
+ "ocrDamage": [],
+ "fields": {
+  "manufacturer": {
+   "value": "Lenze",
+   "unit": "",
+   "line": 0
+  },
+  "type": {
+   "value": "MFEMAXX080-32",
+   "unit": "",
+   "line": 1
+  },
+  "serial": {
+   "value": "13542871",
+   "unit": "",
+   "line": 1
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 1
+  },
+  "ratedPowerKw": {
+   "value": 0.75,
+   "unit": "kW",
+   "line": 2
+  },
+  "frequencyHz": {
+   "value": 50,
+   "unit": "Hz",
+   "line": 2
+  },
+  "speedRpm": {
+   "value": 1395,
+   "unit": "rpm",
+   "line": 2
+  },
+  "duty": {
+   "value": "S1",
+   "unit": "",
+   "line": 2
+  },
+  "connection": {
+   "value": "Δ/Y",
+   "unit": "",
+   "line": 3
+  },
+  "voltage": {
+   "value": [
+    380,
+    420,
+    660,
+    725
+   ],
+   "unit": "V",
+   "line": [
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "current": {
+   "value": [
+    1.8,
+    1.04
+   ],
+   "unit": "A",
+   "line": [
+    5,
+    5
+   ]
+  },
+  "cosPhi": {
+   "value": 0.76,
+   "unit": "",
+   "line": 6
+  },
+  "efficiencyClass": {
+   "value": "IE3",
+   "unit": "",
+   "line": 6
+  },
+  "efficiencyPct": {
+   "value": 82.5,
+   "unit": "%",
+   "line": 6
+  },
+  "ipRating": {
+   "value": "IP54",
+   "unit": "",
+   "line": 6
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 6
+  },
+  "weightKg": {
+   "value": 9.5,
+   "unit": "kg",
+   "line": 6
+  }
+ },
+ "absent": [
+  "ratedPowerHp"
+ ],
+ "checks": [
+  {
+   "kind": "3ph",
+   "P_kW": 0.75,
+   "U": 380,
+   "I": 1.8,
+   "cosPhi": 0.76,
+   "eta": 0.825,
+   "assumed": []
+  },
+  {
+   "kind": "3ph",
+   "P_kW": 0.75,
+   "U": 660,
+   "I": 1.04,
+   "cosPhi": 0.76,
+   "eta": 0.825,
+   "assumed": []
+  }
+ ],
+ "notes": "Δ / Y header line, then voltage ranges 380-420 V and 660-725 V in columns, then one current per column. The dash in a range is not a minus sign."
+}

@@ -1,0 +1,4 @@
+Elektror
+Typ RD 22   Nr. 11873456
+3~  400 V Y   0,62 A   50 Hz
+2780 min-1   IP54

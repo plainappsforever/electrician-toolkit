@@ -1,0 +1,106 @@
+{
+  "fixture": "ebmpapst_ec_fan_input_w_de",
+  "kind": "fan",
+  "lang": "de",
+  "ocrDamage": [
+    "1/l/I",
+    "0/O",
+    "glued-unit",
+    "dropped-spaces",
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "ebm-papst",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "R3G310-AN43-71",
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "1234567",
+      "unit": "",
+      "line": 2
+    },
+    "phases": {
+      "value": 1,
+      "unit": "",
+      "line": 3
+    },
+    "voltage": {
+      "value": [
+        200,
+        277
+      ],
+      "unit": "V",
+      "line": [
+        3,
+        3
+      ]
+    },
+    "frequencyHz": {
+      "value": [
+        50,
+        60
+      ],
+      "unit": "Hz",
+      "line": [
+        3,
+        3
+      ]
+    },
+    "inputPowerKw": {
+      "value": 154,
+      "unit": "W",
+      "line": 4
+    },
+    "current": {
+      "value": 0.8,
+      "unit": "A",
+      "line": 4
+    },
+    "speedRpm": {
+      "value": 2260,
+      "unit": "rpm",
+      "line": 5
+    },
+    "ipRating": {
+      "value": "IP54",
+      "unit": "",
+      "line": 6
+    },
+    "insulationClass": {
+      "value": "B",
+      "unit": "",
+      "line": 6
+    }
+  },
+  "absent": [
+    "ratedPowerKw",
+    "ratedPowerHp",
+    "cosPhi",
+    "efficiencyClass",
+    "efficiencyPct",
+    "duty",
+    "connection",
+    "weightKg"
+  ],
+  "checks": [
+    {
+      "kind": "1ph",
+      "P_kW": 0.154,
+      "U": 200,
+      "I": 0.8,
+      "cosPhi": 0.97,
+      "eta": 1.0,
+      "assumed": [
+        "cosPhi",
+        "eta"
+      ]
+    }
+  ],
+  "notes": "EC fan: 'P 154W' is the electrical input power (W). '2311' after the serial is a yymm date code. 'I 0,8OA' = 0.80 A. Tmax 60 °C is the air temperature."
+}

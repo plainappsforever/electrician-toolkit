@@ -1,0 +1,155 @@
+{
+ "fixture": "weg_w21_brake_motor",
+ "kind": "motor-iec",
+ "lang": "en",
+ "ocrDamage": [
+  "W/VV",
+  "Δ->A"
+ ],
+ "fields": {
+  "manufacturer": {
+   "value": "WEG",
+   "unit": "",
+   "line": 0
+  },
+  "type": {
+   "value": "W21 100L-04",
+   "unit": "",
+   "line": 1
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 1
+  },
+  "serial": {
+   "value": "1027345621",
+   "unit": "",
+   "line": 1
+  },
+  "year": {
+   "value": 2018,
+   "unit": "",
+   "line": 1
+  },
+  "ratedPowerKw": {
+   "value": 3.0,
+   "unit": "kW",
+   "line": 2
+  },
+  "ratedPowerHp": {
+   "value": 4.0,
+   "unit": "hp",
+   "line": 2
+  },
+  "frequencyHz": {
+   "value": 50,
+   "unit": "Hz",
+   "line": 2
+  },
+  "speedRpm": {
+   "value": 1440,
+   "unit": "rpm",
+   "line": 2
+  },
+  "duty": {
+   "value": "S1",
+   "unit": "",
+   "line": 2
+  },
+  "voltage": {
+   "value": [
+    400,
+    690
+   ],
+   "unit": "V",
+   "line": [
+    3,
+    3
+   ]
+  },
+  "connection": {
+   "value": "Δ/Y",
+   "unit": "",
+   "line": 3
+  },
+  "current": {
+   "value": [
+    6.4,
+    3.7
+   ],
+   "unit": "A",
+   "line": [
+    3,
+    3
+   ]
+  },
+  "cosPhi": {
+   "value": 0.8,
+   "unit": "",
+   "line": 4
+  },
+  "efficiencyClass": {
+   "value": "IE2",
+   "unit": "",
+   "line": 4
+  },
+  "efficiencyPct": {
+   "value": 85.7,
+   "unit": "%",
+   "line": 4
+  },
+  "ipRating": {
+   "value": "IP55",
+   "unit": "",
+   "line": 5
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 5
+  },
+  "ambientC": {
+   "value": 40,
+   "unit": "°C",
+   "line": 5
+  },
+  "serviceFactor": {
+   "value": 1.0,
+   "unit": "",
+   "line": 5
+  },
+  "brakeVoltage": {
+   "value": 180,
+   "unit": "V",
+   "line": 6
+  },
+  "weightKg": {
+   "value": 29,
+   "unit": "kg",
+   "line": 6
+  }
+ },
+ "absent": [],
+ "checks": [
+  {
+   "kind": "3ph",
+   "P_kW": 3.0,
+   "U": 400,
+   "I": 6.4,
+   "cosPhi": 0.8,
+   "eta": 0.857,
+   "assumed": []
+  },
+  {
+   "kind": "3ph",
+   "P_kW": 3.0,
+   "U": 690,
+   "I": 3.7,
+   "cosPhi": 0.8,
+   "eta": 0.857,
+   "assumed": []
+  }
+ ],
+ "notes": "Brake motor: BRAKE 180 V DC is brakeVoltage, not motor voltage; 20 Nm is brake torque. 'ΔT 80 K' is temperature rise, not a delta connection; the connection 'A/Y' has Δ read as A. ALT 1000 m is altitude. Dual kW/HP marking. IE2 efficiency at full load only."
+}

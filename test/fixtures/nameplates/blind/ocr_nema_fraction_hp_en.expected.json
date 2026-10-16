@@ -1,0 +1,173 @@
+{
+  "fixture": "ocr_nema_fraction_hp_en",
+  "kind": "motor-nema",
+  "lang": "en",
+  "ocrDamage": [
+    "0/O",
+    "1/l/I",
+    "5/S"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "MARATHON",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "213TTFS6526",
+      "unit": "",
+      "line": 1
+    },
+    "ratedPowerHp": {
+      "value": 7.5,
+      "unit": "hp",
+      "line": 2
+    },
+    "speedRpm": {
+      "value": 1765,
+      "unit": "rpm",
+      "line": 2
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 2
+    },
+    "frequencyHz": {
+      "value": 60,
+      "unit": "Hz",
+      "line": 2
+    },
+    "voltage": {
+      "value": [
+        208,
+        230,
+        460
+      ],
+      "unit": "V",
+      "line": [
+        3,
+        3,
+        3
+      ]
+    },
+    "current": {
+      "value": [
+        20.4,
+        18.6,
+        9.3
+      ],
+      "unit": "A",
+      "line": [
+        4,
+        4,
+        4
+      ]
+    },
+    "serviceFactor": {
+      "value": 1.15,
+      "unit": "",
+      "line": 5
+    },
+    "serviceFactorCurrent": {
+      "value": [
+        23.5,
+        21.4,
+        10.7
+      ],
+      "unit": "A",
+      "line": [
+        5,
+        5,
+        5
+      ]
+    },
+    "efficiencyPct": {
+      "value": 91.7,
+      "unit": "%",
+      "line": 6
+    },
+    "cosPhi": {
+      "value": 0.81,
+      "unit": "",
+      "line": 6
+    },
+    "frame": {
+      "value": "213T",
+      "unit": "",
+      "line": 7
+    },
+    "codeLetter": {
+      "value": "J",
+      "unit": "",
+      "line": 7
+    },
+    "nemaDesign": {
+      "value": "B",
+      "unit": "",
+      "line": 7
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 7
+    },
+    "ambientC": {
+      "value": 40,
+      "unit": "°C",
+      "line": 8
+    },
+    "duty": {
+      "value": "CONT",
+      "unit": "",
+      "line": 8
+    },
+    "enclosure": {
+      "value": "TEFC",
+      "unit": "",
+      "line": 8
+    },
+    "serial": {
+      "value": "MS1234567",
+      "unit": "",
+      "line": 9
+    }
+  },
+  "absent": [
+    "ratedPowerKw",
+    "efficiencyClass",
+    "ipRating",
+    "connection",
+    "weightKg"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_hp": 7.5,
+      "U": 208,
+      "I": 20.4,
+      "cosPhi": 0.81,
+      "eta": 0.917,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_hp": 7.5,
+      "U": 230,
+      "I": 18.6,
+      "cosPhi": 0.81,
+      "eta": 0.917,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_hp": 7.5,
+      "U": 460,
+      "I": 9.3,
+      "cosPhi": 0.81,
+      "eta": 0.917,
+      "assumed": []
+    }
+  ],
+  "notes": "'7 1/2' must become 7.5 hp, not 7 or 1 or 2; SFA values are not FLA."
+}

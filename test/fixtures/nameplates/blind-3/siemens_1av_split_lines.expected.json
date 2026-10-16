@@ -1,0 +1,132 @@
+{
+  "fixture": "siemens_1av_split_lines",
+  "kind": "motor-iec",
+  "lang": "en",
+  "ocrDamage": [
+    "split-lines",
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "SIEMENS",
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "1AV3104B",
+      "unit": "",
+      "line": 1
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "serial": {
+      "value": "UD 2208/0123456-002-1",
+      "unit": "",
+      "line": 2
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 3
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 3
+    },
+    "weightKg": {
+      "value": 22,
+      "unit": "kg",
+      "line": 3
+    },
+    "voltage": {
+      "value": [
+        230,
+        400
+      ],
+      "unit": "V",
+      "line": [
+        4,
+        4
+      ]
+    },
+    "connection": {
+      "value": "Δ/Y",
+      "unit": "",
+      "line": 5
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 5
+    },
+    "current": {
+      "value": [
+        7.62,
+        4.4
+      ],
+      "unit": "A",
+      "line": [
+        6,
+        6
+      ]
+    },
+    "ratedPowerKw": {
+      "value": 2.2,
+      "unit": "kW",
+      "line": 7
+    },
+    "cosPhi": {
+      "value": 0.81,
+      "unit": "",
+      "line": 7
+    },
+    "speedRpm": {
+      "value": 1460,
+      "unit": "rpm",
+      "line": 8
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 9
+    },
+    "efficiencyClass": {
+      "value": "IE4",
+      "unit": "",
+      "line": 10
+    },
+    "efficiencyPct": {
+      "value": 89.5,
+      "unit": "%",
+      "line": 11
+    }
+  },
+  "absent": [
+    "ratedPowerHp"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 2.2,
+      "U": 400,
+      "I": 4.4,
+      "cosPhi": 0.81,
+      "eta": 0.895,
+      "assumed": []
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 2.2,
+      "U": 230,
+      "I": 7.62,
+      "cosPhi": 0.81,
+      "eta": 0.895,
+      "assumed": []
+    }
+  ],
+  "notes": "Voltage line '230/400' has its unit 'V Δ/Y' on the next line; '7,62/4,40' has 'A' on the next line, which also carries kW. A parser that pairs a value with the unit on the same line only reads 2,2 kW as current."
+}

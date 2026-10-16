@@ -1,0 +1,10 @@
+SEW-EURODRIVE   76646 Bruchsal/Germany
+Typ R47 DRN90L4/BE2/TF
+Nr. 01.7465489302.0001.24
+3~IEC60034   50 Hz   IE3   85,3 %
+kW 1,5 S1   cos φ 0,79   1/min 1440/41
+V 220-242Δ/380-420Y
+A 5,60/3,25   IP 54
+Iso.Kl. 155(F)   i 35,02   Ma 350 Nm
+Bremse 230 V AC   20 Nm
+34 kg   CLP 220 Mineralöl 0,65 l

@@ -1,0 +1,96 @@
+{
+  "fixture": "missing_abb_m2_cropped_right",
+  "kind": "motor-iec",
+  "lang": "en",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "ABB",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 0
+    },
+    "type": {
+      "value": "M2AA 90L 4",
+      "unit": "",
+      "line": 1
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 3
+    },
+    "voltage": {
+      "value": [
+        400,
+        690
+      ],
+      "unit": "V",
+      "line": [
+        5,
+        6
+      ]
+    },
+    "connection": {
+      "value": [
+        "Δ",
+        "Y"
+      ],
+      "unit": "",
+      "line": [
+        5,
+        6
+      ]
+    },
+    "frequencyHz": {
+      "value": [
+        50,
+        50
+      ],
+      "unit": "Hz",
+      "line": [
+        5,
+        6
+      ]
+    },
+    "ratedPowerKw": {
+      "value": [
+        1.5,
+        1.5
+      ],
+      "unit": "kW",
+      "line": [
+        5,
+        6
+      ]
+    },
+    "efficiencyClass": {
+      "value": "IE2",
+      "unit": "",
+      "line": 7
+    },
+    "efficiencyPct": {
+      "value": 82.8,
+      "unit": "%",
+      "line": 7
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "current",
+    "cosPhi",
+    "speedRpm",
+    "ipRating",
+    "duty",
+    "serial",
+    "weightKg"
+  ],
+  "checks": [],
+  "notes": "Right edge cropped. The '14' at the end of each row is the first two digits of the speed column, not a value; 'r/' is the cut header. 'IP' without digits gives no IP rating. No current survives, so no physics check is possible."
+}

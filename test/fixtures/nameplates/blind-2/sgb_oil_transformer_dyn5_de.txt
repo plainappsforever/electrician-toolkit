@@ -1,0 +1,8 @@
+SGB   SMIT GROUP   Regensburg
+Drehstrom-Öltransformator   DIN EN 60076
+Typ DOTE 630/20   Fabr.-Nr. 2021-40771   Baujahr 2021
+Nennleistung 630 kVA   50 Hz   Schaltgruppe Dyn5
+OS 20 000 V   18,2 A
+US 400 V   909 A
+uk 6,1 %   Kühlung ONAN   Gesamtgewicht 2150 kg
+IP00

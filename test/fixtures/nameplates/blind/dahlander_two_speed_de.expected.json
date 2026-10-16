@@ -1,0 +1,135 @@
+{
+  "fixture": "dahlander_two_speed_de",
+  "kind": "motor-iec",
+  "lang": "de",
+  "ocrDamage": [
+    "decimal-comma"
+  ],
+  "fields": {
+    "manufacturer": {
+      "value": "LÖNNE",
+      "unit": "",
+      "line": 0
+    },
+    "phases": {
+      "value": 3,
+      "unit": "",
+      "line": 1
+    },
+    "type": {
+      "value": "D 90 L 4/2",
+      "unit": "",
+      "line": 1
+    },
+    "voltage": {
+      "value": 400,
+      "unit": "V",
+      "line": 2
+    },
+    "connection": {
+      "value": "Δ/YY",
+      "unit": "",
+      "line": 2
+    },
+    "frequencyHz": {
+      "value": 50,
+      "unit": "Hz",
+      "line": 2
+    },
+    "ipRating": {
+      "value": "IP55",
+      "unit": "",
+      "line": 2
+    },
+    "ratedPowerKw": {
+      "value": [
+        1.1,
+        1.5
+      ],
+      "unit": "kW",
+      "line": [
+        3,
+        3
+      ]
+    },
+    "current": {
+      "value": [
+        2.8,
+        3.4
+      ],
+      "unit": "A",
+      "line": [
+        3,
+        3
+      ]
+    },
+    "speedRpm": {
+      "value": [
+        1420,
+        2860
+      ],
+      "unit": "rpm",
+      "line": [
+        4,
+        4
+      ]
+    },
+    "cosPhi": {
+      "value": [
+        0.78,
+        0.85
+      ],
+      "unit": "",
+      "line": [
+        4,
+        4
+      ]
+    },
+    "insulationClass": {
+      "value": "F",
+      "unit": "",
+      "line": 5
+    },
+    "duty": {
+      "value": "S1",
+      "unit": "",
+      "line": 5
+    },
+    "serial": {
+      "value": "0412/88123",
+      "unit": "",
+      "line": 5
+    }
+  },
+  "absent": [
+    "ratedPowerHp",
+    "efficiencyClass",
+    "efficiencyPct",
+    "weightKg"
+  ],
+  "checks": [
+    {
+      "kind": "3ph",
+      "P_kW": 1.1,
+      "U": 400,
+      "I": 2.8,
+      "cosPhi": 0.78,
+      "eta": 0.77,
+      "assumed": [
+        "eta"
+      ]
+    },
+    {
+      "kind": "3ph",
+      "P_kW": 1.5,
+      "U": 400,
+      "I": 3.4,
+      "cosPhi": 0.85,
+      "eta": 0.78,
+      "assumed": [
+        "eta"
+      ]
+    }
+  ],
+  "notes": "Two currents here are low/high speed at the SAME 400 V, not Δ/Y voltages."
+}

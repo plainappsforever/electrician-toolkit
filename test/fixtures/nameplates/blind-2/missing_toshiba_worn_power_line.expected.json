@@ -1,0 +1,79 @@
+{
+ "fixture": "missing_toshiba_worn_power_line",
+ "kind": "motor-iec",
+ "lang": "en",
+ "ocrDamage": [],
+ "fields": {
+  "manufacturer": {
+   "value": "Toshiba",
+   "unit": "",
+   "line": 0
+  },
+  "phases": {
+   "value": 3,
+   "unit": "",
+   "line": 0
+  },
+  "type": {
+   "value": "IKK-FBKW21E",
+   "unit": "",
+   "line": 1
+  },
+  "frame": {
+   "value": "132M",
+   "unit": "",
+   "line": 1
+  },
+  "voltage": {
+   "value": 400,
+   "unit": "V",
+   "line": 3
+  },
+  "connection": {
+   "value": "Δ",
+   "unit": "",
+   "line": 3
+  },
+  "frequencyHz": {
+   "value": 50,
+   "unit": "Hz",
+   "line": 3
+  },
+  "speedRpm": {
+   "value": 1460,
+   "unit": "rpm",
+   "line": 3
+  },
+  "current": {
+   "value": 15.2,
+   "unit": "A",
+   "line": 4
+  },
+  "ipRating": {
+   "value": "IP55",
+   "unit": "",
+   "line": 4
+  },
+  "insulationClass": {
+   "value": "F",
+   "unit": "",
+   "line": 4
+  },
+  "duty": {
+   "value": "S1",
+   "unit": "",
+   "line": 5
+  }
+ },
+ "absent": [
+  "ratedPowerKw",
+  "ratedPowerHp",
+  "cosPhi",
+  "efficiencyClass",
+  "efficiencyPct",
+  "serial",
+  "weightKg"
+ ],
+ "checks": [],
+ "notes": "Worn plate: the power / serial line (line 2) and the cos φ field on line 4 are rubbed off and came through as punctuation noise. kW, cos φ, efficiency, serial and weight must stay empty - do not guess 7.5 kW from 15.2 A."
+}

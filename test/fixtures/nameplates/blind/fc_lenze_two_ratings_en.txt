@@ -1,0 +1,7 @@
+Lenze   Inverter duty motor
+3~ MD FMARS 112-22
+No. 13401234   IP54   Th.Cl. F   IE3
+50 Hz   400 V Y   4.0 kW   7.9 A   cos φ 0.82   1450 rpm
+100 Hz   400 V Y   4.0 kW   8.1 A   cos φ 0.84   2950 rpm
+Inverter supply 400 V, fsw ≥ 4 kHz, 5 - 100 Hz
+30 kg

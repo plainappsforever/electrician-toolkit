@@ -1,0 +1,6 @@
+VEM motors GmbH
+3~Mot. K21R 100 L 4/2   Nr. 4401235/0012   2022
+Polumschaltbar (Dahlander)   IP55   Iso.-Kl. F   S1
+400 V   Δ    50 Hz   1,5 kW   3,5 A   1410 U/min   cos φ 0,80
+400 V   YY   50 Hz   1,9 kW   3,9 A   2850 U/min   cos φ 0,88
+Gewicht 27 kg   EN 60034
